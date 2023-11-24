@@ -57,10 +57,10 @@ RM = /home/mohamed/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mohamed/Dev/C++/GilgameshEngineII
+CMAKE_SOURCE_DIR = /home/mohamed/Dev/C++/GilgameshEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mohamed/Dev/C++/GilgameshEngineII/build
+CMAKE_BINARY_DIR = /home/mohamed/Dev/C++/GilgameshEngine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles /home/mohamed/Dev/C++/GilgameshEngineII/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles /home/mohamed/Dev/C++/GilgameshEngine/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,30 @@ Gilgamesh/src/Core/Application.s: Gilgamesh/src/Core/Application.cpp.s
 Gilgamesh/src/Core/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Application.cpp.s
 .PHONY : Gilgamesh/src/Core/Application.cpp.s
+
+Gilgamesh/src/Core/Log.o: Gilgamesh/src/Core/Log.cpp.o
+.PHONY : Gilgamesh/src/Core/Log.o
+
+# target to build an object file
+Gilgamesh/src/Core/Log.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o
+.PHONY : Gilgamesh/src/Core/Log.cpp.o
+
+Gilgamesh/src/Core/Log.i: Gilgamesh/src/Core/Log.cpp.i
+.PHONY : Gilgamesh/src/Core/Log.i
+
+# target to preprocess a source file
+Gilgamesh/src/Core/Log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.i
+.PHONY : Gilgamesh/src/Core/Log.cpp.i
+
+Gilgamesh/src/Core/Log.s: Gilgamesh/src/Core/Log.cpp.s
+.PHONY : Gilgamesh/src/Core/Log.s
+
+# target to generate assembly for a file
+Gilgamesh/src/Core/Log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.s
+.PHONY : Gilgamesh/src/Core/Log.cpp.s
 
 Gilgamesh/src/Core/Window.o: Gilgamesh/src/Core/Window.cpp.o
 .PHONY : Gilgamesh/src/Core/Window.o
@@ -375,6 +399,9 @@ help:
 	@echo "... Gilgamesh/src/Core/Application.o"
 	@echo "... Gilgamesh/src/Core/Application.i"
 	@echo "... Gilgamesh/src/Core/Application.s"
+	@echo "... Gilgamesh/src/Core/Log.o"
+	@echo "... Gilgamesh/src/Core/Log.i"
+	@echo "... Gilgamesh/src/Core/Log.s"
 	@echo "... Gilgamesh/src/Core/Window.o"
 	@echo "... Gilgamesh/src/Core/Window.i"
 	@echo "... Gilgamesh/src/Core/Window.s"

@@ -16,6 +16,7 @@ set(GILG_SOURCES
   # Core 
   ${GILG_SOURCE_PATH}/Core/Application.cpp
   ${GILG_SOURCE_PATH}/Core/Window.cpp
+  ${GILG_SOURCE_PATH}/Core/Log.cpp
 
   # Managers 
   ${GILG_SOURCE_PATH}/Managers/AssetManager.cpp

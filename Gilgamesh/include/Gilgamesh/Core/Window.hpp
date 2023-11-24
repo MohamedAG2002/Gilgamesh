@@ -8,13 +8,10 @@ namespace gilg { // beginning of gilg
 
 typedef GLFWwindow* Window;
 
-// Extern variable declaration
-extern Window window;
-
-void CreateWindow(U32 width, U32 height, const std::string& title);
-bool IsWindowRunning();
-Vec2I GetWindowSize();
+Window CreateWindow(U32 width, U32 height, const std::string& title);
+bool IsWindowRunning(Window window);
+Vec2I GetWindowSize(Window window);
 void ProcessWindowEvents();
-void UnloadWindow();
+void UnloadWindow(Window window);
 
 } // end of gilg

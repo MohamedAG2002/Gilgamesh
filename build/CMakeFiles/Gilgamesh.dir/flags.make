@@ -4,27 +4,29 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DGilgamesh_EXPORTS
 
-CXX_INCLUDES = -I/home/mohamed/Dev/C++/GilgameshEngineII/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngineII/lib/include
+CXX_INCLUDES = -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include
 
 CXX_FLAGS = -g -std=gnu++20 -fPIC
 
-# PCH options: CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch_OPTIONS = -Winvalid-pch;-x;c++-header;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch_OPTIONS = -Winvalid-pch;-x;c++-header;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Application.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Application.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/AssetManager.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/EventManager.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/AssetManager.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/SceneManager.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/EventManager.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/SceneManager.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Scene/Scene2D.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Components/Transform2D.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngineII/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Scene/Scene2D.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Components/Transform2D.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 

@@ -6,7 +6,6 @@
 #include "Gilgamesh/Components/Components.hpp"
 #include "Gilgamesh/Managers/EventManager.hpp"
 #include "Gilgamesh/Managers/AssetManager.hpp"
-#include "Gilgamesh/Graphics/Renderer2D.hpp"
 
 #include <utility>
 
@@ -16,7 +15,6 @@ struct Scene2D
 {
   // Members
   AssetManager astMgr;
-  Renderer2D renderer;
 
   // CTOR
   Scene2D();

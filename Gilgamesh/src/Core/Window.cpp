@@ -5,24 +5,24 @@
 
 namespace gilg { // beginning of gilg
 
-// Extern variable init 
-Window window;
-
-void CreateWindow(U32 width, U32 height, const std::string& title)
+Window CreateWindow(U32 width, U32 height, const std::string& title)
 {
   glfwInit();
   glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
   glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
-  window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
+  Window window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr); 
+  GILG_ASSERT_MSG(window != NULL, "Failed to create window");
+
+  return window;
 }
 
-bool IsWindowRunning()
+bool IsWindowRunning(Window window)
 {
   return !glfwWindowShouldClose(window);
 }
 
-Vec2I GetWindowSize()
+Vec2I GetWindowSize(Window window)
 {
   Vec2I size;
   
@@ -36,7 +36,7 @@ void ProcessWindowEvents()
   glfwPollEvents();
 }
 
-void UnloadWindow()
+void UnloadWindow(Window window)
 {
   glfwDestroyWindow(window);
   glfwTerminate();

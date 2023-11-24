@@ -2,5 +2,5 @@
 
 #pragma GCC system_header
 #ifdef __cplusplus
-#include "/home/mohamed/Dev/C++/GilgameshEngineII/Gilgamesh/include/Gilgamesh/GilgPCH.hpp"
+#include "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/GilgPCH.hpp"
 #endif // __cplusplus

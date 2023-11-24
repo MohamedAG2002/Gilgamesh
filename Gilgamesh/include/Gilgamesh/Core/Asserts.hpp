@@ -1,5 +1,7 @@
 #pragma once 
 
+#include "Log.hpp"
+
 namespace gilg { // beginning of gilg
 
 #define GILG_ASSERT_ENABLED
@@ -12,35 +14,35 @@ namespace gilg { // beginning of gilg
 #define DEBUG_BREAK() __builtin_trap()
 #endif
 
-#define GILG_ASSERT(expr)                                                                  \
-        {                                                                                  \
-          if(expr) {                                                                       \
-          }                                                                                \
-          else {                                                                           \
-            std::cout << "GILG ASSERTION FAIL: " << #expr << __FILE__ << __LINE__ << '\n'; \
-            DEBUG_BREAK();                                                                 \
-          }                                                                                \
-        }                                                                                  \
+#define GILG_ASSERT(expr)                                \
+        {                                                \
+          if(expr) {                                     \
+          }                                              \
+          else {                                         \
+            LogAssertion(#expr, "", __FILE__, __LINE__); \
+            DEBUG_BREAK();                               \
+          }                                              \
+        }                                                \
 
-#define GILG_ASSERT_MSG(expr, msg)                                       \
-        {                                                                                         \
-          if(expr) {                                                                              \
-          }                                                                                       \
-          else {                                                                                  \
-            std::cout << "GILG ASSERTION FAIL: " << #expr << msg << __FILE__ << __LINE__ << '\n'; \
-            DEBUG_BREAK();                                                                        \
-          }                                                                                       \
-        }                                                                                         \
+#define GILG_ASSERT_MSG(expr, msg)                        \
+        {                                                 \
+          if(expr) {                                      \
+          }                                               \
+          else {                                          \
+            LogAssertion(#expr, msg, __FILE__, __LINE__); \
+            DEBUG_BREAK();                                \
+          }                                               \
+        }                                                 \
 
-#define GILG_ASSERT_DEBUG(expr)                                                            \
-        {                                                                                  \
-          if(expr) {                                                                       \
-          }                                                                                \
-          else {                                                                           \
-            std::cout << "GILG ASSERTION FAIL: " << #expr << __FILE__ << __LINE__ << '\n'; \
-            DEBUG_BREAK();                                                                 \
-          }                                                                                \
-        }                                                                                  \
+#define GILG_ASSERT_DEBUG(expr)                                \
+        {                                                      \
+          if(expr) {                                           \
+          }                                                    \
+          else {                                               \
+            LogAssertion(#expr, "", __FILE__, __LINE__);       \
+            DEBUG_BREAK();                                     \
+          }                                                    \
+        }                                                      \
 
 #else 
 #define GILG_ASSERT()

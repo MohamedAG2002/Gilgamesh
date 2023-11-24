@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mohamed/Dev/C++/GilgameshEngineII/Testbed/../Gilgamesh/include
+CXX_INCLUDES = -I/home/mohamed/Dev/C++/GilgameshEngine/Testbed/../Gilgamesh/include
 
 CXX_FLAGS = 
 

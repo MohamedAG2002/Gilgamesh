@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Components/Transform2D.cpp.o.d"
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Application.cpp.o"
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Application.cpp.o.d"
+  "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o"
+  "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o.d"
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o"
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o.d"
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o"
