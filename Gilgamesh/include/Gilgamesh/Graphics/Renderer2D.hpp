@@ -2,7 +2,6 @@
 
 #include "Color.hpp"
 #include "Gilgamesh/GilgPCH.hpp"
-#include "Gilgamesh/Components/Components.hpp"
 
 namespace gilg { // beginning of gilg
  
@@ -20,8 +19,8 @@ void RenderRectangle(Renderer2D& renderer, Vec2F pos, Vec2F size, Color color);
 void RenderRectangleOutline(Renderer2D& renderer, Vec2F pos, Vec2F size, Color color);
 void RenderLine(Renderer2D& renderer, Vec2F startPos, Vec2F endPos, Color color);
 void RenderPoint(Renderer2D& renderer, Vec2F pos, Color color);
-void RenderText(Text& text);
-void RenderSprite(Renderer2D& renderer, Sprite2D& sprite, Vec2F position);
+//void RenderText(Text& text);
+//void RenderSprite(Renderer2D& renderer, Sprite2D& sprite, Vec2F position);
 // RenderTriangle
 // RenderCircle
 

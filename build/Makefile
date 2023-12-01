@@ -129,30 +129,6 @@ Gilgamesh/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/build
 .PHONY : Gilgamesh/fast
 
-Gilgamesh/src/Components/Transform2D.o: Gilgamesh/src/Components/Transform2D.cpp.o
-.PHONY : Gilgamesh/src/Components/Transform2D.o
-
-# target to build an object file
-Gilgamesh/src/Components/Transform2D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Components/Transform2D.cpp.o
-.PHONY : Gilgamesh/src/Components/Transform2D.cpp.o
-
-Gilgamesh/src/Components/Transform2D.i: Gilgamesh/src/Components/Transform2D.cpp.i
-.PHONY : Gilgamesh/src/Components/Transform2D.i
-
-# target to preprocess a source file
-Gilgamesh/src/Components/Transform2D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Components/Transform2D.cpp.i
-.PHONY : Gilgamesh/src/Components/Transform2D.cpp.i
-
-Gilgamesh/src/Components/Transform2D.s: Gilgamesh/src/Components/Transform2D.cpp.s
-.PHONY : Gilgamesh/src/Components/Transform2D.s
-
-# target to generate assembly for a file
-Gilgamesh/src/Components/Transform2D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Components/Transform2D.cpp.s
-.PHONY : Gilgamesh/src/Components/Transform2D.cpp.s
-
 Gilgamesh/src/Core/Application.o: Gilgamesh/src/Core/Application.cpp.o
 .PHONY : Gilgamesh/src/Core/Application.o
 
@@ -273,102 +249,6 @@ Gilgamesh/src/Graphics/Renderer2D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.s
 .PHONY : Gilgamesh/src/Graphics/Renderer2D.cpp.s
 
-Gilgamesh/src/Managers/AssetManager.o: Gilgamesh/src/Managers/AssetManager.cpp.o
-.PHONY : Gilgamesh/src/Managers/AssetManager.o
-
-# target to build an object file
-Gilgamesh/src/Managers/AssetManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/AssetManager.cpp.o
-.PHONY : Gilgamesh/src/Managers/AssetManager.cpp.o
-
-Gilgamesh/src/Managers/AssetManager.i: Gilgamesh/src/Managers/AssetManager.cpp.i
-.PHONY : Gilgamesh/src/Managers/AssetManager.i
-
-# target to preprocess a source file
-Gilgamesh/src/Managers/AssetManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/AssetManager.cpp.i
-.PHONY : Gilgamesh/src/Managers/AssetManager.cpp.i
-
-Gilgamesh/src/Managers/AssetManager.s: Gilgamesh/src/Managers/AssetManager.cpp.s
-.PHONY : Gilgamesh/src/Managers/AssetManager.s
-
-# target to generate assembly for a file
-Gilgamesh/src/Managers/AssetManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/AssetManager.cpp.s
-.PHONY : Gilgamesh/src/Managers/AssetManager.cpp.s
-
-Gilgamesh/src/Managers/EventManager.o: Gilgamesh/src/Managers/EventManager.cpp.o
-.PHONY : Gilgamesh/src/Managers/EventManager.o
-
-# target to build an object file
-Gilgamesh/src/Managers/EventManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/EventManager.cpp.o
-.PHONY : Gilgamesh/src/Managers/EventManager.cpp.o
-
-Gilgamesh/src/Managers/EventManager.i: Gilgamesh/src/Managers/EventManager.cpp.i
-.PHONY : Gilgamesh/src/Managers/EventManager.i
-
-# target to preprocess a source file
-Gilgamesh/src/Managers/EventManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/EventManager.cpp.i
-.PHONY : Gilgamesh/src/Managers/EventManager.cpp.i
-
-Gilgamesh/src/Managers/EventManager.s: Gilgamesh/src/Managers/EventManager.cpp.s
-.PHONY : Gilgamesh/src/Managers/EventManager.s
-
-# target to generate assembly for a file
-Gilgamesh/src/Managers/EventManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/EventManager.cpp.s
-.PHONY : Gilgamesh/src/Managers/EventManager.cpp.s
-
-Gilgamesh/src/Managers/SceneManager.o: Gilgamesh/src/Managers/SceneManager.cpp.o
-.PHONY : Gilgamesh/src/Managers/SceneManager.o
-
-# target to build an object file
-Gilgamesh/src/Managers/SceneManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/SceneManager.cpp.o
-.PHONY : Gilgamesh/src/Managers/SceneManager.cpp.o
-
-Gilgamesh/src/Managers/SceneManager.i: Gilgamesh/src/Managers/SceneManager.cpp.i
-.PHONY : Gilgamesh/src/Managers/SceneManager.i
-
-# target to preprocess a source file
-Gilgamesh/src/Managers/SceneManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/SceneManager.cpp.i
-.PHONY : Gilgamesh/src/Managers/SceneManager.cpp.i
-
-Gilgamesh/src/Managers/SceneManager.s: Gilgamesh/src/Managers/SceneManager.cpp.s
-.PHONY : Gilgamesh/src/Managers/SceneManager.s
-
-# target to generate assembly for a file
-Gilgamesh/src/Managers/SceneManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Managers/SceneManager.cpp.s
-.PHONY : Gilgamesh/src/Managers/SceneManager.cpp.s
-
-Gilgamesh/src/Scene/Scene2D.o: Gilgamesh/src/Scene/Scene2D.cpp.o
-.PHONY : Gilgamesh/src/Scene/Scene2D.o
-
-# target to build an object file
-Gilgamesh/src/Scene/Scene2D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Scene/Scene2D.cpp.o
-.PHONY : Gilgamesh/src/Scene/Scene2D.cpp.o
-
-Gilgamesh/src/Scene/Scene2D.i: Gilgamesh/src/Scene/Scene2D.cpp.i
-.PHONY : Gilgamesh/src/Scene/Scene2D.i
-
-# target to preprocess a source file
-Gilgamesh/src/Scene/Scene2D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Scene/Scene2D.cpp.i
-.PHONY : Gilgamesh/src/Scene/Scene2D.cpp.i
-
-Gilgamesh/src/Scene/Scene2D.s: Gilgamesh/src/Scene/Scene2D.cpp.s
-.PHONY : Gilgamesh/src/Scene/Scene2D.s
-
-# target to generate assembly for a file
-Gilgamesh/src/Scene/Scene2D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Scene/Scene2D.cpp.s
-.PHONY : Gilgamesh/src/Scene/Scene2D.cpp.s
-
 # target to build an object file
 cmake_pch.hxx.gch:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch
@@ -393,9 +273,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Gilgamesh"
-	@echo "... Gilgamesh/src/Components/Transform2D.o"
-	@echo "... Gilgamesh/src/Components/Transform2D.i"
-	@echo "... Gilgamesh/src/Components/Transform2D.s"
 	@echo "... Gilgamesh/src/Core/Application.o"
 	@echo "... Gilgamesh/src/Core/Application.i"
 	@echo "... Gilgamesh/src/Core/Application.s"
@@ -411,18 +288,6 @@ help:
 	@echo "... Gilgamesh/src/Graphics/Renderer2D.o"
 	@echo "... Gilgamesh/src/Graphics/Renderer2D.i"
 	@echo "... Gilgamesh/src/Graphics/Renderer2D.s"
-	@echo "... Gilgamesh/src/Managers/AssetManager.o"
-	@echo "... Gilgamesh/src/Managers/AssetManager.i"
-	@echo "... Gilgamesh/src/Managers/AssetManager.s"
-	@echo "... Gilgamesh/src/Managers/EventManager.o"
-	@echo "... Gilgamesh/src/Managers/EventManager.i"
-	@echo "... Gilgamesh/src/Managers/EventManager.s"
-	@echo "... Gilgamesh/src/Managers/SceneManager.o"
-	@echo "... Gilgamesh/src/Managers/SceneManager.i"
-	@echo "... Gilgamesh/src/Managers/SceneManager.s"
-	@echo "... Gilgamesh/src/Scene/Scene2D.o"
-	@echo "... Gilgamesh/src/Scene/Scene2D.i"
-	@echo "... Gilgamesh/src/Scene/Scene2D.s"
 	@echo "... cmake_pch.hxx.gch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"

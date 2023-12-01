@@ -34,6 +34,7 @@ namespace gilg { // beginning of gilg
           }                                               \
         }                                                 \
 
+#ifdef GILG_DEBUG
 #define GILG_ASSERT_DEBUG(expr)                                \
         {                                                      \
           if(expr) {                                           \
@@ -43,6 +44,9 @@ namespace gilg { // beginning of gilg
             DEBUG_BREAK();                                     \
           }                                                    \
         }                                                      \
+#else
+#define GILG_ASSERT_DEBUG(expr)
+#endif
 
 #else 
 #define GILG_ASSERT()

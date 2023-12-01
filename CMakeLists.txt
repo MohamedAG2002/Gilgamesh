@@ -18,20 +18,9 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/Core/Window.cpp
   ${GILG_SOURCE_PATH}/Core/Log.cpp
 
-  # Managers 
-  ${GILG_SOURCE_PATH}/Managers/AssetManager.cpp
-  ${GILG_SOURCE_PATH}/Managers/EventManager.cpp
-  ${GILG_SOURCE_PATH}/Managers/SceneManager.cpp
-
   # Graphics
   ${GILG_SOURCE_PATH}/Graphics/Renderer2D.cpp
   ${GILG_SOURCE_PATH}/Graphics/Color.cpp
-
-  # Scene 
-  ${GILG_SOURCE_PATH}/Scene/Scene2D.cpp
-
-  # Components
-  ${GILG_SOURCE_PATH}/Components/Transform2D.cpp
 )
 
 add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${GILG_SOURCES})

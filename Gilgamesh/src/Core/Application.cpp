@@ -3,8 +3,6 @@
 #include "Gilgamesh/Graphics/Renderer2D.hpp"
 #include "Gilgamesh/Graphics/Color.hpp"
 #include "Gilgamesh/GilgPCH.hpp"
-#include "Gilgamesh/Managers/SceneManager.hpp"
-#include "Gilgamesh/Scene/Scene2D.hpp"
 
 namespace gilg { // beginning of gilg
 
@@ -15,7 +13,6 @@ Application::Application(U32 width, U32 height, const std::string&& title)
   deltaTime = 0.0f;
 
   window = CreateWindow(width, height, title);
-  
 }
 
 void ProcessAppEvents(Application& app)
@@ -25,15 +22,12 @@ void ProcessAppEvents(Application& app)
 
 void UpdateApp(Application& app)
 {
-  UpdateScenes(app.scnMgr, app.deltaTime);
 }
 
 void RenderApp(Application& app)
 {
-  Render2DClear(app.renderer, Color::Black);
   Render2DBegin(app.renderer);
-
-  RenderScenes(app.scnMgr);
+  Render2DClear(app.renderer, Color::Black);
 
   Render2DEnd(app.renderer);
 }

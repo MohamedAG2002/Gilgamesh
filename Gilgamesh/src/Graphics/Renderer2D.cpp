@@ -41,10 +41,6 @@ void RenderPoint(Renderer2D& renderer, Vec2F pos, Color color)
 { 
 }
 
-void RenderSprite(Renderer2D& renderer, Sprite2D& sprite, Vec2F position)
-{
-}
-
 void* Render2DLoadTexture(Renderer2D& renderer, const std::string& path)
 {
   return nullptr;

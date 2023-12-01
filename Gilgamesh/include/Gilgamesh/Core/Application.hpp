@@ -3,9 +3,9 @@
 #include "Window.hpp"
 #include "Gilgamesh/GilgPCH.hpp"
 #include "Gilgamesh/Graphics/Renderer2D.hpp"
-#include "Gilgamesh/Managers/SceneManager.hpp"
 
 namespace gilg { // beginning of gilg
+
 struct Application 
 {
   bool isRunning;
@@ -13,7 +13,6 @@ struct Application
 
   Window window;
   Renderer2D renderer;
-  SceneManager scnMgr;
 
   Application(U32 width, U32 height, const std::string&& title);
 };

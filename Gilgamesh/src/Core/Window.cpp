@@ -8,11 +8,14 @@ namespace gilg { // beginning of gilg
 Window CreateWindow(U32 width, U32 height, const std::string& title)
 {
   glfwInit();
-  glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+  
   glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   Window window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr); 
-  GILG_ASSERT_MSG(window != NULL, "Failed to create window");
+  GILG_ASSERT_MSG(window != nullptr, "Failed to create window");
 
   return window;
 }
