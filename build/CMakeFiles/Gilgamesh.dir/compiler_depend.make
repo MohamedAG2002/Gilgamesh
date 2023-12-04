@@ -21,11 +21,13 @@ CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o: CMakeFiles/Gilgamesh.dir/
 
 CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o: CMakeFiles/Gilgamesh.dir/cmake_pch.hxx \
   /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Window.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyCode.hpp \
   /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Window.cpp \
   /usr/include/GL/gl.h \
   /usr/include/GL/glext.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/KHR/khrplatform.h \
+  /usr/include/c++/11/iostream \
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
@@ -47,6 +49,12 @@ CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o: CMakeFiles/Gil
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
+
+CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o: CMakeFiles/Gilgamesh.dir/cmake_pch.hxx \
+  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyCode.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyboardInput.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Input/KeyboardInput.cpp \
+  /usr/include/stdc-predef.h
 
 CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.hxx \
   /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Asserts.hpp \
@@ -324,9 +332,9 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
-/usr/include/c++/11/ext/type_traits.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
-/usr/include/c++/11/ext/string_conversions.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /usr/include/c++/11/tuple:
 
@@ -341,12 +349,6 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 /usr/include/features.h:
 
 /usr/include/stdio.h:
-
-/usr/include/c++/11/functional:
-
-/usr/include/c++/11/bits/stl_heap.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
 /usr/include/c++/11/clocale:
 
@@ -380,7 +382,17 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/include/c++/11/bits/stl_heap.h:
+
+/usr/include/c++/11/functional:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
+
 /usr/include/c++/11/bits/stl_function.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
+
+/usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/c++/11/exception:
 
@@ -394,17 +406,11 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/GilgPCH.hpp:
-
-/usr/include/stdint.h:
-
 /usr/include/c++/11/bits/ranges_cmp.h:
 
 /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Graphics/Renderer2D.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/c++/11/bits/ostream.tcc:
 
 /usr/include/features-time64.h:
 
@@ -438,13 +444,23 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /usr/include/c++/11/bits/locale_facets.h:
 
-/usr/include/alloca.h:
+/usr/include/c++/11/bits/locale_classes.tcc:
 
-/usr/include/c++/11/limits:
+/usr/include/c++/11/bits/iterator_concepts.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
+/usr/include/c++/11/bits/hashtable_policy.h:
+
+/usr/include/c++/11/bits/basic_ios.h:
+
+/usr/include/c++/11/bits/istream.tcc:
+
+/usr/include/c++/11/bits/ios_base.h:
+
+/usr/include/c++/11/bits/ostream.tcc:
+
+/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyCode.hpp:
 
 /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Log.hpp:
 
@@ -460,16 +476,6 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /usr/include/c++/11/bits/hashtable.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/c++/11/bits/hashtable_policy.h:
-
-/usr/include/c++/11/bits/basic_ios.h:
-
-/usr/include/c++/11/bits/iterator_concepts.h:
-
-/usr/include/c++/11/ext/numeric_traits.h:
-
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/11/bits/random.tcc:
@@ -480,27 +486,9 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /usr/include/c++/11/type_traits:
 
-/usr/include/c++/11/pstl/execution_defs.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/c++/11/iosfwd:
-
-/usr/include/c++/11/numeric:
-
-/usr/include/c++/11/bits/stl_construct.h:
-
-/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Defines.hpp:
-
-/usr/include/c++/11/bits/charconv.h:
-
-/usr/include/c++/11/tr1/legendre_function.tcc:
-
 /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Asserts.hpp:
 
-/usr/include/c++/11/bits/istream.tcc:
+/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Input/KeyboardInput.cpp:
 
 /usr/include/c++/11/cstdlib:
 
@@ -512,11 +500,19 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /usr/include/time.h:
 
+/usr/include/stdc-predef.h:
+
 /usr/include/c++/11/array:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
 /usr/include/c++/11/system_error:
+
+/usr/include/stdint.h:
+
+/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/GilgPCH.hpp:
+
+/usr/include/c++/11/ext/type_traits.h:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
@@ -538,17 +534,29 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Utils/Random.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/c++/11/bits/cxxabi_forced.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/c++/11/bit:
 
 /usr/include/c++/11/tr1/bessel_function.tcc:
 
-/usr/include/stdc-predef.h:
+/usr/include/c++/11/bits/stl_construct.h:
+
+/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Defines.hpp:
+
+/usr/include/c++/11/bits/charconv.h:
+
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
+/usr/include/c++/11/pstl/execution_defs.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/c++/11/iosfwd:
+
+/usr/include/c++/11/numeric:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
@@ -557,6 +565,8 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Window.hpp:
 
 /usr/include/c++/11/bits/algorithmfwd.h:
+
+/usr/include/c++/11/iostream:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
@@ -568,6 +578,12 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Application.cpp:
 
+/usr/include/alloca.h:
+
+/usr/include/c++/11/limits:
+
+/usr/include/asm-generic/errno-base.h:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/linux/errno.h:
@@ -575,8 +591,6 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/KHR/khrplatform.h:
-
-/usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
 
@@ -588,6 +602,14 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch: CMakeFiles/Gilgamesh.dir/cmake_pch.h
 
 /usr/include/c++/11/cerrno:
 
+/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyboardInput.hpp:
+
+/usr/include/c++/11/ext/string_conversions.h:
+
+/usr/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
 /usr/include/c++/11/bits/enable_special_members.h:
 
 CMakeFiles/Gilgamesh.dir/cmake_pch.hxx:
@@ -598,13 +620,11 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx:
 
 /usr/include/c++/11/cstdint:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
-
 /usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
-/usr/include/c++/11/bits/locale_classes.tcc:
+/usr/include/c++/11/ext/numeric_traits.h:
 
 /usr/include/c++/11/initializer_list:
 
@@ -617,8 +637,6 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx:
 /usr/include/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/include/c++/11/iostream:
 
 /usr/include/c++/11/istream:
 
@@ -768,9 +786,9 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.cxx:
-
 /usr/include/c++/11/bits/predefined_ops.h:
+
+CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.cxx:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
@@ -839,7 +857,3 @@ CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.cxx:
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/c++/11/bits/stl_algobase.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:

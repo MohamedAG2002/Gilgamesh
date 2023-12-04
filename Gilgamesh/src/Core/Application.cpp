@@ -6,7 +6,7 @@
 
 namespace gilg { // beginning of gilg
 
-Application::Application(U32 width, U32 height, const std::string&& title)
+Application::Application(U32 width, U32 height, const String& title)
 {
   isRunning = true;
   lastFrame = 0.0f;

@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o.d"
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o"
   "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o.d"
+  "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o"
+  "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o.d"
   "CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch"
   "CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch.d"
   "libGilgamesh.pdb"

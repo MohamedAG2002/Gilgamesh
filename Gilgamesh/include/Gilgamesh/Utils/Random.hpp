@@ -9,7 +9,7 @@ namespace gilg { // beginning gilg
 namespace util { // beginning util
 
 template<typename T>
-T GetRandomNumber()
+GILG_API T GetRandomNumber()
 {
   std::random_device rndDevice;
   std::default_random_engine rndEngine(rndDevice());

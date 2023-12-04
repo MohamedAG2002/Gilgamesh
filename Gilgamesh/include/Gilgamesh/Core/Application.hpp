@@ -14,14 +14,14 @@ struct Application
   Window window;
   Renderer2D renderer;
 
-  Application(U32 width, U32 height, const std::string&& title);
+  Application(U32 width, U32 height, const String& title);
 };
 
-void InitAppWindow(Application& app, int width, int height, const std::string& title);
 void ProcessAppEvents(Application& app);
 void UpdateApp(Application& app);
 void RenderApp(Application& app);
-void RunApp(Application& app);
-void UnloadApp(Application& app);
+
+GILG_API void RunApp(Application& app);
+GILG_API void UnloadApp(Application& app);
 
 } // end of gilg

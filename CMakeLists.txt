@@ -21,6 +21,9 @@ set(GILG_SOURCES
   # Graphics
   ${GILG_SOURCE_PATH}/Graphics/Renderer2D.cpp
   ${GILG_SOURCE_PATH}/Graphics/Color.cpp
+
+  # Input 
+  ${GILG_SOURCE_PATH}/Input/KeyboardInput.cpp
 )
 
 add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${GILG_SOURCES})

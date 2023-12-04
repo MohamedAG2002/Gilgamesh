@@ -1,7 +1,10 @@
 # Now
+- A better engine event system
+- Global inputs with GLFW
 - Custom renderer with OpenGL
 
 # Future
+- Custom event system for user defined events
 - Physics
 - Particles
 - Add a Camera2D component

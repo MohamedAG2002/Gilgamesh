@@ -249,6 +249,30 @@ Gilgamesh/src/Graphics/Renderer2D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.s
 .PHONY : Gilgamesh/src/Graphics/Renderer2D.cpp.s
 
+Gilgamesh/src/Input/KeyboardInput.o: Gilgamesh/src/Input/KeyboardInput.cpp.o
+.PHONY : Gilgamesh/src/Input/KeyboardInput.o
+
+# target to build an object file
+Gilgamesh/src/Input/KeyboardInput.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o
+.PHONY : Gilgamesh/src/Input/KeyboardInput.cpp.o
+
+Gilgamesh/src/Input/KeyboardInput.i: Gilgamesh/src/Input/KeyboardInput.cpp.i
+.PHONY : Gilgamesh/src/Input/KeyboardInput.i
+
+# target to preprocess a source file
+Gilgamesh/src/Input/KeyboardInput.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.i
+.PHONY : Gilgamesh/src/Input/KeyboardInput.cpp.i
+
+Gilgamesh/src/Input/KeyboardInput.s: Gilgamesh/src/Input/KeyboardInput.cpp.s
+.PHONY : Gilgamesh/src/Input/KeyboardInput.s
+
+# target to generate assembly for a file
+Gilgamesh/src/Input/KeyboardInput.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.s
+.PHONY : Gilgamesh/src/Input/KeyboardInput.cpp.s
+
 # target to build an object file
 cmake_pch.hxx.gch:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch
@@ -288,6 +312,9 @@ help:
 	@echo "... Gilgamesh/src/Graphics/Renderer2D.o"
 	@echo "... Gilgamesh/src/Graphics/Renderer2D.i"
 	@echo "... Gilgamesh/src/Graphics/Renderer2D.s"
+	@echo "... Gilgamesh/src/Input/KeyboardInput.o"
+	@echo "... Gilgamesh/src/Input/KeyboardInput.i"
+	@echo "... Gilgamesh/src/Input/KeyboardInput.s"
 	@echo "... cmake_pch.hxx.gch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"

@@ -3,27 +3,17 @@
 
 CMakeFiles/testbed.dir/main.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/Testbed/main.cpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Components/Anchor.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Components/Components.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Components/Shape2DType.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Components/TextType.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Components/Transform2D.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Application.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Asserts.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Defines.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Log.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Window.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Events/EventFuncs.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/GilgPCH.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Gilgamesh.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Graphics/Color.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Graphics/Renderer2D.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Managers/AssetManager.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Managers/EventManager.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Managers/SceneManager.hpp
+ /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyCode.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Math/Vec2.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Scene/Entity.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Scene/Scene2D.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Utils/Random.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Utils/Utils.hpp
  /usr/include/GL/gl.h
@@ -33,7 +23,6 @@ CMakeFiles/testbed.dir/main.cpp.o
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
- /usr/include/c++/11/algorithm
  /usr/include/c++/11/array
  /usr/include/c++/11/backward/binders.h
  /usr/include/c++/11/bit
@@ -137,7 +126,6 @@ CMakeFiles/testbed.dir/main.cpp.o
  /usr/include/c++/11/numeric
  /usr/include/c++/11/ostream
  /usr/include/c++/11/pstl/execution_defs.h
- /usr/include/c++/11/pstl/glue_algorithm_defs.h
  /usr/include/c++/11/pstl/glue_numeric_defs.h
  /usr/include/c++/11/pstl/pstl_config.h
  /usr/include/c++/11/random

@@ -41,6 +41,22 @@ void RenderPoint(Renderer2D& renderer, Vec2F pos, Color color)
 { 
 }
 
+void RenderText(Renderer2D& renderer)
+{
+}
+
+void RenderSprite(Renderer2D& renderer)
+{
+}
+
+void RenderTriangle(Renderer2D& renderer)
+{
+}
+
+void RenderCircle(Renderer2D& renderer)
+{
+}
+
 void* Render2DLoadTexture(Renderer2D& renderer, const std::string& path)
 {
   return nullptr;

@@ -24,11 +24,13 @@ CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o
 CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Window.hpp
+ /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyCode.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Window.cpp
  /usr/include/GL/gl.h
  /usr/include/GL/glext.h
  /usr/include/GLFW/glfw3.h
  /usr/include/KHR/khrplatform.h
+ /usr/include/c++/11/iostream
  /usr/include/stdc-predef.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
@@ -52,6 +54,13 @@ CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o
  /usr/include/stdc-predef.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
+
+CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o
+ /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+ /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyCode.hpp
+ /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyboardInput.hpp
+ /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Input/KeyboardInput.cpp
+ /usr/include/stdc-predef.h
 
 CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch
  /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
