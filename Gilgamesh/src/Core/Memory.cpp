@@ -7,6 +7,8 @@
 
 namespace gilg { // beginning of gilg
 
+int allocCount = 0;
+
 bool InitMemorySystem()
 {
   //@TODO
@@ -16,13 +18,19 @@ bool InitMemorySystem()
 void UnloadMemorySystem()
 {
   //@TODO
+
+  if(allocCount > 0)
+    GILG_LOG_WARNING("\'%i\' allocation(s) were not freed", allocCount);
+  else 
+    GILG_LOG_WARNING("All allocations were freed!");
 }
 
 void* AllocMem(ISize size)
 {
   void* data = malloc(size);
   GILG_ASSERT(data != nullptr);
-
+  
+  allocCount++;
   GILG_LOG_DEBUG("Successfully allocated memory block of size \'%zu\'", size);
 
   return data;  
@@ -33,6 +41,7 @@ void* CAllocMem(ISize count, ISize size)
   void* data = calloc(count, size);
   GILG_ASSERT(data != nullptr);
 
+  allocCount += count;
   GILG_LOG_DEBUG("Allocated \'%zu\' blocks of memory of size \'%zu\' each", count, size);
 
   return data;  
@@ -52,6 +61,7 @@ void FreeMem(void* mem)
 {
   free(mem);
 
+  allocCount--;
   GILG_LOG_DEBUG("A block of memory was successfully freed");
 }
 
