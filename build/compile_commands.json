@@ -25,20 +25,8 @@
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Graphics/Renderer2D.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Graphics/Renderer2D.cpp",
-  "output": "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o"
-},
-{
-  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Graphics/Color.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Graphics/Color.cpp",
-  "output": "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o"
-},
-{
-  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Input/KeyboardInput.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Input/KeyboardInput.cpp",
-  "output": "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o"
+  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Memory.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Memory.cpp",
+  "output": "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.o"
 }
 ]

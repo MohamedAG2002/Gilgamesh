@@ -17,13 +17,7 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/Core/Application.cpp
   ${GILG_SOURCE_PATH}/Core/Window.cpp
   ${GILG_SOURCE_PATH}/Core/Log.cpp
-
-  # Graphics
-  ${GILG_SOURCE_PATH}/Graphics/Renderer2D.cpp
-  ${GILG_SOURCE_PATH}/Graphics/Color.cpp
-
-  # Input 
-  ${GILG_SOURCE_PATH}/Input/KeyboardInput.cpp
+  ${GILG_SOURCE_PATH}/Core/Memory.cpp
 )
 
 add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${GILG_SOURCES})

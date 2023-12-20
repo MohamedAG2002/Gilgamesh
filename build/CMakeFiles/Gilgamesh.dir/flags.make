@@ -16,9 +16,5 @@ CXX_FLAGS = -g -std=gnu++20 -fPIC
 
 # PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
-
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
-
-# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+# PCH options: CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
 

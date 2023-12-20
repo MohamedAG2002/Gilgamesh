@@ -177,6 +177,30 @@ Gilgamesh/src/Core/Log.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.s
 .PHONY : Gilgamesh/src/Core/Log.cpp.s
 
+Gilgamesh/src/Core/Memory.o: Gilgamesh/src/Core/Memory.cpp.o
+.PHONY : Gilgamesh/src/Core/Memory.o
+
+# target to build an object file
+Gilgamesh/src/Core/Memory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.o
+.PHONY : Gilgamesh/src/Core/Memory.cpp.o
+
+Gilgamesh/src/Core/Memory.i: Gilgamesh/src/Core/Memory.cpp.i
+.PHONY : Gilgamesh/src/Core/Memory.i
+
+# target to preprocess a source file
+Gilgamesh/src/Core/Memory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.i
+.PHONY : Gilgamesh/src/Core/Memory.cpp.i
+
+Gilgamesh/src/Core/Memory.s: Gilgamesh/src/Core/Memory.cpp.s
+.PHONY : Gilgamesh/src/Core/Memory.s
+
+# target to generate assembly for a file
+Gilgamesh/src/Core/Memory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.s
+.PHONY : Gilgamesh/src/Core/Memory.cpp.s
+
 Gilgamesh/src/Core/Window.o: Gilgamesh/src/Core/Window.cpp.o
 .PHONY : Gilgamesh/src/Core/Window.o
 
@@ -200,78 +224,6 @@ Gilgamesh/src/Core/Window.s: Gilgamesh/src/Core/Window.cpp.s
 Gilgamesh/src/Core/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.s
 .PHONY : Gilgamesh/src/Core/Window.cpp.s
-
-Gilgamesh/src/Graphics/Color.o: Gilgamesh/src/Graphics/Color.cpp.o
-.PHONY : Gilgamesh/src/Graphics/Color.o
-
-# target to build an object file
-Gilgamesh/src/Graphics/Color.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o
-.PHONY : Gilgamesh/src/Graphics/Color.cpp.o
-
-Gilgamesh/src/Graphics/Color.i: Gilgamesh/src/Graphics/Color.cpp.i
-.PHONY : Gilgamesh/src/Graphics/Color.i
-
-# target to preprocess a source file
-Gilgamesh/src/Graphics/Color.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.i
-.PHONY : Gilgamesh/src/Graphics/Color.cpp.i
-
-Gilgamesh/src/Graphics/Color.s: Gilgamesh/src/Graphics/Color.cpp.s
-.PHONY : Gilgamesh/src/Graphics/Color.s
-
-# target to generate assembly for a file
-Gilgamesh/src/Graphics/Color.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.s
-.PHONY : Gilgamesh/src/Graphics/Color.cpp.s
-
-Gilgamesh/src/Graphics/Renderer2D.o: Gilgamesh/src/Graphics/Renderer2D.cpp.o
-.PHONY : Gilgamesh/src/Graphics/Renderer2D.o
-
-# target to build an object file
-Gilgamesh/src/Graphics/Renderer2D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o
-.PHONY : Gilgamesh/src/Graphics/Renderer2D.cpp.o
-
-Gilgamesh/src/Graphics/Renderer2D.i: Gilgamesh/src/Graphics/Renderer2D.cpp.i
-.PHONY : Gilgamesh/src/Graphics/Renderer2D.i
-
-# target to preprocess a source file
-Gilgamesh/src/Graphics/Renderer2D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.i
-.PHONY : Gilgamesh/src/Graphics/Renderer2D.cpp.i
-
-Gilgamesh/src/Graphics/Renderer2D.s: Gilgamesh/src/Graphics/Renderer2D.cpp.s
-.PHONY : Gilgamesh/src/Graphics/Renderer2D.s
-
-# target to generate assembly for a file
-Gilgamesh/src/Graphics/Renderer2D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.s
-.PHONY : Gilgamesh/src/Graphics/Renderer2D.cpp.s
-
-Gilgamesh/src/Input/KeyboardInput.o: Gilgamesh/src/Input/KeyboardInput.cpp.o
-.PHONY : Gilgamesh/src/Input/KeyboardInput.o
-
-# target to build an object file
-Gilgamesh/src/Input/KeyboardInput.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o
-.PHONY : Gilgamesh/src/Input/KeyboardInput.cpp.o
-
-Gilgamesh/src/Input/KeyboardInput.i: Gilgamesh/src/Input/KeyboardInput.cpp.i
-.PHONY : Gilgamesh/src/Input/KeyboardInput.i
-
-# target to preprocess a source file
-Gilgamesh/src/Input/KeyboardInput.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.i
-.PHONY : Gilgamesh/src/Input/KeyboardInput.cpp.i
-
-Gilgamesh/src/Input/KeyboardInput.s: Gilgamesh/src/Input/KeyboardInput.cpp.s
-.PHONY : Gilgamesh/src/Input/KeyboardInput.s
-
-# target to generate assembly for a file
-Gilgamesh/src/Input/KeyboardInput.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.s
-.PHONY : Gilgamesh/src/Input/KeyboardInput.cpp.s
 
 # target to build an object file
 cmake_pch.hxx.gch:
@@ -303,18 +255,12 @@ help:
 	@echo "... Gilgamesh/src/Core/Log.o"
 	@echo "... Gilgamesh/src/Core/Log.i"
 	@echo "... Gilgamesh/src/Core/Log.s"
+	@echo "... Gilgamesh/src/Core/Memory.o"
+	@echo "... Gilgamesh/src/Core/Memory.i"
+	@echo "... Gilgamesh/src/Core/Memory.s"
 	@echo "... Gilgamesh/src/Core/Window.o"
 	@echo "... Gilgamesh/src/Core/Window.i"
 	@echo "... Gilgamesh/src/Core/Window.s"
-	@echo "... Gilgamesh/src/Graphics/Color.o"
-	@echo "... Gilgamesh/src/Graphics/Color.i"
-	@echo "... Gilgamesh/src/Graphics/Color.s"
-	@echo "... Gilgamesh/src/Graphics/Renderer2D.o"
-	@echo "... Gilgamesh/src/Graphics/Renderer2D.i"
-	@echo "... Gilgamesh/src/Graphics/Renderer2D.s"
-	@echo "... Gilgamesh/src/Input/KeyboardInput.o"
-	@echo "... Gilgamesh/src/Input/KeyboardInput.i"
-	@echo "... Gilgamesh/src/Input/KeyboardInput.s"
 	@echo "... cmake_pch.hxx.gch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"

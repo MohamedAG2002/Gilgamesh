@@ -5,8 +5,6 @@ CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Application.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Application.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Window.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Graphics/Color.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Graphics/Renderer2D.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Application.cpp
  /usr/include/GL/gl.h
  /usr/include/GL/glext.h
@@ -21,52 +19,38 @@ CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Log.cpp
  /usr/include/stdc-predef.h
 
+CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.o
+ /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
+ /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Memory.cpp
+ /usr/include/c++/11/cstdlib
+ /usr/include/c++/11/cstring
+ /usr/include/features.h
+ /usr/include/stdc-predef.h
+ /usr/include/string.h
+ /usr/include/strings.h
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h
+
 CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Window.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyCode.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Window.cpp
  /usr/include/GL/gl.h
  /usr/include/GL/glext.h
  /usr/include/GLFW/glfw3.h
  /usr/include/KHR/khrplatform.h
- /usr/include/c++/11/iostream
  /usr/include/stdc-predef.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
-
-CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Color.cpp.o
- /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Graphics/Color.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Graphics/Color.cpp
- /usr/include/stdc-predef.h
-
-CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Graphics/Renderer2D.cpp.o
- /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Window.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Graphics/Color.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Graphics/Renderer2D.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Graphics/Renderer2D.cpp
- /usr/include/GL/gl.h
- /usr/include/GL/glext.h
- /usr/include/GLFW/glfw3.h
- /usr/include/KHR/khrplatform.h
- /usr/include/stdc-predef.h
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
-
-CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Input/KeyboardInput.cpp.o
- /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyCode.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Input/KeyboardInput.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Input/KeyboardInput.cpp
- /usr/include/stdc-predef.h
 
 CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch
  /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Asserts.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Defines.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Log.hpp
+ /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Core/Memory.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/GilgPCH.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Math/Vec2.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include/Gilgamesh/Utils/Random.hpp

@@ -1,16 +1,19 @@
-# Now
-- A better engine event system
-- Global inputs with GLFW
-- Custom renderer with OpenGL
+# Core engine systems 
+    - Application / entry point
+    - Event system 
+    - Custom memory allocater
+    - Window abstraction
+    - Input system
+    - Renderer 2D/3D -> Basic shapes, fonts/texts, textures, models
+    - Scenes
+    - Entities
+    - Serialization
+    - Componenets -> Main components first (transform, camera, rendering components, etc.)
+    - Resource managment / asset manager 
+    - Audio system -> Basic at first then something more sophisticated
 
-# Future
-- Custom event system for user defined events
-- Physics
-- Particles
-- Add a Camera2D component
-- Add serialization and deserialization with yaml files using the yaml-cpp library
-- Native scripting with C++
-- Lighting
-- Shadows
-- Add custom scriptting support.
-- GUI support with ImGui. Make the Gui control the functionality of adding entities, components to those entities, custom scripts, assets, and other stuff.
+# Other engine systems 
+    - GUI -> Editor gui and game gui
+    - Scripting system -> Native and external
+    - Physics
+    - Particles -> gpu-based and cpu-based 

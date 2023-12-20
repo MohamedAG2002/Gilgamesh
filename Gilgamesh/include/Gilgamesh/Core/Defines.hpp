@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace gilg { // beginning gilg
+namespace gilg { // beginning of gilg
 
 /* Types typedefs */
 // Ints
@@ -10,6 +10,7 @@ typedef char  I8;
 typedef short I16;
 typedef int   I32;
 typedef long  I64;
+typedef size_t ISize;
 
 // Unsigned ints
 typedef unsigned char  U8;
@@ -23,6 +24,10 @@ typedef double F64;
 
 // String
 typedef std::string String;
+
+// Build types
+#define GILG_RELEASE 0
+#define GILG_DEBUG   1
 
 /* Platform detection macros */
 // Windows 

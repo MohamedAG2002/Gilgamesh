@@ -1,51 +1,48 @@
 #include "Gilgamesh/Core/Application.hpp"
 #include "Gilgamesh/Core/Window.hpp"
-#include "Gilgamesh/Graphics/Renderer2D.hpp"
-#include "Gilgamesh/Graphics/Color.hpp"
 #include "Gilgamesh/GilgPCH.hpp"
+
+#include <GLFW/glfw3.h>
 
 namespace gilg { // beginning of gilg
 
-Application::Application(U32 width, U32 height, const String& title)
-{
-  isRunning = true;
-  lastFrame = 0.0f;
-  deltaTime = 0.0f;
+static Application s_App;
 
-  window = CreateWindow(width, height, title);
+void InitApp(U32 width, U32 height, const String& title)
+{
+  s_App.isRunning = true;
+  s_App.lastFrame = 0.0f;
+  s_App.deltaTime = 0.0f;
+
+  s_App.window = CreateWindow(width, height, title);
+ 
+  const char* info = "Some information";
 }
 
-void ProcessAppEvents(Application& app)
-{
-  ProcessWindowEvents();
-}
-
-void UpdateApp(Application& app)
+void UpdateApp()
 {
 }
 
-void RenderApp(Application& app)
+void RenderApp()
 {
-  Render2DBegin(app.renderer);
-  Render2DClear(app.renderer, Color::Black);
-
-  Render2DEnd(app.renderer);
 }
 
-void RunApp(Application& app)
+void RunApp()
 {
-  while(IsWindowRunning(app.window) && app.isRunning)
+  while(IsWindowRunning(s_App.window) && s_App.isRunning)
   {
-    ProcessAppEvents(app);
-    UpdateApp(app);
-    RenderApp(app);
+    glfwPollEvents();
+
+    UpdateApp();
+    RenderApp();
+
+    glfwSwapBuffers(s_App.window);
   }
 }
 
-void UnloadApp(Application& app)
+void UnloadApp()
 {
-  UnloadRender2D(app.renderer);
-  UnloadWindow(app.window);
+  UnloadWindow(s_App.window);
 }
 
 } // end of gilg

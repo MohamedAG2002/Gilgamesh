@@ -3,11 +3,11 @@
 int main()
 {
   // Init stage
-  gilg::Application app(800, 600, "Testbed");
+  gilg::InitApp(800, 600, "Testbed");
 
-  // Update/Render stage
-  gilg::RunApp(app);
+  // Frame stage
+  gilg::RunApp();
 
   // Shutdown stage
-  gilg::UnloadApp(app);
+  gilg::UnloadApp();
 }
