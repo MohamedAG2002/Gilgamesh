@@ -4,6 +4,7 @@
 #include "core/logger.h"
 #include "core/memory_alloc.h"
 #include "core/window.h"
+#include "core/event.h"
 
 // Private functions
 ///////////////////////////////////////////////
@@ -25,8 +26,12 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
 {
   // Logger init 
   GILG_ASSERT_MSG(init_logger() == true, "Failed to initialize logger"); 
+  
+  // Event system init 
+  if(!init_events())
+    GILG_LOG_ERROR("Failed to initialize event system");
 
-    // Memory allocater init 
+  // Memory allocater init 
   if(!init_memory_allocater())
     GILG_LOG_FATAL("Failed to initialize memory allocater");
 
@@ -38,8 +43,9 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
 void destroy_app()
 {
   destroy_window();
-  shutdown_logger();
   shutdown_memory_allocater();
+  shutdown_events(); 
+  shutdown_logger();
 }
 
 void run_app()
