@@ -1,32 +1,44 @@
 [
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -x c++-header -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch -c /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.cxx",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.cxx",
-  "output": "CMakeFiles/Gilgamesh.dir/cmake_pch.hxx.gch"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/libs/src/stb_image/stb_image.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/stb_image/stb_image.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Application.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Application.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Application.cpp",
-  "output": "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Application.cpp.o"
+  "command": "/usr/bin/cc  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o -c /home/mohamed/Dev/C++/GilgameshEngine/libs/src/glad/gl.c",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/glad/gl.c",
+  "output": "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Window.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Window.cpp",
-  "output": "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Window.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/application.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/application.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Log.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Log.cpp",
-  "output": "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Log.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/window.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/window.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++ -DGilgamesh_EXPORTS -I/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/include -I/home/mohamed/Dev/C++/GilgameshEngine/lib/include -g -std=gnu++20 -fPIC -Winvalid-pch -include /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/Gilgamesh.dir/cmake_pch.hxx -o CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Memory.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/Gilgamesh/src/Core/Memory.cpp",
-  "output": "CMakeFiles/Gilgamesh.dir/Gilgamesh/src/Core/Memory.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/logger.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/logger.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/memory_alloc.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/memory_alloc.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o"
 }
 ]

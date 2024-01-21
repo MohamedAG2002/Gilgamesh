@@ -1,3 +1,0 @@
-/home/mohamed/Dev/C++/GilgameshEngine/Testbed/build/CMakeFiles/testbed.dir
-/home/mohamed/Dev/C++/GilgameshEngine/Testbed/build/CMakeFiles/edit_cache.dir
-/home/mohamed/Dev/C++/GilgameshEngine/Testbed/build/CMakeFiles/rebuild_cache.dir

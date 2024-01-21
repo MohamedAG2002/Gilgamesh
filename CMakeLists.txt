@@ -1,34 +1,46 @@
 cmake_minimum_required(VERSION 3.27.0)
-project(Gilgamesh)
+project(gilgamesh)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # For the LSP
-set(CMAKE_BUILD_TYPE Debug) # For gdb
-set(CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/lib/)
-
+# Setting project variables
+######################################
 set(GILG_LIBRARY_TYPE SHARED)
-set(GILG_SOURCE_PATH ${CMAKE_SOURCE_DIR}/Gilgamesh/src)
-set(GILG_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/Gilgamesh/include)
+set(GILG_BUILD_TYPE Debug)
+set(GILG_SOURCE_PATH ${CMAKE_SOURCE_DIR}/gilgamesh/src)
+set(GILG_LIBS_PATH ${CMAKE_SOURCE_DIR}/libs)
+######################################
 
+# Setting CMake variables
+######################################
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_BUILD_TYPE ${GILG_BUILD_TYPE}) 
+######################################
+
+# Finding libraries
+######################################
 find_library(glfw glfw REQUIRED)
+######################################
 
+# Sources
+######################################
 set(GILG_SOURCES
   # Core 
-  ${GILG_SOURCE_PATH}/Core/Application.cpp
-  ${GILG_SOURCE_PATH}/Core/Window.cpp
-  ${GILG_SOURCE_PATH}/Core/Log.cpp
-  ${GILG_SOURCE_PATH}/Core/Memory.cpp
+  ${GILG_SOURCE_PATH}/core/application.cpp
+  ${GILG_SOURCE_PATH}/core/window.cpp
+  ${GILG_SOURCE_PATH}/core/logger.cpp
+  ${GILG_SOURCE_PATH}/core/memory_alloc.cpp
+  ${GILG_SOURCE_PATH}/main.cpp
 )
 
-add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${GILG_SOURCES})
+set(LIBS_SOURCES
+  ${GILG_LIBS_PATH}/src/stb_image/stb_image.cpp
+  ${GILG_LIBS_PATH}/src/glad/gl.c
+)
+######################################
 
-# Making sure the asset folder is in the final build
-file(COPY assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+add_executable(${PROJECT_NAME} ${LIBS_SOURCES} ${GILG_SOURCES})
 
-target_precompile_headers(${PROJECT_NAME} PUBLIC ${GILG_INCLUDE_PATH}/Gilgamesh/GilgPCH.hpp)
-
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/lib/include/)
-target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_INCLUDE_PATH})
+target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_LIBS_PATH}/include)
+target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_SOURCE_PATH})
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
   ${glfw}  

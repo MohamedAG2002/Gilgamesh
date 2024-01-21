@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/testbed.dir/main.cpp.o -o testbed  -Wl,-rpath,/home/mohamed/Dev/C++/GilgameshEngine/Testbed/build libGilgamesh.so 

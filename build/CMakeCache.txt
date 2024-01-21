@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Gilgamesh
+CMAKE_PROJECT_NAME:STATIC=gilgamesh
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -216,13 +216,13 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Gilgamesh_BINARY_DIR:STATIC=/home/mohamed/Dev/C++/GilgameshEngine/build
+gilgamesh_BINARY_DIR:STATIC=/home/mohamed/Dev/C++/GilgameshEngine/build
 
 //Value Computed by CMake
-Gilgamesh_IS_TOP_LEVEL:STATIC=ON
+gilgamesh_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-Gilgamesh_SOURCE_DIR:STATIC=/home/mohamed/Dev/C++/GilgameshEngine
+gilgamesh_SOURCE_DIR:STATIC=/home/mohamed/Dev/C++/GilgameshEngine
 
 //Path to a library.
 glfw:FILEPATH=/usr/lib/x86_64-linux-gnu/libglfw.so

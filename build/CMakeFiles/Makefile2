@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/mohamed/Dev/C++/GilgameshEngine/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Gilgamesh.dir/all
+all: CMakeFiles/gilgamesh.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Gilgamesh.dir/clean
+clean: CMakeFiles/gilgamesh.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Gilgamesh.dir
+# Target rules for target CMakeFiles/gilgamesh.dir
 
 # All Build rule for target.
-CMakeFiles/Gilgamesh.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Gilgamesh"
-.PHONY : CMakeFiles/Gilgamesh.dir/all
+CMakeFiles/gilgamesh.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target gilgamesh"
+.PHONY : CMakeFiles/gilgamesh.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Gilgamesh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Gilgamesh.dir/all
+CMakeFiles/gilgamesh.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gilgamesh.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles 0
-.PHONY : CMakeFiles/Gilgamesh.dir/rule
+.PHONY : CMakeFiles/gilgamesh.dir/rule
 
 # Convenience name for target.
-Gilgamesh: CMakeFiles/Gilgamesh.dir/rule
-.PHONY : Gilgamesh
+gilgamesh: CMakeFiles/gilgamesh.dir/rule
+.PHONY : gilgamesh
 
 # clean rule for target.
-CMakeFiles/Gilgamesh.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gilgamesh.dir/build.make CMakeFiles/Gilgamesh.dir/clean
-.PHONY : CMakeFiles/Gilgamesh.dir/clean
+CMakeFiles/gilgamesh.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/clean
+.PHONY : CMakeFiles/gilgamesh.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

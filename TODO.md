@@ -1,8 +1,5 @@
 # Core engine systems 
-    - Application / entry point
     - Event system 
-    - Custom memory allocater
-    - Window abstraction
     - Input system
     - Renderer 2D/3D -> Basic shapes, fonts/texts, textures, models
     - Scenes
