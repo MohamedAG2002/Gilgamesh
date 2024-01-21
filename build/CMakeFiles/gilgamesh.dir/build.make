@@ -153,10 +153,38 @@ CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/memory_alloc.cpp -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.s
 
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o: CMakeFiles/gilgamesh.dir/flags.make
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o: /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o: CMakeFiles/gilgamesh.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o -MF CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o.d -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp > CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.i
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.s
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o: CMakeFiles/gilgamesh.dir/flags.make
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o: /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o: CMakeFiles/gilgamesh.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o -MF CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o.d -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp > CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.i
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.s
+
 CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o: CMakeFiles/gilgamesh.dir/flags.make
 CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp
 CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o: CMakeFiles/gilgamesh.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o -MF CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o.d -o CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp
 
 CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.i: cmake_force
@@ -175,6 +203,8 @@ gilgamesh_OBJECTS = \
 "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.o" \
 "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o" \
 "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o" \
+"CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o" \
+"CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o" \
 "CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o"
 
 # External object files for target gilgamesh
@@ -186,11 +216,13 @@ gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o
+gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o
+gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/build.make
 gilgamesh: /usr/lib/x86_64-linux-gnu/libglfw.so
 gilgamesh: CMakeFiles/gilgamesh.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable gilgamesh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable gilgamesh"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gilgamesh.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

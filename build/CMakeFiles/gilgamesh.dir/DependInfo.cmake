@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/glad/gl.c" "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/application.cpp" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/logger.cpp" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/memory_alloc.cpp" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/window.cpp" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.o.d"

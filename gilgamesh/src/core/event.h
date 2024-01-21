@@ -30,12 +30,13 @@ enum event_type
 //////////////////////////////////////////////
 struct event_desc 
 {
-  u8 key_pressed, key_released;
-  u8 mouse_button_pressed, mouse_button_released;
+  u16 key_pressed, key_released;
+  u16 mouse_button_pressed, mouse_button_released;
 
   f32 scroll_value;
 
   glm::vec2 mouse_pos;
+  glm::vec2 window_size;
 };
 //////////////////////////////////////////////
 

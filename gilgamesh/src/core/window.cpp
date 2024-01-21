@@ -2,6 +2,7 @@
 #include "defines.h"
 #include "gilg_asserts.h"
 #include "logger.h"
+#include "core/event.h"
 
 #include <GLFW/glfw3.h>
 #include <glad/gl.h>
@@ -50,24 +51,77 @@ void mouse_callback(GLFWwindow* win, f64 x_pos, f64 y_pos)
 
   // Adding the offset to the current mouse position to get the current position
   window.mouse_pos += offset;
+
+  event_desc desc = event_desc{
+    .mouse_pos = window.mouse_pos
+  };
+  dispatch_event(GILG_EVENT_MOUSE_MOVED, desc);
 }
 
 void scroll_callback(GLFWwindow* win, f64 x_off, f64 y_off)
 {
-  window.scroll_val = (f32)y_off;
+  event_desc desc = event_desc{
+    .scroll_value = (f32)y_off
+  };
+  dispatch_event(GILG_EVENT_MOUSE_SCROLL_WHEEL, desc);
 }
 
 void frame_buffer_resize_callback(GLFWwindow* win, i32 width, i32 height)
 {
   window.size = glm::vec2(width, height);
 
+  event_desc desc = event_desc{
+    .window_size = window.size
+  };
+  dispatch_event(GILG_EVENT_WINDOW_RESIZED, desc);
+
   glViewport(0, 0, width, height);
 }
 
 void key_callback(GLFWwindow* win, i32 key, i32 scancode, i32 action, i32 mods)
 {
-  if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-    glfwSetWindowShouldClose(win, true);
+  event_desc desc; 
+  event_type type;
+
+  if(action == GLFW_PRESS)
+  {
+    desc = event_desc{
+      .key_pressed = (u16)key
+    };
+    type = GILG_EVENT_KEY_PRESSED;
+  }
+  else if(action == GLFW_RELEASE)
+  {
+    desc = event_desc{
+      .key_released = (u16)key
+    };
+    type = GILG_EVENT_KEY_RELEASED;
+  }
+    
+  dispatch_event(type, desc);
+}
+
+void mouse_button_callback(GLFWwindow* win, int button, int action, int mods)
+{
+  event_desc desc; 
+  event_type type;
+
+  if(action == GLFW_PRESS)
+  {
+    desc = event_desc{
+      .mouse_button_pressed = (u16)button
+    };
+    type = GILG_EVENT_MOUSE_BUTTON_PRESSED;
+  }
+  else if(action == GLFW_RELEASE)
+  {
+    desc = event_desc{
+      .mouse_button_released = (u16)button
+    };
+    type = GILG_EVENT_MOUSE_BUTTON_RELEASED;
+  }
+    
+  dispatch_event(type, desc);
 }
 
 void error_callback(i32 err_code, const char* desc)
@@ -116,6 +170,7 @@ b8 create_window(i32 width, i32 height, const std::string& title)
   glfwSetScrollCallback(window.handle, scroll_callback);
   glfwSetFramebufferSizeCallback(window.handle, frame_buffer_resize_callback);
   glfwSetKeyCallback(window.handle, key_callback);
+  glfwSetMouseButtonCallback(window.handle, mouse_button_callback); 
   ////////////////////////////////////////////////////////////////////
 
   return true;
@@ -247,6 +302,11 @@ void window_resize(const glm::vec2 size)
 
   glfwSetWindowSize(window.handle, size.x, size.y);
   glViewport(0, 0, size.x, size.y);
+}
+
+GILG_API void close_window()
+{
+  glfwSetWindowShouldClose(window.handle, true);
 }
 
 void set_window_pos(const glm::vec2 pos)

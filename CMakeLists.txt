@@ -28,6 +28,8 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/core/window.cpp
   ${GILG_SOURCE_PATH}/core/logger.cpp
   ${GILG_SOURCE_PATH}/core/memory_alloc.cpp
+  ${GILG_SOURCE_PATH}/core/event.cpp
+  ${GILG_SOURCE_PATH}/core/input.cpp
   ${GILG_SOURCE_PATH}/main.cpp
 )
 

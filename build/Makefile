@@ -153,6 +153,54 @@ gilgamesh/src/core/application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.s
 .PHONY : gilgamesh/src/core/application.cpp.s
 
+gilgamesh/src/core/event.o: gilgamesh/src/core/event.cpp.o
+.PHONY : gilgamesh/src/core/event.o
+
+# target to build an object file
+gilgamesh/src/core/event.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o
+.PHONY : gilgamesh/src/core/event.cpp.o
+
+gilgamesh/src/core/event.i: gilgamesh/src/core/event.cpp.i
+.PHONY : gilgamesh/src/core/event.i
+
+# target to preprocess a source file
+gilgamesh/src/core/event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.i
+.PHONY : gilgamesh/src/core/event.cpp.i
+
+gilgamesh/src/core/event.s: gilgamesh/src/core/event.cpp.s
+.PHONY : gilgamesh/src/core/event.s
+
+# target to generate assembly for a file
+gilgamesh/src/core/event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.s
+.PHONY : gilgamesh/src/core/event.cpp.s
+
+gilgamesh/src/core/input.o: gilgamesh/src/core/input.cpp.o
+.PHONY : gilgamesh/src/core/input.o
+
+# target to build an object file
+gilgamesh/src/core/input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o
+.PHONY : gilgamesh/src/core/input.cpp.o
+
+gilgamesh/src/core/input.i: gilgamesh/src/core/input.cpp.i
+.PHONY : gilgamesh/src/core/input.i
+
+# target to preprocess a source file
+gilgamesh/src/core/input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.i
+.PHONY : gilgamesh/src/core/input.cpp.i
+
+gilgamesh/src/core/input.s: gilgamesh/src/core/input.cpp.s
+.PHONY : gilgamesh/src/core/input.s
+
+# target to generate assembly for a file
+gilgamesh/src/core/input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.s
+.PHONY : gilgamesh/src/core/input.cpp.s
+
 gilgamesh/src/core/logger.o: gilgamesh/src/core/logger.cpp.o
 .PHONY : gilgamesh/src/core/logger.o
 
@@ -309,6 +357,12 @@ help:
 	@echo "... gilgamesh/src/core/application.o"
 	@echo "... gilgamesh/src/core/application.i"
 	@echo "... gilgamesh/src/core/application.s"
+	@echo "... gilgamesh/src/core/event.o"
+	@echo "... gilgamesh/src/core/event.i"
+	@echo "... gilgamesh/src/core/event.s"
+	@echo "... gilgamesh/src/core/input.o"
+	@echo "... gilgamesh/src/core/input.i"
+	@echo "... gilgamesh/src/core/input.s"
 	@echo "... gilgamesh/src/core/logger.o"
 	@echo "... gilgamesh/src/core/logger.i"
 	@echo "... gilgamesh/src/core/logger.s"

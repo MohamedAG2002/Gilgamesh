@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o"
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o.d"
+  "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o"
+  "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o.d"
+  "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o"
+  "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o"
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o"

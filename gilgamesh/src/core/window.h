@@ -35,6 +35,7 @@ GILG_API void set_fullscreen(const b8 fullscreen);
 GILG_API void set_vsync(const b8 vsync);
 GILG_API void set_sensitivity(const f32 value);
 GILG_API void window_resize(const glm::vec2 size);
+GILG_API void close_window();
 GILG_API void set_window_pos(const glm::vec2 pos);
 GILG_API void set_mouse_pos(const glm::vec2 pos);
 GILG_API void set_window_title(const std::string& title);

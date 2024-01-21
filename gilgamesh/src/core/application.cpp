@@ -5,12 +5,19 @@
 #include "core/memory_alloc.h"
 #include "core/window.h"
 #include "core/event.h"
+#include "core/input.h"
+
+namespace gilg {
+
+// Globals 
+///////////////////////////////////////////////
+bool app_running = true;
+///////////////////////////////////////////////
 
 // Private functions
 ///////////////////////////////////////////////
 void update_app()
 {
-
 }
 
 void render_app()
@@ -18,7 +25,23 @@ void render_app()
 }
 ///////////////////////////////////////////////
 
-namespace gilg {
+// Callbacks
+///////////////////////////////////////////////
+bool app_exit_callback(event_type type, event_desc desc)
+{
+  if(type == GILG_EVENT_WINDOW_CLOSED)
+  {
+    app_running = false;
+    dispatch_event(GILG_EVENT_APP_QUIT, event_desc{}); 
+
+    // Event was handled
+    return true;
+  } 
+
+  // Event was not handled. Move one to the next event
+  return false;
+}
+///////////////////////////////////////////////
 
 // App functions
 ///////////////////////////////////////////////
@@ -29,7 +52,7 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
   
   // Event system init 
   if(!init_events())
-    GILG_LOG_ERROR("Failed to initialize event system");
+    GILG_LOG_FATAL("Failed to initialize event system");
 
   // Memory allocater init 
   if(!init_memory_allocater())
@@ -38,11 +61,21 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
   // Window init 
   if(!create_window(window_width, window_height, window_title))
     GILG_LOG_FATAL("Failed to create window");
+
+  // Input init 
+  if(!init_input())
+    GILG_LOG_FATAL("Failed to initialize input system");
+
+  // Listen to events
+  listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);
 }
 
 void destroy_app()
 {
+  shutdown_input();
+
   destroy_window();
+
   shutdown_memory_allocater();
   shutdown_events(); 
   shutdown_logger();
@@ -50,7 +83,7 @@ void destroy_app()
 
 void run_app()
 {
-  while(!window_closed())
+  while(app_running && !window_closed())
   {
     update_app();
     render_app();

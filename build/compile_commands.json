@@ -37,6 +37,18 @@
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp",
   "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o"

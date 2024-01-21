@@ -1,13 +1,14 @@
 #include "core/event.h"
 #include "core/logger.h"
 
+#include <unordered_map>
 #include <vector>
 
 namespace gilg {
 
 // Globals
 //////////////////////////////////////////////
-static std::vector<std::vector<event_func>> events_poll;
+static std::unordered_map<event_type, std::vector<event_func>> events_poll;
 //////////////////////////////////////////////
 
 // Event functions
@@ -23,8 +24,8 @@ void shutdown_events()
 {
   GILG_LOG_INFO("Event system successfully initialized");
 
-  for(auto& pool : events_poll)
-    pool.clear();
+  for(auto& [key, value] : events_poll)
+    value.clear();
   
   events_poll.clear();
 }
