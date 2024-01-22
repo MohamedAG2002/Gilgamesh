@@ -31,6 +31,13 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/core/event.cpp
   ${GILG_SOURCE_PATH}/core/input.cpp
   ${GILG_SOURCE_PATH}/main.cpp
+  
+  # Graphics backend
+  ${GILG_SOURCE_PATH}/graphics/backend/graphics_context.cpp
+  ${GILG_SOURCE_PATH}/graphics/backend/vertex_array.cpp
+
+  # Graphics
+  ${GILG_SOURCE_PATH}/graphics/renderer.cpp
 )
 
 set(LIBS_SOURCES

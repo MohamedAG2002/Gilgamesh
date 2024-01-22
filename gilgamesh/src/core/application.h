@@ -1,10 +1,17 @@
 #pragma once
 
-#include "defines.h"
+#include "core/defines.h"
+#include "graphics/renderer.h"
 
 #include <string>
 
 namespace gilg {
+
+struct application
+{
+  bool is_running;
+  renderer ren;
+};
 
 // App functions
 ///////////////////////////////////////////////

@@ -273,6 +273,54 @@ gilgamesh/src/core/window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.s
 .PHONY : gilgamesh/src/core/window.cpp.s
 
+gilgamesh/src/graphics/backend/graphics_context.o: gilgamesh/src/graphics/backend/graphics_context.cpp.o
+.PHONY : gilgamesh/src/graphics/backend/graphics_context.o
+
+# target to build an object file
+gilgamesh/src/graphics/backend/graphics_context.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.o
+.PHONY : gilgamesh/src/graphics/backend/graphics_context.cpp.o
+
+gilgamesh/src/graphics/backend/graphics_context.i: gilgamesh/src/graphics/backend/graphics_context.cpp.i
+.PHONY : gilgamesh/src/graphics/backend/graphics_context.i
+
+# target to preprocess a source file
+gilgamesh/src/graphics/backend/graphics_context.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.i
+.PHONY : gilgamesh/src/graphics/backend/graphics_context.cpp.i
+
+gilgamesh/src/graphics/backend/graphics_context.s: gilgamesh/src/graphics/backend/graphics_context.cpp.s
+.PHONY : gilgamesh/src/graphics/backend/graphics_context.s
+
+# target to generate assembly for a file
+gilgamesh/src/graphics/backend/graphics_context.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.s
+.PHONY : gilgamesh/src/graphics/backend/graphics_context.cpp.s
+
+gilgamesh/src/graphics/renderer.o: gilgamesh/src/graphics/renderer.cpp.o
+.PHONY : gilgamesh/src/graphics/renderer.o
+
+# target to build an object file
+gilgamesh/src/graphics/renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o
+.PHONY : gilgamesh/src/graphics/renderer.cpp.o
+
+gilgamesh/src/graphics/renderer.i: gilgamesh/src/graphics/renderer.cpp.i
+.PHONY : gilgamesh/src/graphics/renderer.i
+
+# target to preprocess a source file
+gilgamesh/src/graphics/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.i
+.PHONY : gilgamesh/src/graphics/renderer.cpp.i
+
+gilgamesh/src/graphics/renderer.s: gilgamesh/src/graphics/renderer.cpp.s
+.PHONY : gilgamesh/src/graphics/renderer.s
+
+# target to generate assembly for a file
+gilgamesh/src/graphics/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.s
+.PHONY : gilgamesh/src/graphics/renderer.cpp.s
+
 gilgamesh/src/main.o: gilgamesh/src/main.cpp.o
 .PHONY : gilgamesh/src/main.o
 
@@ -372,6 +420,12 @@ help:
 	@echo "... gilgamesh/src/core/window.o"
 	@echo "... gilgamesh/src/core/window.i"
 	@echo "... gilgamesh/src/core/window.s"
+	@echo "... gilgamesh/src/graphics/backend/graphics_context.o"
+	@echo "... gilgamesh/src/graphics/backend/graphics_context.i"
+	@echo "... gilgamesh/src/graphics/backend/graphics_context.s"
+	@echo "... gilgamesh/src/graphics/renderer.o"
+	@echo "... gilgamesh/src/graphics/renderer.i"
+	@echo "... gilgamesh/src/graphics/renderer.s"
 	@echo "... gilgamesh/src/main.o"
 	@echo "... gilgamesh/src/main.i"
 	@echo "... gilgamesh/src/main.s"

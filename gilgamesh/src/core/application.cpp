@@ -11,17 +11,23 @@ namespace gilg {
 
 // Globals 
 ///////////////////////////////////////////////
-bool app_running = true;
+static application app;
 ///////////////////////////////////////////////
 
 // Private functions
 ///////////////////////////////////////////////
 void update_app()
 {
+  if(is_key_pressed(GILG_KEY_ESCAPE))
+    app.is_running = false;
 }
 
 void render_app()
 {
+  clear_renderer(app.ren, color(0.1f, 0.1f, 0.1f, 1.0f));
+  begin_renderer(app.ren);
+
+  end_renderer(app.ren);
 }
 ///////////////////////////////////////////////
 
@@ -31,7 +37,7 @@ bool app_exit_callback(event_type type, event_desc desc)
 {
   if(type == GILG_EVENT_WINDOW_CLOSED)
   {
-    app_running = false;
+    app.is_running = false;
     dispatch_event(GILG_EVENT_APP_QUIT, event_desc{}); 
 
     // Event was handled
@@ -68,10 +74,16 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
 
   // Listen to events
   listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);
+
+  // App init
+  app.is_running = true;
+  app.ren = create_renderer();
 }
 
 void destroy_app()
 {
+  destroy_renderer(app.ren);
+
   shutdown_input();
 
   destroy_window();
@@ -83,7 +95,7 @@ void destroy_app()
 
 void run_app()
 {
-  while(app_running && !window_closed())
+  while(app.is_running && !window_closed())
   {
     update_app();
     render_app();

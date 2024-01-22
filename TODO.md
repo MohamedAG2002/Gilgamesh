@@ -1,6 +1,4 @@
 # Core engine systems 
-    - Event system 
-    - Input system
     - Renderer 2D/3D -> Basic shapes, fonts/texts, textures, models
     - Scenes
     - Entities

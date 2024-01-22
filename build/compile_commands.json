@@ -52,5 +52,17 @@
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp",
   "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/graphics_context.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/graphics_context.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o"
 }
 ]
