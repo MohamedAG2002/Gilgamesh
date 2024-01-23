@@ -4,7 +4,22 @@
 
 #include <glad/gl.h>
 
+#include <vector>
+
 namespace gilg {
+
+// Private functions
+///////////////////////////////////////////////////////
+u32 calculate_stride(const std::vector<layout_data_type>& layout)
+{
+  u32 stride = 0;
+
+  for(int i = 0; i < layout.size(); i++)
+    stride += layout[i];
+
+  return stride;
+}
+///////////////////////////////////////////////////////
 
 // Vertex Array functions
 ///////////////////////////////////////////////////////
@@ -50,10 +65,45 @@ void vertex_array_push_buffer(const vertex_array& va, const buffer_desc& desc)
   glBufferData((u32)desc.type, desc.data.size, desc.data.data, desc.usage);
 }
 
-void vertex_array_push_layout(const vertex_array& va, u32 index, u32 comps, layout_data_type data_type, bool normalized, usizei stride, usizei offset)
+void vertex_array_push_layout(const vertex_array& va, const std::vector<layout_data_type>& layout)
 {
-  glEnableVertexAttribArray(index);
-  glVertexAttribPointer(index, comps, data_type, normalized, stride, (const void*)offset);
+  u32 stride = calculate_stride(layout); 
+
+  for(int i = 0; i < layout.size(); i++)
+  {
+    buffer_element element;
+
+    switch(layout[i])
+    {
+      case GILG_FLOAT1:
+        element.size = 1;
+        element.type = GL_FLOAT; 
+        element.normalized = false;
+        break;
+      case GILG_FLOAT2:
+        element.size = 2;
+        element.type = GL_FLOAT; 
+        element.normalized = false;
+        break;
+      case GILG_FLOAT3:
+        element.size = 3;
+        element.type = GL_FLOAT; 
+        element.normalized = false;
+        break;
+      case GILG_FLOAT4:
+        element.size = 4;
+        element.type = GL_FLOAT; 
+        element.normalized = false;
+        break;
+    }
+
+    usizei offset = 0;
+    if(i > 0)
+      offset = layout[i - 1];  
+
+    glEnableVertexAttribArray(i);
+    glVertexAttribPointer(i, element.size, element.type, element.normalized, stride, (const void*)offset);
+  }
 }
 ///////////////////////////////////////////////////////
 

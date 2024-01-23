@@ -7,12 +7,9 @@
 #include "core/logger.h"
 #include "core/defines.h"
 
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/ext/matrix_transform.hpp>
-
 #include <string>
 #include <unordered_map>
+#include <vector>
 
 struct vertex 
 {
@@ -27,10 +24,10 @@ namespace gilg {
 void setup_buffers(renderer& ren)
 {
   vertex vertices[] = {
-    // Position         Texture coords
+    // Position                    Texture coords
     glm::vec3(-0.5f, -0.5f, 0.0f), glm::vec2(0, 1), // Top-left
-    glm::vec3(0.5f, -0.5f, 0.0f), glm::vec2(1, 1), // Top-right
-    glm::vec3(0.5f,  0.5f, 0.0f), glm::vec2(1, 0), // Bottom-right
+    glm::vec3( 0.5f, -0.5f, 0.0f), glm::vec2(1, 1), // Top-right
+    glm::vec3( 0.5f,  0.5f, 0.0f), glm::vec2(1, 0), // Bottom-right
     glm::vec3(-0.5f,  0.5f, 0.0f), glm::vec2(0, 0), // Bottom-left
   };
 
@@ -58,11 +55,11 @@ void setup_buffers(renderer& ren)
   vertex_array_push_buffer(ren.quad_va, ebo_desc);
 
   // Pushing layout 
-  // Position 
-  vertex_array_push_layout(ren.quad_va, 0, 3, GILG_LAYOUT_DAT_TYPE_FLOAT, false, sizeof(vertex), offsetof(vertex, position));
- 
-  // Texture coords
-  vertex_array_push_layout(ren.quad_va, 1, 2, GILG_LAYOUT_DAT_TYPE_FLOAT, false, sizeof(vertex), offsetof(vertex, texture_coords));
+  std::vector<layout_data_type> layout = {
+    GILG_FLOAT3, 
+    GILG_FLOAT2,
+  };
+  vertex_array_push_layout(ren.quad_va, layout);
 
   unbind_vertex_array(ren.quad_va);
 }
@@ -81,9 +78,7 @@ renderer create_renderer()
   ren.shaders["texture"] = load_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
   ren.current_shader = ren.shaders["texture"];
 
-  ren.texture = load_texture2d("assets/textures/stupid_pic.jpg");
-  bind_shader(ren.current_shader);
-  set_shader_int(ren.current_shader, "tex", 0);
+  ren.texture = load_texture2d("assets/textures/container.jpg");
 
   GILG_LOG_INFO("Renderer was successfully created");
   return ren;

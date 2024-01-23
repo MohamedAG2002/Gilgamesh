@@ -34,21 +34,24 @@ enum buffer_usage
 };
 ///////////////////////////////////////////////////////
 
+// Buffer Element enum
+///////////////////////////////////////////////////////
+struct buffer_element 
+{
+  i32 size;
+  u32 type;
+  b8 normalized;
+};
+///////////////////////////////////////////////////////
+
 // Layout Data Type enum
 ///////////////////////////////////////////////////////
 enum layout_data_type 
 {
-  GILG_LAYOUT_DAT_TYPE_BYTE  = 0x1400,
-  GILG_LAYOUT_DAT_TYPE_UBYTE = 0x1401,
-  
-  GILG_LAYOUT_DAT_TYPE_SHORT   = 0x1402,
-  GILG_LAYOUT_DAT_TYPE_USHORT  = 0x1403,
-  
-  GILG_LAYOUT_DAT_TYPE_INT  = 0x1404,
-  GILG_LAYOUT_DAT_TYPE_UINT = 0x1405,
-
-  GILG_LAYOUT_DAT_TYPE_FLOAT      = 0x1406,
-  GILG_LAYOUT_DAT_TYPE_HALF_FLOAT = 0x1408,
+  GILG_FLOAT1 = sizeof(float),
+  GILG_FLOAT2 = sizeof(float) * 2, 
+  GILG_FLOAT3 = sizeof(float) * 3,
+  GILG_FLOAT4 = sizeof(float) * 4,
 };
 ///////////////////////////////////////////////////////
 
