@@ -209,10 +209,24 @@ CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/graphics_context.cpp -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.s
 
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o: CMakeFiles/gilgamesh.dir/flags.make
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o: /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/vertex_array.cpp
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o: CMakeFiles/gilgamesh.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o -MF CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o.d -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/vertex_array.cpp
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/vertex_array.cpp > CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.i
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/vertex_array.cpp -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.s
+
 CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o: CMakeFiles/gilgamesh.dir/flags.make
 CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o: /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp
 CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o: CMakeFiles/gilgamesh.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o -MF CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o.d -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp
 
 CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.i: cmake_force
@@ -222,6 +236,20 @@ CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.i: cmake_force
 CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.s
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o: CMakeFiles/gilgamesh.dir/flags.make
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o: /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o: CMakeFiles/gilgamesh.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o -MF CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o.d -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp > CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.i
+
+CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.s
 
 # Object files for target gilgamesh
 gilgamesh_OBJECTS = \
@@ -235,7 +263,9 @@ gilgamesh_OBJECTS = \
 "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o" \
 "CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o" \
 "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.o" \
-"CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o"
+"CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o" \
+"CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o" \
+"CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o"
 
 # External object files for target gilgamesh
 gilgamesh_EXTERNAL_OBJECTS =
@@ -250,11 +280,13 @@ gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.o
+gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o
+gilgamesh: CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o
 gilgamesh: CMakeFiles/gilgamesh.dir/build.make
 gilgamesh: /usr/lib/x86_64-linux-gnu/libglfw.so
 gilgamesh: CMakeFiles/gilgamesh.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable gilgamesh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable gilgamesh"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gilgamesh.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

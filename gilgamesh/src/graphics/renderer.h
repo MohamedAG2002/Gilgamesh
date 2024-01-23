@@ -3,6 +3,7 @@
 #include "graphics/backend/graphics_context.h"
 #include "graphics/backend/vertex_array.h"
 #include "graphics/color.h"
+#include "graphics/shader.h"
 
 namespace gilg {
 
@@ -12,6 +13,7 @@ struct renderer
 {
   graphics_context context;
   vertex_array quad_va;
+  shader basic_shader;
 };
 ///////////////////////////////////////////////////////
 

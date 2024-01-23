@@ -38,6 +38,7 @@ set(GILG_SOURCES
 
   # Graphics
   ${GILG_SOURCE_PATH}/graphics/renderer.cpp
+  ${GILG_SOURCE_PATH}/graphics/shader.cpp
 )
 
 set(LIBS_SOURCES
@@ -46,6 +47,13 @@ set(LIBS_SOURCES
 )
 ######################################
 
+# Copying assets
+######################################
+file(COPY assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+######################################
+
+# Linking
+######################################
 add_executable(${PROJECT_NAME} ${LIBS_SOURCES} ${GILG_SOURCES})
 
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_LIBS_PATH}/include)
@@ -54,3 +62,4 @@ target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_SOURCE_PATH})
 target_link_libraries(${PROJECT_NAME} PUBLIC
   ${glfw}  
 )
+######################################

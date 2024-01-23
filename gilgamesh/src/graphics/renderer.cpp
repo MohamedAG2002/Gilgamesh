@@ -2,6 +2,7 @@
 #include "graphics/color.h"
 #include "graphics/backend/graphics_context.h"
 #include "graphics/backend/vertex_array.h"
+#include "graphics/shader.h"
 #include "core/logger.h"
 #include "core/defines.h"
 
@@ -12,10 +13,10 @@ namespace gilg {
 void setup_buffers(renderer& ren)
 {
   float vertices[] = {
-    -0.5f,  0.5f, 0.0f, 
-     0.5f,  0.5f, 0.0f, 
-     0.5f, -0.5f, 0.0f,
-    -0.5f, -0.5f, 0.0f
+    -0.5f, -0.5f, 0.0f, // Top-left
+     0.5f, -0.5f, 0.0f, // Top-right
+     0.5f,  0.5f, 0.0f, // Bottom-right
+    -0.5f,  0.5f, 0.0f  // Bottom-left
   };
 
   u32 indices[] = {
@@ -43,7 +44,7 @@ void setup_buffers(renderer& ren)
 
   // Pushing layout 
   // Position 
-  vertex_array_push_layout(ren.quad_va, 0, 3, GILG_LAYOUT_DAT_TYPE_FLOAT, false, sizeof(float), 0);
+  vertex_array_push_layout(ren.quad_va, 0, 3, GILG_LAYOUT_DAT_TYPE_FLOAT, false, sizeof(float) * 3, 0);
 
   unbind_vertex_array(ren.quad_va);
 }
@@ -56,6 +57,9 @@ renderer create_renderer()
   renderer ren;
   ren.context = create_gcontext();
   ren.quad_va = create_vertex_array();
+  setup_buffers(ren);
+
+  ren.basic_shader = load_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
 
   GILG_LOG_INFO("Renderer was successfully created");
   return ren;
@@ -76,6 +80,8 @@ void clear_renderer(renderer& renderer, const color& color)
 
 void begin_renderer(renderer& renderer)
 {
+  bind_shader(renderer.basic_shader);
+
   bind_vertex_array(renderer.quad_va);
   gcontext_draw_index(renderer.context, GILG_DRAW_TRIANGLES, 6);
   unbind_vertex_array(renderer.quad_va);

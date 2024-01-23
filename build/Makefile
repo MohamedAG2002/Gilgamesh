@@ -297,6 +297,30 @@ gilgamesh/src/graphics/backend/graphics_context.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.s
 .PHONY : gilgamesh/src/graphics/backend/graphics_context.cpp.s
 
+gilgamesh/src/graphics/backend/vertex_array.o: gilgamesh/src/graphics/backend/vertex_array.cpp.o
+.PHONY : gilgamesh/src/graphics/backend/vertex_array.o
+
+# target to build an object file
+gilgamesh/src/graphics/backend/vertex_array.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o
+.PHONY : gilgamesh/src/graphics/backend/vertex_array.cpp.o
+
+gilgamesh/src/graphics/backend/vertex_array.i: gilgamesh/src/graphics/backend/vertex_array.cpp.i
+.PHONY : gilgamesh/src/graphics/backend/vertex_array.i
+
+# target to preprocess a source file
+gilgamesh/src/graphics/backend/vertex_array.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.i
+.PHONY : gilgamesh/src/graphics/backend/vertex_array.cpp.i
+
+gilgamesh/src/graphics/backend/vertex_array.s: gilgamesh/src/graphics/backend/vertex_array.cpp.s
+.PHONY : gilgamesh/src/graphics/backend/vertex_array.s
+
+# target to generate assembly for a file
+gilgamesh/src/graphics/backend/vertex_array.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.s
+.PHONY : gilgamesh/src/graphics/backend/vertex_array.cpp.s
+
 gilgamesh/src/graphics/renderer.o: gilgamesh/src/graphics/renderer.cpp.o
 .PHONY : gilgamesh/src/graphics/renderer.o
 
@@ -320,6 +344,30 @@ gilgamesh/src/graphics/renderer.s: gilgamesh/src/graphics/renderer.cpp.s
 gilgamesh/src/graphics/renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.s
 .PHONY : gilgamesh/src/graphics/renderer.cpp.s
+
+gilgamesh/src/graphics/shader.o: gilgamesh/src/graphics/shader.cpp.o
+.PHONY : gilgamesh/src/graphics/shader.o
+
+# target to build an object file
+gilgamesh/src/graphics/shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o
+.PHONY : gilgamesh/src/graphics/shader.cpp.o
+
+gilgamesh/src/graphics/shader.i: gilgamesh/src/graphics/shader.cpp.i
+.PHONY : gilgamesh/src/graphics/shader.i
+
+# target to preprocess a source file
+gilgamesh/src/graphics/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.i
+.PHONY : gilgamesh/src/graphics/shader.cpp.i
+
+gilgamesh/src/graphics/shader.s: gilgamesh/src/graphics/shader.cpp.s
+.PHONY : gilgamesh/src/graphics/shader.s
+
+# target to generate assembly for a file
+gilgamesh/src/graphics/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.s
+.PHONY : gilgamesh/src/graphics/shader.cpp.s
 
 gilgamesh/src/main.o: gilgamesh/src/main.cpp.o
 .PHONY : gilgamesh/src/main.o
@@ -423,9 +471,15 @@ help:
 	@echo "... gilgamesh/src/graphics/backend/graphics_context.o"
 	@echo "... gilgamesh/src/graphics/backend/graphics_context.i"
 	@echo "... gilgamesh/src/graphics/backend/graphics_context.s"
+	@echo "... gilgamesh/src/graphics/backend/vertex_array.o"
+	@echo "... gilgamesh/src/graphics/backend/vertex_array.i"
+	@echo "... gilgamesh/src/graphics/backend/vertex_array.s"
 	@echo "... gilgamesh/src/graphics/renderer.o"
 	@echo "... gilgamesh/src/graphics/renderer.i"
 	@echo "... gilgamesh/src/graphics/renderer.s"
+	@echo "... gilgamesh/src/graphics/shader.o"
+	@echo "... gilgamesh/src/graphics/shader.i"
+	@echo "... gilgamesh/src/graphics/shader.s"
 	@echo "... gilgamesh/src/main.o"
 	@echo "... gilgamesh/src/main.i"
 	@echo "... gilgamesh/src/main.s"

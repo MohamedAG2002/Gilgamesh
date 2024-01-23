@@ -61,8 +61,20 @@
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/vertex_array.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/vertex_array.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp",
   "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o"
 }
 ]
