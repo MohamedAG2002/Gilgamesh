@@ -4,6 +4,10 @@
 #include "graphics/backend/vertex_array.h"
 #include "graphics/color.h"
 #include "graphics/shader.h"
+#include "graphics/texture2d.h"
+
+#include <string>
+#include <unordered_map>
 
 namespace gilg {
 
@@ -13,7 +17,9 @@ struct renderer
 {
   graphics_context context;
   vertex_array quad_va;
-  shader basic_shader;
+  std::unordered_map<std::string, shader> shaders;
+  shader current_shader;
+  texture2d texture;
 };
 ///////////////////////////////////////////////////////
 

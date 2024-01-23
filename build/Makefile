@@ -369,6 +369,30 @@ gilgamesh/src/graphics/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.s
 .PHONY : gilgamesh/src/graphics/shader.cpp.s
 
+gilgamesh/src/graphics/texture2d.o: gilgamesh/src/graphics/texture2d.cpp.o
+.PHONY : gilgamesh/src/graphics/texture2d.o
+
+# target to build an object file
+gilgamesh/src/graphics/texture2d.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.o
+.PHONY : gilgamesh/src/graphics/texture2d.cpp.o
+
+gilgamesh/src/graphics/texture2d.i: gilgamesh/src/graphics/texture2d.cpp.i
+.PHONY : gilgamesh/src/graphics/texture2d.i
+
+# target to preprocess a source file
+gilgamesh/src/graphics/texture2d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.i
+.PHONY : gilgamesh/src/graphics/texture2d.cpp.i
+
+gilgamesh/src/graphics/texture2d.s: gilgamesh/src/graphics/texture2d.cpp.s
+.PHONY : gilgamesh/src/graphics/texture2d.s
+
+# target to generate assembly for a file
+gilgamesh/src/graphics/texture2d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.s
+.PHONY : gilgamesh/src/graphics/texture2d.cpp.s
+
 gilgamesh/src/main.o: gilgamesh/src/main.cpp.o
 .PHONY : gilgamesh/src/main.o
 
@@ -480,6 +504,9 @@ help:
 	@echo "... gilgamesh/src/graphics/shader.o"
 	@echo "... gilgamesh/src/graphics/shader.i"
 	@echo "... gilgamesh/src/graphics/shader.s"
+	@echo "... gilgamesh/src/graphics/texture2d.o"
+	@echo "... gilgamesh/src/graphics/texture2d.i"
+	@echo "... gilgamesh/src/graphics/texture2d.s"
 	@echo "... gilgamesh/src/main.o"
 	@echo "... gilgamesh/src/main.i"
 	@echo "... gilgamesh/src/main.s"

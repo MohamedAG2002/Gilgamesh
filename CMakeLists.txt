@@ -39,6 +39,7 @@ set(GILG_SOURCES
   # Graphics
   ${GILG_SOURCE_PATH}/graphics/renderer.cpp
   ${GILG_SOURCE_PATH}/graphics/shader.cpp
+  ${GILG_SOURCE_PATH}/graphics/texture2d.cpp
 )
 
 set(LIBS_SOURCES

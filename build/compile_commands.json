@@ -76,5 +76,11 @@
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp",
   "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/texture2d.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/texture2d.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.o"
 }
 ]

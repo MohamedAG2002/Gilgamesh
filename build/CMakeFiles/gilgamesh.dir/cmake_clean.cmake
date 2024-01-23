@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o"
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o.d"
+  "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.o"
+  "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o"
   "CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o"
