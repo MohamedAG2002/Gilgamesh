@@ -19,8 +19,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/graphics_context.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o.d"
-  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/shader.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.o.d"
-  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/texture2d.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/gilg_random.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

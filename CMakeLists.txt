@@ -30,15 +30,21 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/core/memory_alloc.cpp
   ${GILG_SOURCE_PATH}/core/event.cpp
   ${GILG_SOURCE_PATH}/core/input.cpp
-  
+
+  # Math 
+  ${GILG_SOURCE_PATH}/math/gilg_random.cpp
+
   # Graphics backend
   ${GILG_SOURCE_PATH}/graphics/backend/graphics_context.cpp
   ${GILG_SOURCE_PATH}/graphics/backend/vertex_array.cpp
 
   # Graphics
   ${GILG_SOURCE_PATH}/graphics/renderer.cpp
-  ${GILG_SOURCE_PATH}/graphics/shader.cpp
-  ${GILG_SOURCE_PATH}/graphics/texture2d.cpp
+  
+  # Resources
+  ${GILG_SOURCE_PATH}/resources/resource_manager.cpp
+  ${GILG_SOURCE_PATH}/resources/shader.cpp
+  ${GILG_SOURCE_PATH}/resources/texture2d.cpp
 )
 
 set(LIBS_SOURCES

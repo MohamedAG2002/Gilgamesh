@@ -393,53 +393,101 @@ src/gilgamesh/graphics/renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.s
 .PHONY : src/gilgamesh/graphics/renderer.cpp.s
 
-src/gilgamesh/graphics/shader.o: src/gilgamesh/graphics/shader.cpp.o
-.PHONY : src/gilgamesh/graphics/shader.o
+src/gilgamesh/math/gilg_random.o: src/gilgamesh/math/gilg_random.cpp.o
+.PHONY : src/gilgamesh/math/gilg_random.o
 
 # target to build an object file
-src/gilgamesh/graphics/shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.o
-.PHONY : src/gilgamesh/graphics/shader.cpp.o
+src/gilgamesh/math/gilg_random.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o
+.PHONY : src/gilgamesh/math/gilg_random.cpp.o
 
-src/gilgamesh/graphics/shader.i: src/gilgamesh/graphics/shader.cpp.i
-.PHONY : src/gilgamesh/graphics/shader.i
+src/gilgamesh/math/gilg_random.i: src/gilgamesh/math/gilg_random.cpp.i
+.PHONY : src/gilgamesh/math/gilg_random.i
 
 # target to preprocess a source file
-src/gilgamesh/graphics/shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.i
-.PHONY : src/gilgamesh/graphics/shader.cpp.i
+src/gilgamesh/math/gilg_random.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.i
+.PHONY : src/gilgamesh/math/gilg_random.cpp.i
 
-src/gilgamesh/graphics/shader.s: src/gilgamesh/graphics/shader.cpp.s
-.PHONY : src/gilgamesh/graphics/shader.s
+src/gilgamesh/math/gilg_random.s: src/gilgamesh/math/gilg_random.cpp.s
+.PHONY : src/gilgamesh/math/gilg_random.s
 
 # target to generate assembly for a file
-src/gilgamesh/graphics/shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.s
-.PHONY : src/gilgamesh/graphics/shader.cpp.s
+src/gilgamesh/math/gilg_random.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.s
+.PHONY : src/gilgamesh/math/gilg_random.cpp.s
 
-src/gilgamesh/graphics/texture2d.o: src/gilgamesh/graphics/texture2d.cpp.o
-.PHONY : src/gilgamesh/graphics/texture2d.o
+src/gilgamesh/resources/resource_manager.o: src/gilgamesh/resources/resource_manager.cpp.o
+.PHONY : src/gilgamesh/resources/resource_manager.o
 
 # target to build an object file
-src/gilgamesh/graphics/texture2d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.o
-.PHONY : src/gilgamesh/graphics/texture2d.cpp.o
+src/gilgamesh/resources/resource_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o
+.PHONY : src/gilgamesh/resources/resource_manager.cpp.o
 
-src/gilgamesh/graphics/texture2d.i: src/gilgamesh/graphics/texture2d.cpp.i
-.PHONY : src/gilgamesh/graphics/texture2d.i
+src/gilgamesh/resources/resource_manager.i: src/gilgamesh/resources/resource_manager.cpp.i
+.PHONY : src/gilgamesh/resources/resource_manager.i
 
 # target to preprocess a source file
-src/gilgamesh/graphics/texture2d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.i
-.PHONY : src/gilgamesh/graphics/texture2d.cpp.i
+src/gilgamesh/resources/resource_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.i
+.PHONY : src/gilgamesh/resources/resource_manager.cpp.i
 
-src/gilgamesh/graphics/texture2d.s: src/gilgamesh/graphics/texture2d.cpp.s
-.PHONY : src/gilgamesh/graphics/texture2d.s
+src/gilgamesh/resources/resource_manager.s: src/gilgamesh/resources/resource_manager.cpp.s
+.PHONY : src/gilgamesh/resources/resource_manager.s
 
 # target to generate assembly for a file
-src/gilgamesh/graphics/texture2d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.s
-.PHONY : src/gilgamesh/graphics/texture2d.cpp.s
+src/gilgamesh/resources/resource_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.s
+.PHONY : src/gilgamesh/resources/resource_manager.cpp.s
+
+src/gilgamesh/resources/shader.o: src/gilgamesh/resources/shader.cpp.o
+.PHONY : src/gilgamesh/resources/shader.o
+
+# target to build an object file
+src/gilgamesh/resources/shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o
+.PHONY : src/gilgamesh/resources/shader.cpp.o
+
+src/gilgamesh/resources/shader.i: src/gilgamesh/resources/shader.cpp.i
+.PHONY : src/gilgamesh/resources/shader.i
+
+# target to preprocess a source file
+src/gilgamesh/resources/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.i
+.PHONY : src/gilgamesh/resources/shader.cpp.i
+
+src/gilgamesh/resources/shader.s: src/gilgamesh/resources/shader.cpp.s
+.PHONY : src/gilgamesh/resources/shader.s
+
+# target to generate assembly for a file
+src/gilgamesh/resources/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.s
+.PHONY : src/gilgamesh/resources/shader.cpp.s
+
+src/gilgamesh/resources/texture2d.o: src/gilgamesh/resources/texture2d.cpp.o
+.PHONY : src/gilgamesh/resources/texture2d.o
+
+# target to build an object file
+src/gilgamesh/resources/texture2d.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o
+.PHONY : src/gilgamesh/resources/texture2d.cpp.o
+
+src/gilgamesh/resources/texture2d.i: src/gilgamesh/resources/texture2d.cpp.i
+.PHONY : src/gilgamesh/resources/texture2d.i
+
+# target to preprocess a source file
+src/gilgamesh/resources/texture2d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.i
+.PHONY : src/gilgamesh/resources/texture2d.cpp.i
+
+src/gilgamesh/resources/texture2d.s: src/gilgamesh/resources/texture2d.cpp.s
+.PHONY : src/gilgamesh/resources/texture2d.s
+
+# target to generate assembly for a file
+src/gilgamesh/resources/texture2d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.s
+.PHONY : src/gilgamesh/resources/texture2d.cpp.s
 
 # Help Target
 help:
@@ -483,12 +531,18 @@ help:
 	@echo "... src/gilgamesh/graphics/renderer.o"
 	@echo "... src/gilgamesh/graphics/renderer.i"
 	@echo "... src/gilgamesh/graphics/renderer.s"
-	@echo "... src/gilgamesh/graphics/shader.o"
-	@echo "... src/gilgamesh/graphics/shader.i"
-	@echo "... src/gilgamesh/graphics/shader.s"
-	@echo "... src/gilgamesh/graphics/texture2d.o"
-	@echo "... src/gilgamesh/graphics/texture2d.i"
-	@echo "... src/gilgamesh/graphics/texture2d.s"
+	@echo "... src/gilgamesh/math/gilg_random.o"
+	@echo "... src/gilgamesh/math/gilg_random.i"
+	@echo "... src/gilgamesh/math/gilg_random.s"
+	@echo "... src/gilgamesh/resources/resource_manager.o"
+	@echo "... src/gilgamesh/resources/resource_manager.i"
+	@echo "... src/gilgamesh/resources/resource_manager.s"
+	@echo "... src/gilgamesh/resources/shader.o"
+	@echo "... src/gilgamesh/resources/shader.i"
+	@echo "... src/gilgamesh/resources/shader.s"
+	@echo "... src/gilgamesh/resources/texture2d.o"
+	@echo "... src/gilgamesh/resources/texture2d.i"
+	@echo "... src/gilgamesh/resources/texture2d.s"
 .PHONY : help
 
 

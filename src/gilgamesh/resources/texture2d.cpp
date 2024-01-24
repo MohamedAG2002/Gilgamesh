@@ -1,4 +1,4 @@
-#include "graphics/texture2d.h"
+#include "texture2d.h"
 #include "core/defines.h"
 #include "core/logger.h"
 

@@ -3,8 +3,8 @@
 #include "graphics/backend/graphics_context.h"
 #include "graphics/backend/vertex_array.h"
 #include "graphics/color.h"
-#include "graphics/shader.h"
-#include "graphics/texture2d.h"
+#include "resources/shader.h"
+#include "resources/texture2d.h"
 
 #include <string>
 #include <unordered_map>

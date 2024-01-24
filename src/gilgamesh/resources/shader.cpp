@@ -1,4 +1,4 @@
-#include "graphics/shader.h"
+#include "shader.h"
 #include "core/defines.h"
 #include "core/logger.h"
 

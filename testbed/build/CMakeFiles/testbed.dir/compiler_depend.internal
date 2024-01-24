@@ -151,8 +151,8 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/color.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.h
- /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/shader.h
- /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/texture2d.h
+ /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h
+ /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h

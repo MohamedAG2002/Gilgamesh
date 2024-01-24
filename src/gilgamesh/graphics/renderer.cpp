@@ -2,20 +2,15 @@
 #include "graphics/color.h"
 #include "graphics/backend/graphics_context.h"
 #include "graphics/backend/vertex_array.h"
-#include "graphics/shader.h"
-#include "graphics/texture2d.h"
+#include "resources/shader.h"
+#include "resources/texture2d.h"
 #include "core/logger.h"
 #include "core/defines.h"
+#include "math/vertex.h"
 
 #include <string>
 #include <unordered_map>
 #include <vector>
-
-struct vertex 
-{
-  glm::vec3 position;
-  glm::vec2 texture_coords;
-};
 
 namespace gilg {
 

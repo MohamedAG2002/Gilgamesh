@@ -1,5 +1,6 @@
 #include "logger.h"
 #include "defines.h"
+#include "core/event.h"
 
 #include <string>
 #include <cstdio>
@@ -34,6 +35,9 @@ void log_info(log_level level, const std::string& msg, ...)
   const char* levels[] = { "NONE", "TRACE", "DEBUG", "INFO", "WARN", "ERROR", "FATAL"};
 
   printf("[GILG-%s]: %s\n", levels[log_index], msg.c_str());
+
+  if(level == FATAL)
+    dispatch_event(GILG_EVENT_APP_QUIT, event_desc{});
 }
 //////////////////////////////////////////////////////
 

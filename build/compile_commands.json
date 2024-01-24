@@ -49,6 +49,12 @@
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/gilg_random.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/gilg_random.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/graphics_context.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/graphics_context.cpp",
   "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o"
@@ -67,14 +73,20 @@
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/shader.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/shader.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/texture2d.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/texture2d.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o"
 }
 ]

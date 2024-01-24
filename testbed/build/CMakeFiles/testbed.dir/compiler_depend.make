@@ -150,8 +150,8 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/color.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.h \
-  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/shader.h \
-  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/texture2d.h \
+  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h \
+  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -682,6 +682,10 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/func_integer.inl:
 
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/c++/11/tr1/ell_integral.tcc:
+
 /usr/include/c++/11/ext/numeric_traits.h:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/matrix_double2x3_precision.hpp:
@@ -780,8 +784,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/func_common.inl:
 
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/texture2d.h:
-
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/matrix_float4x2.hpp:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/mat4x3.hpp:
@@ -848,10 +850,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/trigonometric.hpp:
 
-/usr/include/time.h:
-
-/home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec3.hpp:
-
 /usr/include/c++/11/bits/memoryfwd.h:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec4.hpp:
@@ -876,11 +874,13 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 
 /usr/include/math.h:
 
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+/usr/include/time.h:
 
-/usr/include/c++/11/tr1/ell_integral.tcc:
+/home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec3.hpp:
 
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/shader.h:
+/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h:
+
+/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h:
 
 /usr/include/alloca.h:
 

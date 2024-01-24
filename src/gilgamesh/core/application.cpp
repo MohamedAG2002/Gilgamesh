@@ -6,6 +6,7 @@
 #include "core/window.h"
 #include "core/event.h"
 #include "core/input.h"
+#include "resources/resource_manager.h"
 
 namespace gilg {
 
@@ -58,7 +59,7 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
   
   // Event system init 
   if(!init_events())
-    GILG_LOG_FATAL("Failed to initialize event system");
+    GILG_LOG_ERROR("Failed to initialize event system");
 
   // Memory allocater init 
   if(!init_memory_allocater())
@@ -70,18 +71,24 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
 
   // Input init 
   if(!init_input())
-    GILG_LOG_FATAL("Failed to initialize input system");
-
-  // Listen to events
-  listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);
-
+    GILG_LOG_ERROR("Failed to initialize input system");
+  
   // App init
   app.is_running = true;
   app.ren = create_renderer();
+
+  // Resource Manager init 
+  if(!init_resource_manager())
+    GILG_LOG_ERROR("Could not initialize resource manager");
+
+  // Listen to events
+  listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);
 }
 
 void destroy_app()
 {
+  shutdown_resource_manager();
+
   destroy_renderer(app.ren);
 
   shutdown_input();
