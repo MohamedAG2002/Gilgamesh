@@ -3,9 +3,9 @@ project(gilgamesh)
 
 # Setting project variables
 ######################################
-set(GILG_LIBRARY_TYPE SHARED)
+set(GILG_LIBRARY_TYPE STATIC)
 set(GILG_BUILD_TYPE Debug)
-set(GILG_SOURCE_PATH ${CMAKE_SOURCE_DIR}/gilgamesh/src)
+set(GILG_SOURCE_PATH ${CMAKE_SOURCE_DIR}/src/gilgamesh/)
 set(GILG_LIBS_PATH ${CMAKE_SOURCE_DIR}/libs)
 ######################################
 
@@ -30,7 +30,6 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/core/memory_alloc.cpp
   ${GILG_SOURCE_PATH}/core/event.cpp
   ${GILG_SOURCE_PATH}/core/input.cpp
-  ${GILG_SOURCE_PATH}/main.cpp
   
   # Graphics backend
   ${GILG_SOURCE_PATH}/graphics/backend/graphics_context.cpp
@@ -55,7 +54,7 @@ file(COPY assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 # Linking
 ######################################
-add_executable(${PROJECT_NAME} ${LIBS_SOURCES} ${GILG_SOURCES})
+add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${LIBS_SOURCES} ${GILG_SOURCES})
 
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_LIBS_PATH}/include)
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_SOURCE_PATH})

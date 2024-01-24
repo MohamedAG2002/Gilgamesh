@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/testbed.dir/core_test/main.cpp.o -o testbed  /home/mohamed/Dev/C++/GilgameshEngine//build/libgilgamesh.a /usr/lib/x86_64-linux-gnu/libglfw.so 

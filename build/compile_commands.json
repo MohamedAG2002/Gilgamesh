@@ -1,86 +1,80 @@
 [
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/libs/src/stb_image/stb_image.cpp",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/libs/src/stb_image/stb_image.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/stb_image/stb_image.cpp",
   "output": "CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/cc  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o -c /home/mohamed/Dev/C++/GilgameshEngine/libs/src/glad/gl.c",
+  "command": "/usr/bin/cc  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o -c /home/mohamed/Dev/C++/GilgameshEngine/libs/src/glad/gl.c",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/glad/gl.c",
   "output": "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/application.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/application.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/application.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/application.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/application.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/window.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/window.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/window.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/window.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/window.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/window.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/window.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/logger.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/logger.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/logger.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/memory_alloc.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/memory_alloc.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/memory_alloc.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/memory_alloc.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/memory_alloc.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/memory_alloc.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/memory_alloc.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/event.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/event.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/event.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/event.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/event.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/event.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/core/input.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/core/input.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/input.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/input.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/input.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/input.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/main.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/main.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/graphics_context.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/graphics_context.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/graphics_context.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/graphics_context.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/graphics_context.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/vertex_array.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/backend/vertex_array.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/backend/vertex_array.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/renderer.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/renderer.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/shader.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/shader.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/shader.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/shader.cpp.o"
-},
-{
-  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/texture2d.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/gilgamesh/src/graphics/texture2d.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/gilgamesh/src/graphics/texture2d.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/texture2d.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/texture2d.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/texture2d.cpp.o"
 }
 ]
