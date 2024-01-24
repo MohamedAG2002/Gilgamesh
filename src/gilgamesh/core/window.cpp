@@ -3,6 +3,7 @@
 #include "gilg_asserts.h"
 #include "logger.h"
 #include "core/event.h"
+#include "core/input.h"
 
 #include <GLFW/glfw3.h>
 #include <glad/gl.h>
@@ -23,7 +24,7 @@ struct window
 {
   b8 is_fullscreen;
 
-  i32 frame_count;
+  i32 frame_count, exit_key;
   f32 scroll_val, sensitivity;
 
   f64 last_frame, delta_time;
@@ -82,6 +83,12 @@ void key_callback(GLFWwindow* win, i32 key, i32 scancode, i32 action, i32 mods)
 {
   event_desc desc; 
   event_type type;
+
+  if(key == window.exit_key && action == GLFW_PRESS)
+  {
+    dispatch_event(GILG_EVENT_WINDOW_CLOSED, event_desc{});
+    close_window(); 
+  }
 
   if(action == GLFW_PRESS)
   {
@@ -152,6 +159,7 @@ b8 create_window(i32 width, i32 height, const std::string& title)
   window.sensitivity = 0.1f;
   window.is_fullscreen = false;
   window.size = glm::vec2(width, height);
+  window.exit_key = GILG_KEY_ESCAPE;
   last_mouse_pos = glm::vec2(window.size.x / 2.0f, window.size.y / 2.0f);
   /////////////////////////////////////////////////////////////
   
@@ -304,9 +312,14 @@ void window_resize(const glm::vec2 size)
   glViewport(0, 0, size.x, size.y);
 }
 
-GILG_API void close_window()
+void close_window()
 {
   glfwSetWindowShouldClose(window.handle, true);
+}
+
+void set_window_exit_key(const i32 key_code)
+{
+  window.exit_key = key_code;
 }
 
 void set_window_pos(const glm::vec2 pos)

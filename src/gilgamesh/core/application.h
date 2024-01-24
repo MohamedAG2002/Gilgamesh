@@ -7,12 +7,6 @@
 
 namespace gilg {
 
-struct application
-{
-  bool is_running;
-  renderer ren;
-};
-
 // App functions
 ///////////////////////////////////////////////
 GILG_API void create_app(const i32 window_width, const i32 window_height, const std::string& window_title);

@@ -6,6 +6,8 @@
 #include "core/input.h"
 
 #include "graphics/color.h"
-#include "graphics/shader.h"
 #include "graphics/renderer.h"
-#include "graphics/texture2d.h"
+
+#include "resources/resource_manager.h"
+#include "resources/shader.h"
+#include "resources/texture2d.h"

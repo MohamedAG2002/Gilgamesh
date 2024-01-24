@@ -2,8 +2,7 @@
 #include "graphics/color.h"
 #include "graphics/backend/graphics_context.h"
 #include "graphics/backend/vertex_array.h"
-#include "resources/shader.h"
-#include "resources/texture2d.h"
+#include "resources/resource_manager.h"
 #include "core/logger.h"
 #include "core/defines.h"
 #include "math/vertex.h"
@@ -69,11 +68,11 @@ renderer create_renderer()
   ren.quad_va = create_vertex_array();
   setup_buffers(ren);
 
-  ren.shaders["basic"] = load_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
-  ren.shaders["texture"] = load_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
+  ren.shaders["basic"] = resource_add_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
+  ren.shaders["texture"] = resource_add_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
   ren.current_shader = ren.shaders["texture"];
 
-  ren.texture = load_texture2d("assets/textures/container.jpg");
+  ren.textures["container"] = resource_add_texture("assets/textures/container.jpg");
 
   GILG_LOG_INFO("Renderer was successfully created");
   return ren;
@@ -81,11 +80,6 @@ renderer create_renderer()
 
 void destroy_renderer(renderer& renderer)
 {
-  unload_texture2d(renderer.texture);
-
-  for(auto& [key, value] : renderer.shaders)
-    unload_shader(value);
-
   destroy_vertex_array(renderer.quad_va);
   destroy_gcontext(renderer.context);
 
@@ -99,8 +93,11 @@ void clear_renderer(renderer& renderer, const color& color)
 
 void begin_renderer(renderer& renderer)
 {
-  bind_shader(renderer.current_shader);
-  render_texture2d(renderer.texture, 0);
+  shader curr_shdr = resource_get_shader(renderer.current_shader);
+  texture2d curr_tex = resource_get_texture(renderer.textures["container"]);
+
+  bind_shader(curr_shdr);
+  render_texture2d(curr_tex, 0);
 
   bind_vertex_array(renderer.quad_va);
   gcontext_draw_index(renderer.context, GILG_DRAW_TRIANGLES, 6);

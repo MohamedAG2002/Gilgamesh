@@ -3,8 +3,6 @@
 #include "graphics/backend/graphics_context.h"
 #include "graphics/backend/vertex_array.h"
 #include "graphics/color.h"
-#include "resources/shader.h"
-#include "resources/texture2d.h"
 
 #include <string>
 #include <unordered_map>
@@ -17,9 +15,8 @@ struct renderer
 {
   graphics_context context;
   vertex_array quad_va;
-  std::unordered_map<std::string, shader> shaders;
-  shader current_shader;
-  texture2d texture;
+  std::unordered_map<std::string, u64> shaders, textures;
+  u64 current_shader;
 };
 ///////////////////////////////////////////////////////
 

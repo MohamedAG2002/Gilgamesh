@@ -1909,6 +1909,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/window.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/defines.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/event.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/gilg_asserts.h
+ /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/input.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/window.h
  /usr/include/GLFW/glfw3.h
@@ -2762,6 +2763,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/color.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/vertex.h
+ /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h
  /usr/include/alloca.h

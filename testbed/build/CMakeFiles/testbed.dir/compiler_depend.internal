@@ -143,7 +143,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec2.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec3.hpp
  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec4.hpp
- /home/mohamed/Dev/C++/GilgameshEngine/libs/include/stb_image/stb_image.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/application.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/defines.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/buffer.h
@@ -151,8 +150,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/color.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.h
- /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h
- /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -231,7 +228,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o
  /usr/include/c++/11/limits
  /usr/include/c++/11/new
  /usr/include/c++/11/pstl/pstl_config.h
- /usr/include/c++/11/stdlib.h
  /usr/include/c++/11/string
  /usr/include/c++/11/string_view
  /usr/include/c++/11/tr1/bessel_function.tcc

@@ -80,8 +80,6 @@ void destroy_vertex_array(vertex_array& va)
 void bind_vertex_array(vertex_array& va)
 {
   glBindVertexArray(va.id);
-  glBindBuffer(GL_ARRAY_BUFFER, va.vbo.id);
-  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, va.ebo.id);
 
   va.is_binded = true;
 }
@@ -89,19 +87,26 @@ void bind_vertex_array(vertex_array& va)
 void unbind_vertex_array(vertex_array& va)
 {
   glBindVertexArray(0);
-  glBindBuffer(GL_ARRAY_BUFFER, 0);
-  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
   
   va.is_binded = false;
 }
 
 void vertex_array_push_buffer(const vertex_array& va, const buffer_desc& desc)
 {
+  // Making sure to bind the correct buffer
+  if(desc.type == GILG_BUFF_TYPE_VERTEX)
+    glBindBuffer(GL_ARRAY_BUFFER, va.vbo.id);
+  else 
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, va.ebo.id);
+
+  // Setting the data of the binded buffer
   glBufferData((u32)desc.type, desc.data.size, desc.data.data, desc.usage);
 }
 
 void vertex_array_push_layout(const vertex_array& va, const std::vector<layout_data_type>& layout)
 {
+  glBindBuffer(GL_ARRAY_BUFFER, va.vbo.id);
+  
   u32 stride = calculate_stride(layout); 
   usizei offset = 0;
 

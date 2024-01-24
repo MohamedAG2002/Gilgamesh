@@ -142,7 +142,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec2.hpp \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec3.hpp \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec4.hpp \
-  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/stb_image/stb_image.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/application.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/defines.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/buffer.h \
@@ -150,8 +149,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/color.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.h \
-  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h \
-  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -230,7 +227,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
   /usr/include/c++/11/limits \
   /usr/include/c++/11/new \
   /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/stdlib.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/tr1/bessel_function.tcc \
@@ -416,6 +412,12 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
@@ -464,6 +466,8 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
@@ -499,10 +503,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_bool4.hpp:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_vec2.hpp:
-
-/usr/include/stdlib.h:
-
-/home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_bool2.hpp:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_half.hpp:
 
@@ -557,10 +557,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/matrix_float2x3.hpp:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/simd/platform.h:
-
-/usr/include/wchar.h:
-
-/usr/include/c++/11/vector:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/mat3x3.hpp:
 
@@ -637,14 +633,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 /usr/include/c++/11/string:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_mat4x4.inl:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/c++/11/stdlib.h:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_mat2x4.hpp:
 
@@ -850,13 +838,17 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/trigonometric.hpp:
 
+/home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_bool2.hpp:
+
+/usr/include/stdlib.h:
+
+/usr/include/time.h:
+
+/home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec3.hpp:
+
 /usr/include/c++/11/bits/memoryfwd.h:
 
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec4.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/home/mohamed/Dev/C++/GilgameshEngine/libs/include/stb_image/stb_image.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
@@ -873,14 +865,6 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 /usr/include/assert.h:
 
 /usr/include/math.h:
-
-/usr/include/time.h:
-
-/home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec3.hpp:
-
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h:
-
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h:
 
 /usr/include/alloca.h:
 
@@ -1071,3 +1055,7 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o: /home/mohamed/Dev/C++/GilgameshEngi
 /usr/include/sched.h:
 
 /usr/include/stdc-predef.h:
+
+/usr/include/c++/11/vector:
+
+/usr/include/wchar.h:

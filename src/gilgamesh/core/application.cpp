@@ -10,8 +10,14 @@
 
 namespace gilg {
 
-// Globals 
+// Application type 
 ///////////////////////////////////////////////
+struct application
+{
+  b8 is_running;
+  renderer ren;
+};
+
 static application app;
 ///////////////////////////////////////////////
 
@@ -19,13 +25,11 @@ static application app;
 ///////////////////////////////////////////////
 void update_app()
 {
-  if(is_key_pressed(GILG_KEY_ESCAPE))
-    app.is_running = false;
 }
 
 void render_app()
 {
-  clear_renderer(app.ren, color(0.1f, 0.1f, 0.1f, 1.0f));
+  clear_renderer(app.ren, color(1.0f, 0.5f, 0.3f, 1.0f));
   begin_renderer(app.ren);
 
   end_renderer(app.ren);
