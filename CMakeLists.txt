@@ -30,6 +30,7 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/core/memory_alloc.cpp
   ${GILG_SOURCE_PATH}/core/event.cpp
   ${GILG_SOURCE_PATH}/core/input.cpp
+  ${GILG_SOURCE_PATH}/main.cpp
 
   # Math 
   ${GILG_SOURCE_PATH}/math/gilg_random.cpp
@@ -41,6 +42,7 @@ set(GILG_SOURCES
   # Graphics
   ${GILG_SOURCE_PATH}/graphics/renderer.cpp
   ${GILG_SOURCE_PATH}/graphics/renderer_queue.cpp
+  ${GILG_SOURCE_PATH}/graphics/camera3d.cpp
   
   # Resources
   ${GILG_SOURCE_PATH}/resources/resource_manager.cpp
@@ -56,7 +58,8 @@ set(LIBS_SOURCES
 
 # Linking
 ######################################
-add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${LIBS_SOURCES} ${GILG_SOURCES})
+#add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${LIBS_SOURCES} ${GILG_SOURCES})
+add_executable(${PROJECT_NAME} ${GILG_SOURCES} ${LIBS_SOURCES})
 
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_LIBS_PATH}/include)
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_SOURCE_PATH})
@@ -64,4 +67,9 @@ target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_SOURCE_PATH})
 target_link_libraries(${PROJECT_NAME} PUBLIC
   ${glfw}  
 )
+######################################
+
+# Copying assets
+######################################
+file(COPY assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 ######################################

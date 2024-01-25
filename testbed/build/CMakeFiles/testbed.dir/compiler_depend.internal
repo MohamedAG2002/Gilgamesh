@@ -151,6 +151,7 @@ CMakeFiles/testbed.dir/core_test/main.cpp.o
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/gilgamesh.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/buffer.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.h
+ /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/color.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.h
  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.h

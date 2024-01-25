@@ -1,6 +1,7 @@
 #include "renderer.h"
 #include "graphics/color.h"
 #include "graphics/renderer_queue.h"
+#include "graphics/camera3d.h"
 
 #include "graphics/backend/graphics_context.h"
 #include "graphics/backend/vertex_array.h"
@@ -11,6 +12,8 @@
 #include "core/defines.h"
 
 #include "math/vertex.h"
+
+#include <glm/ext/matrix_transform.hpp>
 
 #include <string>
 #include <unordered_map>
@@ -29,6 +32,57 @@ void setup_buffers(renderer& ren)
     glm::vec3( 0.5f,  0.5f, 0.0f), glm::vec2(1, 0), // Bottom-right
     glm::vec3(-0.5f,  0.5f, 0.0f), glm::vec2(0, 0), // Bottom-left
   };
+
+  /*
+  vertex vertices[] = {
+    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 0.0f),  
+    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 0.0f), 
+    glm::vec3( 0.5f,  0.5f, -0.5f), glm::vec2(1.0f, 1.0f), 
+    glm::vec3( 0.5f,  0.5f, -0.5f), glm::vec2(1.0f, 1.0f), 
+    glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec2(0.0f, 1.0f), 
+    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 0.0f), 
+   
+    // Back-face
+    glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec2(0.0f, 0.0f),
+    glm::vec3( 0.5f, -0.5f, 0.5f), glm::vec2(1.0f, 0.0f),
+    glm::vec3( 0.5f,  0.5f, 0.5f), glm::vec2(1.0f, 1.0f),
+    glm::vec3( 0.5f,  0.5f, 0.5f), glm::vec2(1.0f, 1.0f),
+    glm::vec3(-0.5f,  0.5f, 0.5f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec2(0.0f, 0.0f),
+   
+    // Left-face
+    glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec2(1.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
+   
+    // Right-face
+    glm::vec3(0.5f,  0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(0.5f,  0.5f, -0.5f), glm::vec2(1.0f, 1.0f),
+    glm::vec3(0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(0.5f,  0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
+   
+    // Bottom-face
+    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 1.0f),
+    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 1.0f),
+    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 0.0f),
+    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 1.0f),
+   
+    // Top-face
+    glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
+    glm::vec3( 0.5f, 0.5f, -0.5f), glm::vec2(1.0f, 1.0f),
+    glm::vec3( 0.5f, 0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
+    glm::vec3( 0.5f, 0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(-0.5f, 0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
+  };
+  */
 
   u32 indices[] = {
     0, 1, 2, 
@@ -79,9 +133,13 @@ renderer create_renderer()
 
   ren.shaders["basic"] = resource_add_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
   ren.shaders["texture"] = resource_add_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
-  ren.current_shader = ren.shaders["texture"];
+  ren.shaders["camera"] = resource_add_shader("assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
+  ren.current_shader = ren.shaders["camera"];
 
   ren.textures["container"] = resource_add_texture("assets/textures/container.jpg");
+
+  ren.curr_shdr = resource_get_shader(ren.current_shader);
+  ren.curr_tex = resource_get_texture(ren.textures["container"]);
 
   GILG_LOG_INFO("Renderer was successfully created");
   return ren;
@@ -95,13 +153,16 @@ void destroy_renderer(renderer& renderer)
   GILG_LOG_INFO("Renderer was successfully destroyed");
 }
 
-void pre_renderer(renderer& renderer)
+void pre_renderer(renderer& renderer, const camera3d& cam)
 {
-  shader curr_shdr = resource_get_shader(renderer.current_shader);
-  texture2d curr_tex = resource_get_texture(renderer.textures["container"]);
-  
-  bind_shader(curr_shdr);
-  render_texture2d(curr_tex, 0);
+  bind_shader(renderer.curr_shdr);
+  set_shader_mat4(renderer.curr_shdr, "u_projection", cam.projection); 
+  set_shader_mat4(renderer.curr_shdr, "u_view", cam.view); 
+
+  glm::mat4 model(1.0f);
+  model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
+  set_shader_mat4(renderer.curr_shdr, "u_model", model); 
+
 }
 
 void begin_renderer(renderer& renderer, const color& color)

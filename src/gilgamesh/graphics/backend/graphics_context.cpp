@@ -24,7 +24,7 @@ b8 create_gcontext()
   }
 
   // Set the viewport's size
-  glm::vec2 size = window_size();
+  glm::vec2 size = get_window_size();
   glViewport(0, 0, size.x, size.y);
   
   // Enable some OpenGL functionalities

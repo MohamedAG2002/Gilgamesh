@@ -13,7 +13,7 @@
 
 // Globals 
 /////////////////////////////////
-glm::vec2 last_mouse_pos;
+static glm::vec2 last_mouse_pos;
 /////////////////////////////////
 
 namespace gilg {
@@ -44,8 +44,8 @@ static window window;
 ////////////////////////////////////////////
 void mouse_callback(GLFWwindow* win, f64 x_pos, f64 y_pos)
 {
-  glm::vec2 offset = glm::vec2(x_pos - window.mouse_pos.x, window.mouse_pos.y - y_pos);
-  glm::vec2 last_mouse_pos = glm::vec2(x_pos, y_pos);
+  glm::vec2 offset = glm::vec2(x_pos - last_mouse_pos.x, last_mouse_pos.y - y_pos);
+  last_mouse_pos = glm::vec2(x_pos, y_pos);
 
   // Adding the sensitivity 
   offset *= window.sensitivity;
@@ -154,13 +154,14 @@ b8 create_window(i32 width, i32 height, const std::string& title)
   
   // Variables init
   /////////////////////////////////////////////////////////////
+  last_mouse_pos = glm::vec2(width, height) / 2.0f;
+  
+  window.size = glm::vec2(width, height);
   window.mouse_pos = last_mouse_pos;
   window.scroll_val = 0.0f;
   window.sensitivity = 0.1f;
   window.is_fullscreen = false;
-  window.size = glm::vec2(width, height);
   window.exit_key = GILG_KEY_ESCAPE;
-  last_mouse_pos = glm::vec2(window.size.x / 2.0f, window.size.y / 2.0f);
   /////////////////////////////////////////////////////////////
   
   // Create window and check for errors
@@ -224,7 +225,8 @@ void enable_cursor()
 
 void disable_cursor()
 {
-  glfwSetInputMode(window.handle, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+  glfwSetInputMode(window.handle, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+  glfwSetInputMode(window.handle, GLFW_RAW_MOUSE_MOTION, GLFW_TRUE);
 }
 
 b8 window_fullscreen()
@@ -237,37 +239,37 @@ b8 window_closed()
   return glfwWindowShouldClose(window.handle);
 }
 
-const f32 scroll()
+const f32 get_scroll()
 {
   return window.scroll_val;
 }
 
-const f32 sensitivity()
+const f32 get_sensitivity()
 {
   return window.sensitivity;
 }
 
-const f32 aspect_ratio()
+const f32 get_aspect_ratio()
 {
   return window.size.x / window.size.y;
 }
 
-const f64 delta_time()
+const f64 get_delta_time()
 {
   return window.delta_time;
 }
 
-const f64 fps()
+const f64 get_fps()
 {
   return window.fps;
 }
 
-const glm::vec2 window_size()
+const glm::vec2 get_window_size()
 {
   return window.size;
 }
 
-const glm::vec2 mouse_pos()
+const glm::vec2 get_mouse_pos()
 {
   return window.mouse_pos;
 }

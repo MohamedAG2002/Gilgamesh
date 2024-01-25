@@ -8,7 +8,7 @@ namespace gilg {
 // Globals
 ///////////////////////////////////////////////////////////////
 static std::random_device rand_device;
-static std::mt19937 engine(rand_device());
+static std::default_random_engine engine(rand_device());
 ///////////////////////////////////////////////////////////////
 
 // Random functions

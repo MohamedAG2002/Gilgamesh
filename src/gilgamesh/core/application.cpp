@@ -6,7 +6,10 @@
 #include "core/window.h"
 #include "core/event.h"
 #include "core/input.h"
+
 #include "resources/resource_manager.h"
+
+#include "graphics/camera3d.h"
 
 namespace gilg {
 
@@ -16,6 +19,9 @@ struct application
 {
   b8 is_running;
   renderer ren;
+  camera3d cam;
+
+  glm::vec3 target = glm::vec3(0.0f, 0.0f, -3.0f);
 };
 
 static application app;
@@ -25,12 +31,14 @@ static application app;
 ///////////////////////////////////////////////
 void update_app()
 {
+  update_camera3d(app.cam);
+  move_camera3d(app.cam);
 }
 
 void render_app()
 {
-  pre_renderer(app.ren);
-  begin_renderer(app.ren, color(1.0f, 0.5f, 0.3f, 1.0f));
+  pre_renderer(app.ren, app.cam); 
+  begin_renderer(app.ren, color(0.1f, 0.1f, 0.1f, 1.0f));
 
   end_renderer(app.ren);
 }
@@ -72,19 +80,22 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
   // Window init 
   if(!create_window(window_width, window_height, window_title))
     GILG_LOG_FATAL("Failed to create window");
+  disable_cursor();
 
   // Input init 
   if(!init_input())
     GILG_LOG_ERROR("Failed to initialize input system");
   
-  // App init
-  app.is_running = true;
-  app.ren = create_renderer();
-
   // Resource Manager init 
   if(!init_resource_manager())
     GILG_LOG_ERROR("Could not initialize resource manager");
-
+  
+  // App init
+  app.is_running = true;
+  app.ren = create_renderer();
+  app.target = glm::vec3(0.0f, 0.0f, -3.0f);
+  app.cam = create_camera3d(GILG_CAM_FREE, glm::vec3(1.0f, 0.0f, 1.0f), &app.target, 45.0f);
+  
   // Listen to events
   listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);
 }

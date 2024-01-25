@@ -21,13 +21,13 @@ GILG_API void disable_cursor();
 
 GILG_API b8 window_fullscreen();
 GILG_API b8 window_closed();
-GILG_API const f32 scroll();
-GILG_API const f32 sensitivity();
-GILG_API const f32 aspect_ratio();
-GILG_API const f64 delta_time(); 
-GILG_API const f64 fps();
-GILG_API const glm::vec2 window_size();
-GILG_API const glm::vec2 mouse_pos();
+GILG_API const f32 get_scroll();
+GILG_API const f32 get_sensitivity();
+GILG_API const f32 get_aspect_ratio();
+GILG_API const f64 get_delta_time(); 
+GILG_API const f64 get_fps();
+GILG_API const glm::vec2 get_window_size();
+GILG_API const glm::vec2 get_mouse_pos();
 GILG_API GLFWwindow* window_handle();
 GILG_API const std::string& window_title();
 
