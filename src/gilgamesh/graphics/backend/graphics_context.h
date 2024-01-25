@@ -2,6 +2,7 @@
 
 #include "core/defines.h"
 #include "graphics/color.h"
+#include "graphics/backend/vertex_array.h"
 
 namespace gilg {
 
@@ -25,22 +26,14 @@ enum draw_mode
 };
 ////////////////////////////////////////////////////////////
 
-// Graphics context type
-////////////////////////////////////////////////////////////
-struct graphics_context
-{
-
-};
-////////////////////////////////////////////////////////////
-
 // Graphics context functions
 ////////////////////////////////////////////////////////////
-graphics_context create_gcontext();
-void destroy_gcontext(graphics_context& context);
-void gcontext_clear(const graphics_context& context, const color& color);
-void gcontext_swap(const graphics_context& context);
-void gcontext_draw_vertex(const graphics_context& context, const draw_mode mode, const usizei vertices_count);
-void gcontext_draw_index(const graphics_context& context, const draw_mode mode, const usizei indices_count);
+b8 create_gcontext();
+void destroy_gcontext();
+void gcontext_clear(const color& color);
+void gcontext_swap();
+void gcontext_draw_vertex(const draw_mode mode, vertex_array& va);
+void gcontext_draw_index(const draw_mode mode, vertex_array& va);
 ////////////////////////////////////////////////////////////
 
 }

@@ -393,6 +393,30 @@ src/gilgamesh/graphics/renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.s
 .PHONY : src/gilgamesh/graphics/renderer.cpp.s
 
+src/gilgamesh/graphics/renderer_queue.o: src/gilgamesh/graphics/renderer_queue.cpp.o
+.PHONY : src/gilgamesh/graphics/renderer_queue.o
+
+# target to build an object file
+src/gilgamesh/graphics/renderer_queue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.o
+.PHONY : src/gilgamesh/graphics/renderer_queue.cpp.o
+
+src/gilgamesh/graphics/renderer_queue.i: src/gilgamesh/graphics/renderer_queue.cpp.i
+.PHONY : src/gilgamesh/graphics/renderer_queue.i
+
+# target to preprocess a source file
+src/gilgamesh/graphics/renderer_queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.i
+.PHONY : src/gilgamesh/graphics/renderer_queue.cpp.i
+
+src/gilgamesh/graphics/renderer_queue.s: src/gilgamesh/graphics/renderer_queue.cpp.s
+.PHONY : src/gilgamesh/graphics/renderer_queue.s
+
+# target to generate assembly for a file
+src/gilgamesh/graphics/renderer_queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.s
+.PHONY : src/gilgamesh/graphics/renderer_queue.cpp.s
+
 src/gilgamesh/math/gilg_random.o: src/gilgamesh/math/gilg_random.cpp.o
 .PHONY : src/gilgamesh/math/gilg_random.o
 
@@ -531,6 +555,9 @@ help:
 	@echo "... src/gilgamesh/graphics/renderer.o"
 	@echo "... src/gilgamesh/graphics/renderer.i"
 	@echo "... src/gilgamesh/graphics/renderer.s"
+	@echo "... src/gilgamesh/graphics/renderer_queue.o"
+	@echo "... src/gilgamesh/graphics/renderer_queue.i"
+	@echo "... src/gilgamesh/graphics/renderer_queue.s"
 	@echo "... src/gilgamesh/math/gilg_random.o"
 	@echo "... src/gilgamesh/math/gilg_random.i"
 	@echo "... src/gilgamesh/math/gilg_random.s"

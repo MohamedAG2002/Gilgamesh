@@ -73,6 +73,12 @@
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer_queue.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer_queue.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.cpp",
   "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o"

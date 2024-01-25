@@ -40,6 +40,7 @@ set(GILG_SOURCES
 
   # Graphics
   ${GILG_SOURCE_PATH}/graphics/renderer.cpp
+  ${GILG_SOURCE_PATH}/graphics/renderer_queue.cpp
   
   # Resources
   ${GILG_SOURCE_PATH}/resources/resource_manager.cpp
@@ -51,11 +52,6 @@ set(LIBS_SOURCES
   ${GILG_LIBS_PATH}/src/stb_image/stb_image.cpp
   ${GILG_LIBS_PATH}/src/glad/gl.c
 )
-######################################
-
-# Copying assets
-######################################
-file(COPY assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 ######################################
 
 # Linking

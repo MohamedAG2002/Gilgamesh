@@ -74,6 +74,10 @@ struct buffer_desc
   buffer_type type;
   buffer_data data;
   buffer_usage usage;
+
+  // The number of indices if the buffer type is INDEX; the numebr of vertices
+  // if the buffer type is VERTEX
+  usizei count;
 };
 ///////////////////////////////////////////////////////
 

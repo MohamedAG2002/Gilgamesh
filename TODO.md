@@ -1,12 +1,15 @@
-# TODO: 
-- Renderer 2D/3D -> Basic shapes, fonts/texts, textures, models
+# Short-Term TODO:
+- Camera
 - Primitive editor
 - Entry point
+
+# Mid-Term TODO:
 - Scenes
 - Entities
 - Serialization
-- Componenets -> Main components first (transform, camera, rendering components, etc.)
 - Audio system -> Basic at first then something more sophisticated
+
+# Long-Term TODO:
 - GUI -> Editor gui and game gui
 - Scripting system -> Native and external
 - Physics

@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o.d"
+  "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.o"
+  "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o"

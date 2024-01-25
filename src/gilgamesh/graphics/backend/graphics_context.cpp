@@ -1,4 +1,5 @@
 #include "graphics/backend/graphics_context.h"
+#include "graphics/backend/vertex_array.h"
 #include "core/gilg_asserts.h"
 #include "graphics/color.h"
 #include "core/defines.h"
@@ -11,12 +12,16 @@ namespace gilg {
 
 // Graphics context functions
 ////////////////////////////////////////////////////////////
-graphics_context create_gcontext()
+b8 create_gcontext()
 {
   GILG_LOG_INFO("Created graphics context");
   
   // GLAD init 
-  GILG_ASSERT_MSG(gladLoadGL(glfwGetProcAddress), "Failed to initialize GLAD"); 
+  if(!gladLoadGL(glfwGetProcAddress))
+  {
+    GILG_ASSERT_MSG(false, "Failed to load GLAD");
+    return false;
+  }
 
   // Set the viewport's size
   glm::vec2 size = window_size();
@@ -31,33 +36,37 @@ graphics_context create_gcontext()
   // Set the current context
   glfwMakeContextCurrent(window_handle());
 
-  return graphics_context{};
+  return true;
 }
 
-void destroy_gcontext(graphics_context& context)
+void destroy_gcontext()
 {
   GILG_LOG_INFO("Destroyed graphics context");
 }
 
-void gcontext_clear(const graphics_context& context, const color& color)
+void gcontext_clear(const color& color)
 {
   glClearColor(color.r, color.g, color.b, color.a);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 }
 
-void gcontext_swap(const graphics_context& context)
+void gcontext_swap()
 {
   glfwSwapBuffers(window_handle());
 }
 
-void gcontext_draw_vertex(const graphics_context& context, const draw_mode mode, const usizei vertices_count)
+void gcontext_draw_vertex(const draw_mode mode, vertex_array& va)
 {
-  glDrawArrays((u32)mode, 0, vertices_count);
+  bind_vertex_array(va); 
+
+  glDrawArrays((u32)mode, 0, va.vbo.count);
 }
 
-void gcontext_draw_index(const graphics_context& context, const draw_mode mode, const usizei indices_count)
+void gcontext_draw_index(const draw_mode mode, vertex_array& va)
 {
-  glDrawElements((u32)mode, indices_count, GL_UNSIGNED_INT, 0);
+  bind_vertex_array(va); 
+  
+  glDrawElements((u32)mode, va.ebo.count, GL_UNSIGNED_INT, 0);
 }
 ////////////////////////////////////////////////////////////
 

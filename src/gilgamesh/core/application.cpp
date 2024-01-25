@@ -29,8 +29,8 @@ void update_app()
 
 void render_app()
 {
-  clear_renderer(app.ren, color(1.0f, 0.5f, 0.3f, 1.0f));
-  begin_renderer(app.ren);
+  pre_renderer(app.ren);
+  begin_renderer(app.ren, color(1.0f, 0.5f, 0.3f, 1.0f));
 
   end_renderer(app.ren);
 }
