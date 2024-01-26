@@ -95,8 +95,6 @@ void update_camera3d(camera3d& cam)
   cam.direction.y = sin(glm::radians(cam.pitch));
   cam.direction.z = sin(glm::radians(cam.yaw)) * cos(glm::radians(cam.pitch));
   cam.front = glm::normalize(cam.direction);
-
-  printf("Camera Position = {.x = %f, .y = %f, .z = %f}\n", cam.position.x, cam.position.y, cam.position.z);
 }
 
 void move_camera3d(camera3d& cam)

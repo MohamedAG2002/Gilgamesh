@@ -91,13 +91,27 @@ void unbind_vertex_array(vertex_array& va)
   va.is_binded = false;
 }
 
-void vertex_array_push_buffer(const vertex_array& va, const buffer_desc& desc)
+void vertex_array_push_buffer(vertex_array& va, const buffer_desc& desc)
 {
   // Making sure to bind the correct buffer
   if(desc.type == GILG_BUFF_TYPE_VERTEX)
+  {
+    va.vbo.type = desc.type;
+    va.vbo.data = desc.data;
+    va.vbo.usage = desc.usage;
+    va.vbo.count = desc.count;
+
     glBindBuffer(GL_ARRAY_BUFFER, va.vbo.id);
+  }
   else 
+  {
+    va.ebo.type = desc.type;
+    va.ebo.data = desc.data;
+    va.ebo.usage = desc.usage;
+    va.ebo.count = desc.count;
+
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, va.ebo.id);
+  }
 
   // Setting the data of the binded buffer
   glBufferData((u32)desc.type, desc.data.size, desc.data.data, desc.usage);

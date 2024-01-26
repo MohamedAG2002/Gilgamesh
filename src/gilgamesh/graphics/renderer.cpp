@@ -168,14 +168,13 @@ void pre_renderer(renderer& renderer, const camera3d& cam)
 void begin_renderer(renderer& renderer, const color& color)
 {
   gcontext_clear(color);
-  gcontext_draw_vertex(GILG_DRAW_TRIANGLES, renderer.quad_va);
 
-  //renderer_queue_sumbit(renderer.quad_va);
+  renderer_queue_sumbit(renderer.quad_va);
 }
 
 void end_renderer(renderer& renderer)
 {
-  //renderer_queue_flush();
+  renderer_queue_flush();
 
   gcontext_swap();
 }

@@ -26,7 +26,7 @@ void renderer_queue_sumbit(vertex_array& va)
 void renderer_queue_flush()
 {
   for(auto& va : ren_que.queue)
-    gcontext_draw_index(GILG_DRAW_TRIANGLES, va);
+    gcontext_draw_vertex(GILG_DRAW_TRIANGLES, va);
 }
 //////////////////////////////////////////////////
 
