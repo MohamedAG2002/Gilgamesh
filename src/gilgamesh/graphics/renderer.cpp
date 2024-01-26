@@ -25,6 +25,7 @@ namespace gilg {
 ///////////////////////////////////////////////////////
 void setup_buffers(renderer& ren)
 {
+  /*
   vertex vertices[] = {
     // Position                    Texture coords
     glm::vec3(-0.5f, -0.5f, 0.0f), glm::vec2(0, 1), // Top-left
@@ -32,8 +33,8 @@ void setup_buffers(renderer& ren)
     glm::vec3( 0.5f,  0.5f, 0.0f), glm::vec2(1, 0), // Bottom-right
     glm::vec3(-0.5f,  0.5f, 0.0f), glm::vec2(0, 0), // Bottom-left
   };
+  */
 
-  /*
   vertex vertices[] = {
     glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 0.0f),  
     glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 0.0f), 
@@ -82,7 +83,6 @@ void setup_buffers(renderer& ren)
     glm::vec3(-0.5f, 0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
     glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
   };
-  */
 
   u32 indices[] = {
     0, 1, 2, 
@@ -96,7 +96,7 @@ void setup_buffers(renderer& ren)
     .type  = GILG_BUFF_TYPE_VERTEX,
     .data  = GILG_BUFFER_DATA(vertices),
     .usage = GILG_BUFF_USAGE_STATIC_DRAW, 
-    .count = 4
+    .count = 36
   };
   vertex_array_push_buffer(ren.quad_va, vbo_desc);
 
@@ -156,25 +156,26 @@ void destroy_renderer(renderer& renderer)
 void pre_renderer(renderer& renderer, const camera3d& cam)
 {
   bind_shader(renderer.curr_shdr);
+ 
   set_shader_mat4(renderer.curr_shdr, "u_projection", cam.projection); 
   set_shader_mat4(renderer.curr_shdr, "u_view", cam.view); 
 
   glm::mat4 model(1.0f);
   model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
   set_shader_mat4(renderer.curr_shdr, "u_model", model); 
-
 }
 
 void begin_renderer(renderer& renderer, const color& color)
 {
   gcontext_clear(color);
+  gcontext_draw_vertex(GILG_DRAW_TRIANGLES, renderer.quad_va);
 
-  renderer_queue_sumbit(renderer.quad_va);
+  //renderer_queue_sumbit(renderer.quad_va);
 }
 
 void end_renderer(renderer& renderer)
 {
-  renderer_queue_flush();
+  //renderer_queue_flush();
 
   gcontext_swap();
 }

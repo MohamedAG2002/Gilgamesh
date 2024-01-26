@@ -19,19 +19,19 @@ const f32 CAM_SPEED = 10.0f;
 ////////////////////////////////////////////////////////
 void move_free_cam(camera3d& cam, f32 speed)
 { 
-  // Move forwards/up
-  if(is_key_down(GILG_KEY_W))
-    cam.position += cam.front * speed;
-  // Move backwards/down
-  else if(is_key_down(GILG_KEY_S))
-    cam.position -= cam.front * speed;
-
   // Move right
   if(is_key_down(GILG_KEY_D))
     cam.position += glm::normalize(glm::cross(cam.front, cam.up)) * speed;
   // Move left
   else if(is_key_down(GILG_KEY_A))
     cam.position -= glm::normalize(glm::cross(cam.front, cam.up)) * speed;
+ 
+  // Move forwards/up
+  if(is_key_down(GILG_KEY_W))
+    cam.position += cam.front * speed;
+  // Move backwards/down
+  else if(is_key_down(GILG_KEY_S))
+    cam.position -= cam.front * speed;
 }
 
 void move_fps_cam(camera3d& cam, f32 speed)
@@ -54,6 +54,7 @@ camera3d create_camera3d(const camera_type type, const glm::vec3& pos, glm::vec3
   cam.pitch = 0.0f;
 
   cam.position = pos;
+  
   cam.up_axis = glm::vec3(0.0f, 1.0f, 0.0f);
   cam.right_axis = glm::normalize(glm::cross(cam.up_axis, look_dir));
   cam.up = glm::normalize(glm::cross(look_dir, cam.right_axis));
@@ -78,13 +79,13 @@ void update_camera3d(camera3d& cam)
   glm::vec2 mouse_pos = get_mouse_pos();
 
   // Updating the projection and view matrices
-  cam.view = glm::lookAt(cam.position, cam.position + cam.front, cam.up_axis);  
+  cam.view = glm::lookAt(cam.position, cam.position + cam.front, cam.up);  
   cam.projection = glm::perspective(glm::radians(cam.zoom), aspect_ratio, 0.1f, 100.0f);
-
+  
   // Updating the yaw and pitch values
   cam.yaw = mouse_pos.x;
   cam.pitch = mouse_pos.y;
-
+  
   // Clamping the pitch and zoom values to not get crazy values
   cam.pitch = glm::clamp(cam.pitch, -CAM_MAX_DEG, CAM_MAX_DEG);
   cam.zoom = glm::clamp(cam.zoom, 1.0f, CAM_MAX_ZOOM);
@@ -94,6 +95,8 @@ void update_camera3d(camera3d& cam)
   cam.direction.y = sin(glm::radians(cam.pitch));
   cam.direction.z = sin(glm::radians(cam.yaw)) * cos(glm::radians(cam.pitch));
   cam.front = glm::normalize(cam.direction);
+
+  printf("Camera Position = {.x = %f, .y = %f, .z = %f}\n", cam.position.x, cam.position.y, cam.position.z);
 }
 
 void move_camera3d(camera3d& cam)

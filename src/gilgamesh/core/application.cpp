@@ -94,7 +94,7 @@ void create_app(const i32 window_width, const i32 window_height, const std::stri
   app.is_running = true;
   app.ren = create_renderer();
   app.target = glm::vec3(0.0f, 0.0f, -3.0f);
-  app.cam = create_camera3d(GILG_CAM_FREE, glm::vec3(1.0f, 0.0f, 1.0f), &app.target, 45.0f);
+  app.cam = create_camera3d(GILG_CAM_FREE, glm::vec3(-10.0f, 0.0f, -4.0f), &app.target, 45.0f);
   
   // Listen to events
   listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);

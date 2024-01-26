@@ -59,7 +59,7 @@ void gcontext_draw_vertex(const draw_mode mode, vertex_array& va)
 {
   bind_vertex_array(va); 
 
-  glDrawArrays((u32)mode, 0, va.vbo.count);
+  glDrawArrays((u32)mode, 0, 36);
 }
 
 void gcontext_draw_index(const draw_mode mode, vertex_array& va)

@@ -11,11 +11,6 @@
 
 #include <string>
 
-// Globals 
-/////////////////////////////////
-static glm::vec2 last_mouse_pos;
-/////////////////////////////////
-
 namespace gilg {
 
 // Window struct
@@ -36,15 +31,19 @@ struct window
 
   std::string title;
 }; 
+/////////////////////////////////
 
+// Globals 
+/////////////////////////////////
 static window window;
+static glm::vec2 last_mouse_pos(0.0f);
 /////////////////////////////////
 
 // Callbacks
 ////////////////////////////////////////////
 void mouse_callback(GLFWwindow* win, f64 x_pos, f64 y_pos)
 {
-  glm::vec2 offset = glm::vec2(x_pos - last_mouse_pos.x, last_mouse_pos.y - y_pos);
+  glm::vec2 offset(x_pos - last_mouse_pos.x, last_mouse_pos.y - y_pos);
   last_mouse_pos = glm::vec2(x_pos, y_pos);
 
   // Adding the sensitivity 
@@ -147,6 +146,7 @@ b8 create_window(i32 width, i32 height, const std::string& title)
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+  glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
   // Setting the error callback to catch any errors prior
   glfwSetErrorCallback(error_callback);
@@ -154,8 +154,6 @@ b8 create_window(i32 width, i32 height, const std::string& title)
   
   // Variables init
   /////////////////////////////////////////////////////////////
-  last_mouse_pos = glm::vec2(width, height) / 2.0f;
-  
   window.size = glm::vec2(width, height);
   window.mouse_pos = last_mouse_pos;
   window.scroll_val = 0.0f;
