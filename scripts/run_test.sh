@@ -1,4 +1,4 @@
 echo "Running tests..."
 
-cd ../testbed/build/
+cd ../apps/build/ 
 ./testbed

@@ -31,7 +31,6 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/core/event.cpp
   ${GILG_SOURCE_PATH}/core/input.cpp
   ${GILG_SOURCE_PATH}/core/clock.cpp
-  ${GILG_SOURCE_PATH}/main.cpp
 
   # Math 
   ${GILG_SOURCE_PATH}/math/gilg_random.cpp
@@ -59,8 +58,7 @@ set(LIBS_SOURCES
 
 # Linking
 ######################################
-#add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${LIBS_SOURCES} ${GILG_SOURCES})
-add_executable(${PROJECT_NAME} ${GILG_SOURCES} ${LIBS_SOURCES})
+add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${LIBS_SOURCES} ${GILG_SOURCES})
 
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_LIBS_PATH}/include)
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_SOURCE_PATH})

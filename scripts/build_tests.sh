@@ -1,8 +1,6 @@
 echo "Building tests...."
 
-cd ../testbed/build/ 
+cd ../apps/build/ 
 cmake .. && make
 
 echo "Successfuly built the tests...."
-
-cd ../../scripts/

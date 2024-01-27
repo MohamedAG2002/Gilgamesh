@@ -1,4 +1,2 @@
-./build_engine.sh
-
-cd ../build/ 
-./gilgamesh
+./build_all.sh
+./run_test.sh

@@ -27,8 +27,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.o.d"
-  "CMakeFiles/gilgamesh.dir/src/gilgamesh/main.cpp.o"
-  "CMakeFiles/gilgamesh.dir/src/gilgamesh/main.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o"
@@ -37,8 +35,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o.d"
-  "gilgamesh"
-  "gilgamesh.pdb"
+  "libgilgamesh.a"
+  "libgilgamesh.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

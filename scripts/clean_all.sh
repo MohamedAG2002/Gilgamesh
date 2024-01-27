@@ -4,7 +4,7 @@ rm -rf *
 cd ../scripts/
 
 echo "Cleaning tests..."
-cd ../testbed/build/ 
+cd ../apps/build/ 
 rm -rf * 
 cd ../../scripts/
 

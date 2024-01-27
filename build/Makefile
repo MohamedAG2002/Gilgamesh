@@ -465,30 +465,6 @@ src/gilgamesh/graphics/renderer_queue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.s
 .PHONY : src/gilgamesh/graphics/renderer_queue.cpp.s
 
-src/gilgamesh/main.o: src/gilgamesh/main.cpp.o
-.PHONY : src/gilgamesh/main.o
-
-# target to build an object file
-src/gilgamesh/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/main.cpp.o
-.PHONY : src/gilgamesh/main.cpp.o
-
-src/gilgamesh/main.i: src/gilgamesh/main.cpp.i
-.PHONY : src/gilgamesh/main.i
-
-# target to preprocess a source file
-src/gilgamesh/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/main.cpp.i
-.PHONY : src/gilgamesh/main.cpp.i
-
-src/gilgamesh/main.s: src/gilgamesh/main.cpp.s
-.PHONY : src/gilgamesh/main.s
-
-# target to generate assembly for a file
-src/gilgamesh/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/main.cpp.s
-.PHONY : src/gilgamesh/main.cpp.s
-
 src/gilgamesh/math/gilg_random.o: src/gilgamesh/math/gilg_random.cpp.o
 .PHONY : src/gilgamesh/math/gilg_random.o
 
@@ -636,9 +612,6 @@ help:
 	@echo "... src/gilgamesh/graphics/renderer_queue.o"
 	@echo "... src/gilgamesh/graphics/renderer_queue.i"
 	@echo "... src/gilgamesh/graphics/renderer_queue.s"
-	@echo "... src/gilgamesh/main.o"
-	@echo "... src/gilgamesh/main.i"
-	@echo "... src/gilgamesh/main.s"
 	@echo "... src/gilgamesh/math/gilg_random.o"
 	@echo "... src/gilgamesh/math/gilg_random.i"
 	@echo "... src/gilgamesh/math/gilg_random.s"
