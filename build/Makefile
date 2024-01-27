@@ -489,6 +489,30 @@ src/gilgamesh/math/gilg_random.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.s
 .PHONY : src/gilgamesh/math/gilg_random.cpp.s
 
+src/gilgamesh/math/transform.o: src/gilgamesh/math/transform.cpp.o
+.PHONY : src/gilgamesh/math/transform.o
+
+# target to build an object file
+src/gilgamesh/math/transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.o
+.PHONY : src/gilgamesh/math/transform.cpp.o
+
+src/gilgamesh/math/transform.i: src/gilgamesh/math/transform.cpp.i
+.PHONY : src/gilgamesh/math/transform.i
+
+# target to preprocess a source file
+src/gilgamesh/math/transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.i
+.PHONY : src/gilgamesh/math/transform.cpp.i
+
+src/gilgamesh/math/transform.s: src/gilgamesh/math/transform.cpp.s
+.PHONY : src/gilgamesh/math/transform.s
+
+# target to generate assembly for a file
+src/gilgamesh/math/transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.s
+.PHONY : src/gilgamesh/math/transform.cpp.s
+
 src/gilgamesh/resources/resource_manager.o: src/gilgamesh/resources/resource_manager.cpp.o
 .PHONY : src/gilgamesh/resources/resource_manager.o
 
@@ -615,6 +639,9 @@ help:
 	@echo "... src/gilgamesh/math/gilg_random.o"
 	@echo "... src/gilgamesh/math/gilg_random.i"
 	@echo "... src/gilgamesh/math/gilg_random.s"
+	@echo "... src/gilgamesh/math/transform.o"
+	@echo "... src/gilgamesh/math/transform.i"
+	@echo "... src/gilgamesh/math/transform.s"
 	@echo "... src/gilgamesh/resources/resource_manager.o"
 	@echo "... src/gilgamesh/resources/resource_manager.i"
 	@echo "... src/gilgamesh/resources/resource_manager.s"

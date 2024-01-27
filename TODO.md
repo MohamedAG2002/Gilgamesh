@@ -1,5 +1,4 @@
 # Short-Term TODO:
-- Seperation between engine creation and application creation
 - Transforms
 - Renderer
 - Primitive editor

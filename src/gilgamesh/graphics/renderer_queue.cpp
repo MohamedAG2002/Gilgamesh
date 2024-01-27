@@ -20,7 +20,9 @@ static renderer_queue ren_que;
 //////////////////////////////////////////////////
 void renderer_queue_sumbit(vertex_array& va)
 {
-  ren_que.queue.push_back(va); 
+  //ren_que.queue.push_back(va); 
+
+  gcontext_draw_vertex(GILG_DRAW_TRIANGLES, va); 
 }
 
 void renderer_queue_flush()

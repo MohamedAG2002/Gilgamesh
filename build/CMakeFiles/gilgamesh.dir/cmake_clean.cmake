@@ -29,6 +29,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o.d"
+  "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.o"
+  "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o"

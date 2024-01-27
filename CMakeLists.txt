@@ -34,6 +34,7 @@ set(GILG_SOURCES
 
   # Math 
   ${GILG_SOURCE_PATH}/math/gilg_random.cpp
+  ${GILG_SOURCE_PATH}/math/transform.cpp
 
   # Graphics backend
   ${GILG_SOURCE_PATH}/graphics/backend/graphics_context.cpp

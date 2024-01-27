@@ -12,6 +12,7 @@
 #include "core/defines.h"
 
 #include "math/vertex.h"
+#include "math/transform.h"
 
 #include <glm/ext/matrix_transform.hpp>
 
@@ -31,6 +32,8 @@ struct renderer
  
   shader curr_shdr;
   texture2d curr_tex;
+
+  std::vector<transform> models;
 };
 
 static renderer renderer;
@@ -159,6 +162,12 @@ b8 create_renderer()
   renderer.curr_shdr = resource_get_shader(renderer.current_shader);
   renderer.curr_tex = resource_get_texture(renderer.textures["container"]);
 
+  renderer.models.push_back(create_transform(glm::vec3(10.0f, 0.0f, 10.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(20.0f, 0.0f, 15.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(30.0f, 0.0f, 30.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(35.0f, 0.0f, 20.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(40.0f, 0.0f, 50.0f)));
+
   GILG_LOG_INFO("Renderer was successfully created");
   return true;
 }
@@ -182,16 +191,16 @@ void begin_renderer(const camera3d& cam)
  
   set_shader_mat4(renderer.curr_shdr, "u_projection", cam.projection); 
   set_shader_mat4(renderer.curr_shdr, "u_view", cam.view); 
-
-  glm::mat4 model(1.0f);
-  model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
-  set_shader_mat4(renderer.curr_shdr, "u_model", model); 
 }
 
 void end_renderer()
 {
-  renderer_queue_sumbit(renderer.quad_va);
-  renderer_queue_flush();
+  for(auto& transform : renderer.models)
+  {
+    set_shader_mat4(renderer.curr_shdr, "u_model", transform.model); 
+    renderer_queue_sumbit(renderer.quad_va);
+    //renderer_queue_flush();
+  }
 
   gcontext_swap();
 }
