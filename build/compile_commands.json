@@ -1,9 +1,9 @@
 [
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
-  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/application.cpp",
-  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/application.cpp",
-  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.o"
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/engine.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/engine.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
@@ -34,6 +34,12 @@
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/input.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/input.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/input.cpp",
   "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/input.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/clock.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/clock.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o"
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",

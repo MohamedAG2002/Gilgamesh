@@ -1,7 +1,8 @@
 # Short-Term TODO:
-- Camera
+- Seperation between engine creation and application creation
+- Transforms
+- Renderer
 - Primitive editor
-- Entry point
 
 # Mid-Term TODO:
 - Scenes

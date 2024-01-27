@@ -21,9 +21,25 @@
 
 namespace gilg {
 
+// Renderer type
+///////////////////////////////////////////////////////
+struct renderer 
+{
+  vertex_array quad_va;
+  std::unordered_map<std::string, u64> shaders, textures;
+  u64 current_shader;
+ 
+  shader curr_shdr;
+  texture2d curr_tex;
+};
+
+static renderer renderer;
+///////////////////////////////////////////////////////
+
+
 // Private functions
 ///////////////////////////////////////////////////////
-void setup_buffers(renderer& ren)
+void setup_buffers()
 {
   /*
   vertex vertices[] = {
@@ -89,7 +105,7 @@ void setup_buffers(renderer& ren)
     2, 3, 0
   };
 
-  bind_vertex_array(ren.quad_va);
+  bind_vertex_array(renderer.quad_va);
 
   // Pushing vbo buffer
   buffer_desc vbo_desc = {
@@ -98,7 +114,7 @@ void setup_buffers(renderer& ren)
     .usage = GILG_BUFF_USAGE_STATIC_DRAW, 
     .count = 36
   };
-  vertex_array_push_buffer(ren.quad_va, vbo_desc);
+  vertex_array_push_buffer(renderer.quad_va, vbo_desc);
 
   // Pushing ebo buffer
   buffer_desc ebo_desc = {
@@ -107,45 +123,47 @@ void setup_buffers(renderer& ren)
     .usage = GILG_BUFF_USAGE_STATIC_DRAW, 
     .count = 6
   };
-  vertex_array_push_buffer(ren.quad_va, ebo_desc);
+  vertex_array_push_buffer(renderer.quad_va, ebo_desc);
 
   // Pushing layout 
   std::vector<layout_data_type> layout = {
     GILG_FLOAT3, 
     GILG_FLOAT2,
   };
-  vertex_array_push_layout(ren.quad_va, layout);
+  vertex_array_push_layout(renderer.quad_va, layout);
 
-  unbind_vertex_array(ren.quad_va);
+  unbind_vertex_array(renderer.quad_va);
 }
 ///////////////////////////////////////////////////////
 
 // Renderer functions
 ///////////////////////////////////////////////////////
-renderer create_renderer()
+b8 create_renderer()
 {
-  renderer ren;
   if(!create_gcontext()) 
+  {
     GILG_LOG_ERROR("Failed to create graphics context");
+    return false;
+  }
 
-  ren.quad_va = create_vertex_array();
-  setup_buffers(ren);
+  renderer.quad_va = create_vertex_array();
+  setup_buffers();
 
-  ren.shaders["basic"] = resource_add_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
-  ren.shaders["texture"] = resource_add_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
-  ren.shaders["camera"] = resource_add_shader("assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
-  ren.current_shader = ren.shaders["camera"];
+  renderer.shaders["basic"] = resource_add_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
+  renderer.shaders["texture"] = resource_add_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
+  renderer.shaders["camera"] = resource_add_shader("assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
+  renderer.current_shader = renderer.shaders["camera"];
 
-  ren.textures["container"] = resource_add_texture("assets/textures/container.jpg");
+  renderer.textures["container"] = resource_add_texture("assets/textures/container.jpg");
 
-  ren.curr_shdr = resource_get_shader(ren.current_shader);
-  ren.curr_tex = resource_get_texture(ren.textures["container"]);
+  renderer.curr_shdr = resource_get_shader(renderer.current_shader);
+  renderer.curr_tex = resource_get_texture(renderer.textures["container"]);
 
   GILG_LOG_INFO("Renderer was successfully created");
-  return ren;
+  return true;
 }
 
-void destroy_renderer(renderer& renderer)
+void destroy_renderer()
 {
   destroy_vertex_array(renderer.quad_va);
   destroy_gcontext();
@@ -153,7 +171,12 @@ void destroy_renderer(renderer& renderer)
   GILG_LOG_INFO("Renderer was successfully destroyed");
 }
 
-void pre_renderer(renderer& renderer, const camera3d& cam)
+void clear_renderer(const color& color)
+{
+  gcontext_clear(color);
+}
+
+void begin_renderer(const camera3d& cam)
 {
   bind_shader(renderer.curr_shdr);
  
@@ -165,15 +188,9 @@ void pre_renderer(renderer& renderer, const camera3d& cam)
   set_shader_mat4(renderer.curr_shdr, "u_model", model); 
 }
 
-void begin_renderer(renderer& renderer, const color& color)
+void end_renderer()
 {
-  gcontext_clear(color);
-
   renderer_queue_sumbit(renderer.quad_va);
-}
-
-void end_renderer(renderer& renderer)
-{
   renderer_queue_flush();
 
   gcontext_swap();

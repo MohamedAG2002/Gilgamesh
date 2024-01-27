@@ -19,11 +19,8 @@ struct window
 {
   b8 is_fullscreen;
 
-  i32 frame_count, exit_key;
+  i32 exit_key;
   f32 scroll_val, sensitivity;
-
-  f64 last_frame, delta_time;
-  f64 prev_time, curr_time, fps; 
 
   glm::vec2 size, mouse_pos;
   
@@ -191,25 +188,6 @@ void destroy_window()
 
 void update_window()
 { 
-  // Calculate delta time
-  //////////////////////////////////////////////////
-  window.delta_time = glfwGetTime() - window.last_frame;
-  window.last_frame = glfwGetTime();
-  //////////////////////////////////////////////////
-  
-  // Calculate FPS
-  //////////////////////////////////////////////////
-  window.frame_count++;
-  window.curr_time = glfwGetTime();
-
-  if((window.curr_time - window.prev_time) >= 1.0f)
-  {
-    window.fps = window.frame_count;
-    window.frame_count = 0;
-    window.prev_time = window.curr_time;
-  }
-  //////////////////////////////////////////////////
-
   // Necessary steps to do every frame
   //////////////////////////////////////////////////
   glfwPollEvents();
@@ -252,14 +230,9 @@ const f32 get_aspect_ratio()
   return window.size.x / window.size.y;
 }
 
-const f64 get_delta_time()
+const f64 get_time()
 {
-  return window.delta_time;
-}
-
-const f64 get_fps()
-{
-  return window.fps;
+  return glfwGetTime();
 }
 
 const glm::vec2 get_window_size()

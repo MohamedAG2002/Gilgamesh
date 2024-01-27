@@ -10,7 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/glad/gl.c" "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/stb_image/stb_image.cpp" "CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o.d"
-  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/application.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/clock.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/engine.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/event.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/event.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/event.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/input.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/input.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/input.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o.d"

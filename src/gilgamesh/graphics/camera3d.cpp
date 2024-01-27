@@ -1,6 +1,7 @@
 #include "camera3d.h"
 #include "core/window.h"
 #include "core/input.h"
+#include "core/clock.h"
 
 #include <glm/glm.hpp>
 #include <glm/ext/matrix_transform.hpp>
@@ -99,7 +100,7 @@ void update_camera3d(camera3d& cam)
 
 void move_camera3d(camera3d& cam)
 {
-  f32 delta_speed = CAM_SPEED * get_delta_time();
+  f32 delta_speed = CAM_SPEED * clock_delta_time();
 
   switch(cam.type)
   {

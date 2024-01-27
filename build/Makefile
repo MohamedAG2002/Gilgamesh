@@ -177,29 +177,53 @@ libs/src/stb_image/stb_image.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.s
 .PHONY : libs/src/stb_image/stb_image.cpp.s
 
-src/gilgamesh/core/application.o: src/gilgamesh/core/application.cpp.o
-.PHONY : src/gilgamesh/core/application.o
+src/gilgamesh/core/clock.o: src/gilgamesh/core/clock.cpp.o
+.PHONY : src/gilgamesh/core/clock.o
 
 # target to build an object file
-src/gilgamesh/core/application.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.o
-.PHONY : src/gilgamesh/core/application.cpp.o
+src/gilgamesh/core/clock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o
+.PHONY : src/gilgamesh/core/clock.cpp.o
 
-src/gilgamesh/core/application.i: src/gilgamesh/core/application.cpp.i
-.PHONY : src/gilgamesh/core/application.i
+src/gilgamesh/core/clock.i: src/gilgamesh/core/clock.cpp.i
+.PHONY : src/gilgamesh/core/clock.i
 
 # target to preprocess a source file
-src/gilgamesh/core/application.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.i
-.PHONY : src/gilgamesh/core/application.cpp.i
+src/gilgamesh/core/clock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.i
+.PHONY : src/gilgamesh/core/clock.cpp.i
 
-src/gilgamesh/core/application.s: src/gilgamesh/core/application.cpp.s
-.PHONY : src/gilgamesh/core/application.s
+src/gilgamesh/core/clock.s: src/gilgamesh/core/clock.cpp.s
+.PHONY : src/gilgamesh/core/clock.s
 
 # target to generate assembly for a file
-src/gilgamesh/core/application.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/application.cpp.s
-.PHONY : src/gilgamesh/core/application.cpp.s
+src/gilgamesh/core/clock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.s
+.PHONY : src/gilgamesh/core/clock.cpp.s
+
+src/gilgamesh/core/engine.o: src/gilgamesh/core/engine.cpp.o
+.PHONY : src/gilgamesh/core/engine.o
+
+# target to build an object file
+src/gilgamesh/core/engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o
+.PHONY : src/gilgamesh/core/engine.cpp.o
+
+src/gilgamesh/core/engine.i: src/gilgamesh/core/engine.cpp.i
+.PHONY : src/gilgamesh/core/engine.i
+
+# target to preprocess a source file
+src/gilgamesh/core/engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.i
+.PHONY : src/gilgamesh/core/engine.cpp.i
+
+src/gilgamesh/core/engine.s: src/gilgamesh/core/engine.cpp.s
+.PHONY : src/gilgamesh/core/engine.s
+
+# target to generate assembly for a file
+src/gilgamesh/core/engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.s
+.PHONY : src/gilgamesh/core/engine.cpp.s
 
 src/gilgamesh/core/event.o: src/gilgamesh/core/event.cpp.o
 .PHONY : src/gilgamesh/core/event.o
@@ -576,9 +600,12 @@ help:
 	@echo "... libs/src/stb_image/stb_image.o"
 	@echo "... libs/src/stb_image/stb_image.i"
 	@echo "... libs/src/stb_image/stb_image.s"
-	@echo "... src/gilgamesh/core/application.o"
-	@echo "... src/gilgamesh/core/application.i"
-	@echo "... src/gilgamesh/core/application.s"
+	@echo "... src/gilgamesh/core/clock.o"
+	@echo "... src/gilgamesh/core/clock.i"
+	@echo "... src/gilgamesh/core/clock.s"
+	@echo "... src/gilgamesh/core/engine.o"
+	@echo "... src/gilgamesh/core/engine.i"
+	@echo "... src/gilgamesh/core/engine.s"
 	@echo "... src/gilgamesh/core/event.o"
 	@echo "... src/gilgamesh/core/event.i"
 	@echo "... src/gilgamesh/core/event.s"

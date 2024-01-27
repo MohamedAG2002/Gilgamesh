@@ -24,12 +24,13 @@ find_library(glfw glfw REQUIRED)
 ######################################
 set(GILG_SOURCES
   # Core 
-  ${GILG_SOURCE_PATH}/core/application.cpp
+  ${GILG_SOURCE_PATH}/core/engine.cpp
   ${GILG_SOURCE_PATH}/core/window.cpp
   ${GILG_SOURCE_PATH}/core/logger.cpp
   ${GILG_SOURCE_PATH}/core/memory_alloc.cpp
   ${GILG_SOURCE_PATH}/core/event.cpp
   ${GILG_SOURCE_PATH}/core/input.cpp
+  ${GILG_SOURCE_PATH}/core/clock.cpp
   ${GILG_SOURCE_PATH}/main.cpp
 
   # Math 
