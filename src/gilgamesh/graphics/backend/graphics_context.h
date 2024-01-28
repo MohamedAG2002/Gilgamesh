@@ -4,6 +4,8 @@
 #include "graphics/color.h"
 #include "graphics/backend/vertex_array.h"
 
+#include <string>
+
 namespace gilg {
 
 // Draw modes
@@ -26,10 +28,19 @@ enum draw_mode
 };
 ////////////////////////////////////////////////////////////
 
+// Context Debug info struct
+////////////////////////////////////////////////////////////
+struct context_debug_info 
+{
+  std::string vendor, renderer, version;  
+};
+////////////////////////////////////////////////////////////
+
 // Graphics context functions
 ////////////////////////////////////////////////////////////
 b8 create_gcontext();
 void destroy_gcontext();
+const context_debug_info& gcontext_debug_info();
 void gcontext_clear(const color& color);
 void gcontext_swap();
 void gcontext_draw_vertex(const draw_mode mode, vertex_array& va);

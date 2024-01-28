@@ -18,7 +18,7 @@ struct shader
 shader load_shader(const std::string& vert_path, const std::string& frag_path);
 void unload_shader(shader& shader);
 
-void bind_shader(shader& shader);
+void bind_shader(const shader& shader);
 
 void set_shader_int(shader& shader, const std::string& name, i32 value);
 void set_shader_float(shader& shader, const std::string& name, f32 value);

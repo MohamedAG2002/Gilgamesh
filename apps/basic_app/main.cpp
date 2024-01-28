@@ -16,7 +16,7 @@ struct game
 game init_game();
 void update_game(game& game);
 void render_game(game& game);
-void render_game_gui(game& game);
+void render_game_gui(game& game, const gilg::render_data& data);
 void shutdown_game(game& game);
 
 int main()
@@ -68,11 +68,15 @@ void update_game(game& game)
 
 void render_game(game& game)
 {
-  gilg::begin_renderer(game.cam);
+  gilg::render_data ren_dat = {
+    .cam = &game.cam, 
+  };
+
+  gilg::begin_renderer(ren_dat);
   gilg::clear_renderer(game.background_color);
 
   if(game.show_editor)
-    render_game_gui(game);
+    render_game_gui(game, ren_dat);
 
   gilg::end_renderer();
 }

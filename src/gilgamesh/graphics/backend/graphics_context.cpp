@@ -8,7 +8,14 @@
 #include <glm/glm.hpp>
 #include <glad/gl.h>
 
+#include <string>
+
 namespace gilg {
+
+// Globals
+////////////////////////////////////////////////////////////
+static context_debug_info debug_info;
+////////////////////////////////////////////////////////////
 
 // Graphics context functions
 ////////////////////////////////////////////////////////////
@@ -36,12 +43,24 @@ b8 create_gcontext()
   // Set the current context
   glfwMakeContextCurrent(window_handle());
 
+  // Retrieving debug info 
+  debug_info = context_debug_info{
+    .vendor   = (char*)glGetString(GL_VENDOR),
+    .renderer = (char*)glGetString(GL_RENDERER),
+    .version  = (char*)glGetString(GL_VERSION),
+  };
+
   return true;
 }
 
 void destroy_gcontext()
 {
   GILG_LOG_INFO("Destroyed graphics context");
+}
+
+const context_debug_info& gcontext_debug_info()
+{
+  return debug_info;
 }
 
 void gcontext_clear(const color& color)

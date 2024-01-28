@@ -2,7 +2,11 @@
 #include "core/defines.h"
 #include "core/logger.h"
 #include "core/window.h"
+#include "core/clock.h"
 
+#include "graphics/backend/graphics_context.h"
+
+#include <glm/glm.hpp>
 #include <imgui/imgui.h>
 #include <imgui/imgui_impl_glfw.h>
 #include <imgui/imgui_impl_opengl3.h>
@@ -64,6 +68,38 @@ void editor_end()
 {
   ImGui::Render();
   ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+}
+
+void editor_engine_info()
+{
+  ImGui::Begin("Engine Info");
+  ImGui::Text("Version: 0.1");
+
+  glm::vec2 mouse_pos = get_mouse_pos();
+  ImGui::Text("Mouse Position: {X = %f, Y = %f}", mouse_pos.x, mouse_pos.y);
+  
+  f64 fps = clock_fps(); 
+  ImGui::Text("FPS = %f", fps);
+
+  ImGui::End();
+}
+
+void editor_renderer_info()
+{
+  ImGui::Begin("Renderer Info");
+  
+  context_debug_info debug_info = gcontext_debug_info();
+  ImGui::Text("Vendor: %s", debug_info.vendor.c_str());
+  ImGui::Text("Renderer: %s", debug_info.renderer.c_str());
+  ImGui::Text("Version: %s", debug_info.version.c_str());
+
+  ImGui::End();
+}
+
+void editor_hierarchy_panel()
+{
+  ImGui::Begin("Hierarchy Panel");
+  ImGui::End();
 }
 /////////////////////////////////////////////////////
 

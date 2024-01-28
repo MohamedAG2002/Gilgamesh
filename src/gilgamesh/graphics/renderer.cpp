@@ -26,6 +26,8 @@ namespace gilg {
 ///////////////////////////////////////////////////////
 struct renderer 
 {
+  renderer_debug_info info;
+
   vertex_array quad_va;
   std::unordered_map<std::string, u64> shaders, textures;
   u64 current_shader;
@@ -185,20 +187,19 @@ void clear_renderer(const color& color)
   gcontext_clear(color);
 }
 
-void begin_renderer(const camera3d& cam)
+void begin_renderer(const render_data& data)
 {
   bind_shader(renderer.curr_shdr);
  
-  set_shader_mat4(renderer.curr_shdr, "u_projection", cam.projection); 
-  set_shader_mat4(renderer.curr_shdr, "u_view", cam.view); 
+  set_shader_mat4(renderer.curr_shdr, "u_projection", data.cam->projection); 
+  set_shader_mat4(renderer.curr_shdr, "u_view", data.cam->view); 
 }
 
 void end_renderer()
 {
   for(auto& transform : renderer.models)
   {
-    set_shader_mat4(renderer.curr_shdr, "u_model", transform.model); 
-    renderer_queue_sumbit(renderer.quad_va);
+    renderer_queue_sumbit(renderer.curr_shdr, renderer.quad_va, transform);
     //renderer_queue_flush();
   }
 

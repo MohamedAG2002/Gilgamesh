@@ -115,7 +115,7 @@ void unload_shader(shader& shader)
 
 }
 
-void bind_shader(shader& shader)
+void bind_shader(const shader& shader)
 {
   glUseProgram(shader.program);
 }

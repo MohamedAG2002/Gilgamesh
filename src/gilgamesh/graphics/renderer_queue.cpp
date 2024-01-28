@@ -1,6 +1,8 @@
 #include "renderer_queue.h"
 #include "graphics/backend/vertex_array.h"
 #include "graphics/backend/graphics_context.h"
+#include "resources/shader.h"
+#include "math/transform.h"
 
 #include <vector>
 
@@ -18,9 +20,10 @@ static renderer_queue ren_que;
 
 // Renderer Queue functions
 //////////////////////////////////////////////////
-void renderer_queue_sumbit(vertex_array& va)
+void renderer_queue_sumbit(shader& shader, vertex_array& va, const transform& transform)
 {
-  //ren_que.queue.push_back(va); 
+  bind_shader(shader);
+  set_shader_mat4(shader, "u_model", transform.model);
 
   gcontext_draw_vertex(GILG_DRAW_TRIANGLES, va); 
 }
