@@ -20,3 +20,5 @@
 
 #include "math/gilg_random.h"
 #include "math/vertex.h"
+
+#include "editor/editor.h"

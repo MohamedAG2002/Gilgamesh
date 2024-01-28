@@ -9,6 +9,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/glad/gl.c" "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/imgui/imgui.cpp" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/imgui/imgui_demo.cpp" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_demo.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_demo.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/imgui/imgui_draw.cpp" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_draw.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_draw.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/imgui/imgui_impl_glfw.cpp" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_glfw.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_glfw.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/imgui/imgui_impl_opengl3.cpp" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_opengl3.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_opengl3.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/imgui/imgui_tables.cpp" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_tables.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_tables.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/imgui/imgui_widgets.cpp" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_widgets.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_widgets.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/libs/src/stb_image/stb_image.cpp" "CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/libs/src/stb_image/stb_image.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/clock.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/engine.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o.d"
@@ -17,6 +24,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/memory_alloc.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/memory_alloc.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/memory_alloc.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/window.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/window.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/core/window.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/editor/editor.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/graphics_context.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/camera3d.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/camera3d.cpp.o.d"

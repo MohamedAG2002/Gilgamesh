@@ -11,6 +11,7 @@ set(GILG_LIBS_PATH ${CMAKE_SOURCE_DIR}/libs)
 
 # Setting CMake variables
 ######################################
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_BUILD_TYPE ${GILG_BUILD_TYPE}) 
 ######################################
@@ -49,11 +50,26 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/resources/resource_manager.cpp
   ${GILG_SOURCE_PATH}/resources/shader.cpp
   ${GILG_SOURCE_PATH}/resources/texture2d.cpp
+ 
+  # Editor
+  ${GILG_SOURCE_PATH}/editor/editor.cpp
+)
+
+set(IMGUI_SOURCES
+  ${GILG_LIBS_PATH}/src/imgui/imgui.cpp 
+  ${GILG_LIBS_PATH}/src/imgui/imgui_demo.cpp 
+  ${GILG_LIBS_PATH}/src/imgui/imgui_draw.cpp 
+  ${GILG_LIBS_PATH}/src/imgui/imgui_tables.cpp 
+  ${GILG_LIBS_PATH}/src/imgui/imgui_widgets.cpp 
+  
+  ${GILG_LIBS_PATH}/src/imgui/imgui_impl_glfw.cpp 
+  ${GILG_LIBS_PATH}/src/imgui/imgui_impl_opengl3.cpp 
 )
 
 set(LIBS_SOURCES
   ${GILG_LIBS_PATH}/src/stb_image/stb_image.cpp
   ${GILG_LIBS_PATH}/src/glad/gl.c
+  ${IMGUI_SOURCES}
 )
 ######################################
 

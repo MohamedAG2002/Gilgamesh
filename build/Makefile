@@ -153,6 +153,174 @@ libs/src/glad/gl.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/glad/gl.c.s
 .PHONY : libs/src/glad/gl.c.s
 
+libs/src/imgui/imgui.o: libs/src/imgui/imgui.cpp.o
+.PHONY : libs/src/imgui/imgui.o
+
+# target to build an object file
+libs/src/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui.cpp.o
+.PHONY : libs/src/imgui/imgui.cpp.o
+
+libs/src/imgui/imgui.i: libs/src/imgui/imgui.cpp.i
+.PHONY : libs/src/imgui/imgui.i
+
+# target to preprocess a source file
+libs/src/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui.cpp.i
+.PHONY : libs/src/imgui/imgui.cpp.i
+
+libs/src/imgui/imgui.s: libs/src/imgui/imgui.cpp.s
+.PHONY : libs/src/imgui/imgui.s
+
+# target to generate assembly for a file
+libs/src/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui.cpp.s
+.PHONY : libs/src/imgui/imgui.cpp.s
+
+libs/src/imgui/imgui_demo.o: libs/src/imgui/imgui_demo.cpp.o
+.PHONY : libs/src/imgui/imgui_demo.o
+
+# target to build an object file
+libs/src/imgui/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_demo.cpp.o
+.PHONY : libs/src/imgui/imgui_demo.cpp.o
+
+libs/src/imgui/imgui_demo.i: libs/src/imgui/imgui_demo.cpp.i
+.PHONY : libs/src/imgui/imgui_demo.i
+
+# target to preprocess a source file
+libs/src/imgui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_demo.cpp.i
+.PHONY : libs/src/imgui/imgui_demo.cpp.i
+
+libs/src/imgui/imgui_demo.s: libs/src/imgui/imgui_demo.cpp.s
+.PHONY : libs/src/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+libs/src/imgui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_demo.cpp.s
+.PHONY : libs/src/imgui/imgui_demo.cpp.s
+
+libs/src/imgui/imgui_draw.o: libs/src/imgui/imgui_draw.cpp.o
+.PHONY : libs/src/imgui/imgui_draw.o
+
+# target to build an object file
+libs/src/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_draw.cpp.o
+.PHONY : libs/src/imgui/imgui_draw.cpp.o
+
+libs/src/imgui/imgui_draw.i: libs/src/imgui/imgui_draw.cpp.i
+.PHONY : libs/src/imgui/imgui_draw.i
+
+# target to preprocess a source file
+libs/src/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_draw.cpp.i
+.PHONY : libs/src/imgui/imgui_draw.cpp.i
+
+libs/src/imgui/imgui_draw.s: libs/src/imgui/imgui_draw.cpp.s
+.PHONY : libs/src/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+libs/src/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_draw.cpp.s
+.PHONY : libs/src/imgui/imgui_draw.cpp.s
+
+libs/src/imgui/imgui_impl_glfw.o: libs/src/imgui/imgui_impl_glfw.cpp.o
+.PHONY : libs/src/imgui/imgui_impl_glfw.o
+
+# target to build an object file
+libs/src/imgui/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_glfw.cpp.o
+.PHONY : libs/src/imgui/imgui_impl_glfw.cpp.o
+
+libs/src/imgui/imgui_impl_glfw.i: libs/src/imgui/imgui_impl_glfw.cpp.i
+.PHONY : libs/src/imgui/imgui_impl_glfw.i
+
+# target to preprocess a source file
+libs/src/imgui/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_glfw.cpp.i
+.PHONY : libs/src/imgui/imgui_impl_glfw.cpp.i
+
+libs/src/imgui/imgui_impl_glfw.s: libs/src/imgui/imgui_impl_glfw.cpp.s
+.PHONY : libs/src/imgui/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+libs/src/imgui/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_glfw.cpp.s
+.PHONY : libs/src/imgui/imgui_impl_glfw.cpp.s
+
+libs/src/imgui/imgui_impl_opengl3.o: libs/src/imgui/imgui_impl_opengl3.cpp.o
+.PHONY : libs/src/imgui/imgui_impl_opengl3.o
+
+# target to build an object file
+libs/src/imgui/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_opengl3.cpp.o
+.PHONY : libs/src/imgui/imgui_impl_opengl3.cpp.o
+
+libs/src/imgui/imgui_impl_opengl3.i: libs/src/imgui/imgui_impl_opengl3.cpp.i
+.PHONY : libs/src/imgui/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+libs/src/imgui/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_opengl3.cpp.i
+.PHONY : libs/src/imgui/imgui_impl_opengl3.cpp.i
+
+libs/src/imgui/imgui_impl_opengl3.s: libs/src/imgui/imgui_impl_opengl3.cpp.s
+.PHONY : libs/src/imgui/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+libs/src/imgui/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_impl_opengl3.cpp.s
+.PHONY : libs/src/imgui/imgui_impl_opengl3.cpp.s
+
+libs/src/imgui/imgui_tables.o: libs/src/imgui/imgui_tables.cpp.o
+.PHONY : libs/src/imgui/imgui_tables.o
+
+# target to build an object file
+libs/src/imgui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_tables.cpp.o
+.PHONY : libs/src/imgui/imgui_tables.cpp.o
+
+libs/src/imgui/imgui_tables.i: libs/src/imgui/imgui_tables.cpp.i
+.PHONY : libs/src/imgui/imgui_tables.i
+
+# target to preprocess a source file
+libs/src/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_tables.cpp.i
+.PHONY : libs/src/imgui/imgui_tables.cpp.i
+
+libs/src/imgui/imgui_tables.s: libs/src/imgui/imgui_tables.cpp.s
+.PHONY : libs/src/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+libs/src/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_tables.cpp.s
+.PHONY : libs/src/imgui/imgui_tables.cpp.s
+
+libs/src/imgui/imgui_widgets.o: libs/src/imgui/imgui_widgets.cpp.o
+.PHONY : libs/src/imgui/imgui_widgets.o
+
+# target to build an object file
+libs/src/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_widgets.cpp.o
+.PHONY : libs/src/imgui/imgui_widgets.cpp.o
+
+libs/src/imgui/imgui_widgets.i: libs/src/imgui/imgui_widgets.cpp.i
+.PHONY : libs/src/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+libs/src/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_widgets.cpp.i
+.PHONY : libs/src/imgui/imgui_widgets.cpp.i
+
+libs/src/imgui/imgui_widgets.s: libs/src/imgui/imgui_widgets.cpp.s
+.PHONY : libs/src/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+libs/src/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/libs/src/imgui/imgui_widgets.cpp.s
+.PHONY : libs/src/imgui/imgui_widgets.cpp.s
+
 libs/src/stb_image/stb_image.o: libs/src/stb_image/stb_image.cpp.o
 .PHONY : libs/src/stb_image/stb_image.o
 
@@ -344,6 +512,30 @@ src/gilgamesh/core/window.s: src/gilgamesh/core/window.cpp.s
 src/gilgamesh/core/window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/core/window.cpp.s
 .PHONY : src/gilgamesh/core/window.cpp.s
+
+src/gilgamesh/editor/editor.o: src/gilgamesh/editor/editor.cpp.o
+.PHONY : src/gilgamesh/editor/editor.o
+
+# target to build an object file
+src/gilgamesh/editor/editor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.o
+.PHONY : src/gilgamesh/editor/editor.cpp.o
+
+src/gilgamesh/editor/editor.i: src/gilgamesh/editor/editor.cpp.i
+.PHONY : src/gilgamesh/editor/editor.i
+
+# target to preprocess a source file
+src/gilgamesh/editor/editor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.i
+.PHONY : src/gilgamesh/editor/editor.cpp.i
+
+src/gilgamesh/editor/editor.s: src/gilgamesh/editor/editor.cpp.s
+.PHONY : src/gilgamesh/editor/editor.s
+
+# target to generate assembly for a file
+src/gilgamesh/editor/editor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.s
+.PHONY : src/gilgamesh/editor/editor.cpp.s
 
 src/gilgamesh/graphics/backend/graphics_context.o: src/gilgamesh/graphics/backend/graphics_context.cpp.o
 .PHONY : src/gilgamesh/graphics/backend/graphics_context.o
@@ -597,6 +789,27 @@ help:
 	@echo "... libs/src/glad/gl.o"
 	@echo "... libs/src/glad/gl.i"
 	@echo "... libs/src/glad/gl.s"
+	@echo "... libs/src/imgui/imgui.o"
+	@echo "... libs/src/imgui/imgui.i"
+	@echo "... libs/src/imgui/imgui.s"
+	@echo "... libs/src/imgui/imgui_demo.o"
+	@echo "... libs/src/imgui/imgui_demo.i"
+	@echo "... libs/src/imgui/imgui_demo.s"
+	@echo "... libs/src/imgui/imgui_draw.o"
+	@echo "... libs/src/imgui/imgui_draw.i"
+	@echo "... libs/src/imgui/imgui_draw.s"
+	@echo "... libs/src/imgui/imgui_impl_glfw.o"
+	@echo "... libs/src/imgui/imgui_impl_glfw.i"
+	@echo "... libs/src/imgui/imgui_impl_glfw.s"
+	@echo "... libs/src/imgui/imgui_impl_opengl3.o"
+	@echo "... libs/src/imgui/imgui_impl_opengl3.i"
+	@echo "... libs/src/imgui/imgui_impl_opengl3.s"
+	@echo "... libs/src/imgui/imgui_tables.o"
+	@echo "... libs/src/imgui/imgui_tables.i"
+	@echo "... libs/src/imgui/imgui_tables.s"
+	@echo "... libs/src/imgui/imgui_widgets.o"
+	@echo "... libs/src/imgui/imgui_widgets.i"
+	@echo "... libs/src/imgui/imgui_widgets.s"
 	@echo "... libs/src/stb_image/stb_image.o"
 	@echo "... libs/src/stb_image/stb_image.i"
 	@echo "... libs/src/stb_image/stb_image.s"
@@ -621,6 +834,9 @@ help:
 	@echo "... src/gilgamesh/core/window.o"
 	@echo "... src/gilgamesh/core/window.i"
 	@echo "... src/gilgamesh/core/window.s"
+	@echo "... src/gilgamesh/editor/editor.o"
+	@echo "... src/gilgamesh/editor/editor.i"
+	@echo "... src/gilgamesh/editor/editor.s"
 	@echo "... src/gilgamesh/graphics/backend/graphics_context.o"
 	@echo "... src/gilgamesh/graphics/backend/graphics_context.i"
 	@echo "... src/gilgamesh/graphics/backend/graphics_context.s"
