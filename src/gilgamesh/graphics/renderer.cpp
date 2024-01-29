@@ -26,8 +26,6 @@ namespace gilg {
 ///////////////////////////////////////////////////////
 struct renderer 
 {
-  renderer_debug_info info;
-
   vertex_array quad_va;
   std::unordered_map<std::string, u64> shaders, textures;
   u64 current_shader;

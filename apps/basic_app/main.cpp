@@ -9,14 +9,14 @@ struct game
 
   glm::vec3 target;
   gilg::camera3d cam;
-  gilg::color background_color;
+  gilg::render_data render_data;
   bool show_editor;
 };
 
 game init_game();
 void update_game(game& game);
 void render_game(game& game);
-void render_game_gui(game& game, const gilg::render_data& data);
+void render_game_gui(game& game);
 void shutdown_game(game& game);
 
 int main()
@@ -49,7 +49,9 @@ game init_game()
 
   game.target = glm::vec3(0.0f, 0.0f, -3.0f);
   game.cam = gilg::create_camera3d(gilg::GILG_CAM_FREE, glm::vec3(-10.0f, 0.0f, -4.0f), &game.target, 45.0f); 
-  game.background_color = gilg::color(0.1f, 0.1f, 0.1f, 1.0f);
+ 
+  game.render_data.cam = &game.cam;
+  game.render_data.clear_color = gilg::color(0.1f, 0.1f, 0.1f, 1.0f);
 
   return game;
 }
@@ -68,15 +70,16 @@ void update_game(game& game)
 
 void render_game(game& game)
 {
-  gilg::render_data ren_dat = {
-    .cam = &game.cam, 
-  };
-
-  gilg::begin_renderer(ren_dat);
-  gilg::clear_renderer(game.background_color);
+  gilg::begin_renderer(game.render_data);
+  gilg::clear_renderer(game.render_data.clear_color);
 
   if(game.show_editor)
-    render_game_gui(game, ren_dat);
+  {
+    render_game_gui(game);
+    gilg::enable_cursor();
+  }
+  else 
+    gilg::disable_cursor();
 
   gilg::end_renderer();
 }
@@ -84,7 +87,9 @@ void render_game(game& game)
 void render_game_gui(game& game)
 {
   gilg::editor_begin();
-  gilg::enable_cursor();
+
+  gilg::editor_info_window(game.render_data);
+  gilg::editor_camera_panel(game.cam); 
 
   gilg::editor_end();
 }

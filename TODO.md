@@ -1,6 +1,7 @@
 # Short-Term TODO:
+- Include files naming. Make sure to have "gilgamesh" before every include file
+- Uniform buffers
 - Renderer
-- Primitive editor
 
 # Mid-Term TODO:
 - Scenes

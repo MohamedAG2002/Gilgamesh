@@ -12,6 +12,7 @@ struct render_data
 {
   camera3d* cam;
   shader* current_shader;
+  color clear_color;
 };
 ///////////////////////////////////////////////////////
 

@@ -60,8 +60,6 @@ void editor_begin()
   ImGui_ImplOpenGL3_NewFrame();
   ImGui_ImplGlfw_NewFrame();
   ImGui::NewFrame();
-
-  ImGui::ShowDemoWindow();
 }
 
 void editor_end()
@@ -84,7 +82,7 @@ void editor_engine_info()
   ImGui::End();
 }
 
-void editor_renderer_info()
+void editor_renderer_info(render_data& data)
 {
   ImGui::Begin("Renderer Info");
   
@@ -93,6 +91,23 @@ void editor_renderer_info()
   ImGui::Text("Renderer: %s", debug_info.renderer.c_str());
   ImGui::Text("Version: %s", debug_info.version.c_str());
 
+  ImGui::ColorEdit3("Background Color", &data.clear_color.r);
+
+  ImGui::End();
+}
+
+void editor_info_window(render_data& data)
+{
+  editor_engine_info();
+  editor_renderer_info(data);
+}
+
+static u8 current_cam_type = 0;
+void editor_camera_panel(camera3d& cam)
+{
+  const char* camera_types[] = {"Free", "FPS"};
+
+  ImGui::Begin("Camera");
   ImGui::End();
 }
 
