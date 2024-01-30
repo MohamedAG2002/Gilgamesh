@@ -25,7 +25,7 @@ struct camera3d
   glm::vec3 up_axis, right_axis, up;
   glm::vec3 direction, front;
 
-  glm::mat4 projection, view;
+  glm::mat4 view_projection;
 
   camera_type type;
 };

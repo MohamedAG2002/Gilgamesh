@@ -65,9 +65,7 @@ camera3d create_camera3d(const camera_type type, const glm::vec3& pos, glm::vec3
   cam.direction.z = glm::sin(glm::radians(cam.yaw)) * glm::cos(glm::radians(cam.pitch));
   cam.front = glm::normalize(cam.direction);
 
-  cam.projection = glm::mat4(1.0f);
-  cam.view = glm::mat4(1.0f);
-  
+  cam.view_projection = glm::mat4(1.0f);
   cam.type = type;
 
   return cam;
@@ -80,9 +78,9 @@ void update_camera3d(camera3d& cam)
   glm::vec2 mouse_pos = get_mouse_pos();
 
   // Updating the projection and view matrices
-  cam.view = glm::lookAt(cam.position, cam.position + cam.front, cam.up);  
-  cam.projection = glm::perspective(glm::radians(cam.zoom), aspect_ratio, 0.1f, 100.0f);
-  
+  cam.view_projection = glm::perspective(glm::radians(cam.zoom), aspect_ratio, 0.1f, 100.0f) * 
+                        glm::lookAt(cam.position, cam.position + cam.front, cam.up); 
+
   // Updating the yaw and pitch values
   cam.yaw = mouse_pos.x;
   cam.pitch = mouse_pos.y;

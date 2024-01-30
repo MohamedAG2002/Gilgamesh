@@ -1,5 +1,4 @@
 # Short-Term TODO:
-- Include files naming. Make sure to have "gilgamesh" before every include file
 - u_view, u_projection -> u_view_projection 
 - Uniform buffers
 - Renderer

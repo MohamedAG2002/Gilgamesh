@@ -46,7 +46,7 @@ void shutdown_resource_manager()
   GILG_LOG_INFO("Resource manager was successfully shutdown");
 }
 
-resource_id resource_add_texture(const std::string& path)
+const resource_id resource_add_texture(const std::string& path)
 {
   resource_id id = random_ulong();
   rsrc_man.textures2d[id] = load_texture2d(path);
@@ -54,7 +54,7 @@ resource_id resource_add_texture(const std::string& path)
   return id;
 }
 
-resource_id resource_add_shader(const std::string& vert_path, const std::string& frag_path)
+const resource_id resource_add_shader(const std::string& vert_path, const std::string& frag_path)
 {
   resource_id id = random_ulong();
   rsrc_man.shaders[id] = load_shader(vert_path, frag_path);
@@ -62,7 +62,7 @@ resource_id resource_add_shader(const std::string& vert_path, const std::string&
   return id;
 }
 
-texture2d resource_get_texture(const resource_id& id)
+const texture2d resource_get_texture(const resource_id& id)
 {
   if (rsrc_man.textures2d.find(id) == nullptr)
     GILG_ASSERT_MSG(false, "Could not retrieve texture2d since it doesn't exist");
@@ -70,7 +70,7 @@ texture2d resource_get_texture(const resource_id& id)
   return rsrc_man.textures2d[id];
 }
 
-shader resource_get_shader(const resource_id& id)
+const shader resource_get_shader(const resource_id& id)
 {
   if (rsrc_man.shaders.find(id) == nullptr)
     GILG_ASSERT_MSG(false, "Could not retrieve shader since it doesn't exist");

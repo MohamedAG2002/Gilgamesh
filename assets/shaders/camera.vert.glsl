@@ -8,11 +8,11 @@ layout (location = 1) in vec2 aTextureCoords;
 out vec2 texture_coords;
 
 // Uniforms 
-uniform mat4 u_projection, u_view, u_model;
+uniform mat4 u_view_projection, u_model;
 
 void main() 
 {
   texture_coords = aTextureCoords;
   
-  gl_Position = u_projection * u_view * u_model * vec4(aPos, 1.0f);
+  gl_Position = u_view_projection * u_model * vec4(aPos, 1.0f);
 }

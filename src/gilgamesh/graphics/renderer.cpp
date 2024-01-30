@@ -28,7 +28,7 @@ struct renderer
 {
   vertex_array quad_va;
   std::unordered_map<std::string, u64> shaders, textures;
-  u64 current_shader;
+  resource_id current_shader, current_texture;
  
   shader curr_shdr;
   texture2d curr_tex;
@@ -155,12 +155,14 @@ b8 create_renderer()
   renderer.shaders["basic"] = resource_add_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
   renderer.shaders["texture"] = resource_add_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
   renderer.shaders["camera"] = resource_add_shader("assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
-  renderer.current_shader = renderer.shaders["camera"];
 
   renderer.textures["container"] = resource_add_texture("assets/textures/container.jpg");
+  
+  renderer.current_shader = renderer.shaders["camera"];
+  renderer.current_texture = renderer.textures["container"];
 
   renderer.curr_shdr = resource_get_shader(renderer.current_shader);
-  renderer.curr_tex = resource_get_texture(renderer.textures["container"]);
+  renderer.curr_tex = resource_get_texture(renderer.current_texture);
 
   renderer.models.push_back(create_transform(glm::vec3(10.0f, 0.0f, 10.0f)));
   renderer.models.push_back(create_transform(glm::vec3(20.0f, 0.0f, 15.0f)));
@@ -188,18 +190,13 @@ void clear_renderer(const color& color)
 void begin_renderer(const render_data& data)
 {
   bind_shader(renderer.curr_shdr);
- 
-  set_shader_mat4(renderer.curr_shdr, "u_projection", data.cam->projection); 
-  set_shader_mat4(renderer.curr_shdr, "u_view", data.cam->view); 
+  set_shader_mat4(renderer.curr_shdr, "u_view_projection", data.cam->view_projection); 
 }
 
 void end_renderer()
 {
   for(auto& transform : renderer.models)
-  {
     renderer_queue_sumbit(renderer.curr_shdr, renderer.quad_va, transform);
-    //renderer_queue_flush();
-  }
 
   gcontext_swap();
 }
