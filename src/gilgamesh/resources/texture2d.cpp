@@ -1,6 +1,6 @@
 #include "texture2d.h"
-#include "core/defines.h"
-#include "core/logger.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/logger.h"
 
 #include <glad/gl.h>
 #include <stb_image/stb_image.h>

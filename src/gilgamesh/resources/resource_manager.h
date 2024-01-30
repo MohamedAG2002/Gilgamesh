@@ -1,9 +1,9 @@
 #pragma once
 
-#include "core/defines.h"
+#include "gilgamesh/core/defines.h"
 
-#include "resources/texture2d.h"
-#include "resources/shader.h"
+#include "gilgamesh/resources/texture2d.h"
+#include "gilgamesh/resources/shader.h"
 
 #include <string>
 

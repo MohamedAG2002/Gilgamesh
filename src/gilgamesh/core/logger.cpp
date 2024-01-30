@@ -1,6 +1,6 @@
 #include "logger.h"
-#include "defines.h"
-#include "core/event.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/event.h"
 
 #include <string>
 #include <cstdio>

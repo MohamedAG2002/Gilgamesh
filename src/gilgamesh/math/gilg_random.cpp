@@ -1,5 +1,5 @@
 #include "gilg_random.h"
-#include "core/defines.h"
+#include "gilgamesh/core/defines.h"
 
 #include <random>
 

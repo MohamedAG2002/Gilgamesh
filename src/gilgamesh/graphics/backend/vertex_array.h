@@ -1,7 +1,7 @@
 #pragma once
 
-#include "core/defines.h"
-#include "graphics/backend/buffer.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/graphics/backend/buffer.h"
 
 #include <vector>
 

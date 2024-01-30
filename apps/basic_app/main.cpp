@@ -1,4 +1,4 @@
-#include <gilgamesh.h>
+#include "gilgamesh/gilgamesh.h"
 
 #include <cstdio>
 

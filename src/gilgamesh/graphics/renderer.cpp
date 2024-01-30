@@ -1,18 +1,18 @@
 #include "renderer.h"
-#include "graphics/color.h"
-#include "graphics/renderer_queue.h"
-#include "graphics/camera3d.h"
+#include "gilgamesh/graphics/color.h"
+#include "gilgamesh/graphics/renderer_queue.h"
+#include "gilgamesh/graphics/camera3d.h"
 
-#include "graphics/backend/graphics_context.h"
-#include "graphics/backend/vertex_array.h"
+#include "gilgamesh/graphics/backend/graphics_context.h"
+#include "gilgamesh/graphics/backend/vertex_array.h"
 
-#include "resources/resource_manager.h"
+#include "gilgamesh/resources/resource_manager.h"
 
-#include "core/logger.h"
-#include "core/defines.h"
+#include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/defines.h"
 
-#include "math/vertex.h"
-#include "math/transform.h"
+#include "gilgamesh/math/vertex.h"
+#include "gilgamesh/math/transform.h"
 
 #include <glm/ext/matrix_transform.hpp>
 

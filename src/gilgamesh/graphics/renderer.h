@@ -1,8 +1,8 @@
 #pragma once
 
-#include "resources/shader.h"
-#include "graphics/camera3d.h"
-#include "graphics/color.h"
+#include "gilgamesh/resources/shader.h"
+#include "gilgamesh/graphics/camera3d.h"
+#include "gilgamesh/graphics/color.h"
 
 namespace gilg {
 

@@ -1,9 +1,9 @@
-#include "graphics/backend/graphics_context.h"
-#include "graphics/backend/vertex_array.h"
-#include "core/gilg_asserts.h"
-#include "graphics/color.h"
-#include "core/defines.h"
-#include "core/window.h"
+#include "graphics_context.h"
+#include "gilgamesh/graphics/backend/vertex_array.h"
+#include "gilgamesh/core/gilg_asserts.h"
+#include "gilgamesh/graphics/color.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/window.h"
 
 #include <glm/glm.hpp>
 #include <glad/gl.h>

@@ -1,10 +1,10 @@
 #include "resource_manager.h"
-#include "core/defines.h"
-#include "core/logger.h"
-#include "core/gilg_asserts.h"
-#include "resources/texture2d.h"
-#include "resources/shader.h"
-#include "math/gilg_random.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/gilg_asserts.h"
+#include "gilgamesh/resources/texture2d.h"
+#include "gilgamesh/resources/shader.h"
+#include "gilgamesh/math/gilg_random.h"
 
 #include <string>
 #include <unordered_map>

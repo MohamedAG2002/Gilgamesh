@@ -1,6 +1,6 @@
 #pragma once
 
-#include "defines.h"
+#include "gilgamesh/core/defines.h"
 
 #include <string>
 

@@ -1,7 +1,7 @@
 #include "clock.h"
-#include "core/defines.h"
-#include "core/logger.h"
-#include "core/window.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/window.h"
 
 namespace gilg {
 

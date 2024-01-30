@@ -1,8 +1,8 @@
 #pragma once
 
-#include "core/defines.h"
-#include "graphics/color.h"
-#include "graphics/backend/vertex_array.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/graphics/color.h"
+#include "gilgamesh/graphics/backend/vertex_array.h"
 
 #include <string>
 

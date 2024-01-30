@@ -1,15 +1,15 @@
 #include "engine.h"
-#include "core/defines.h"
-#include "core/gilg_asserts.h"
-#include "core/logger.h"
-#include "core/memory_alloc.h"
-#include "core/window.h"
-#include "core/event.h"
-#include "core/input.h"
-#include "core/clock.h"
-#include "graphics/renderer.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/gilg_asserts.h"
+#include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/memory_alloc.h"
+#include "gilgamesh/core/window.h"
+#include "gilgamesh/core/event.h"
+#include "gilgamesh/core/input.h"
+#include "gilgamesh/core/clock.h"
+#include "gilgamesh/graphics/renderer.h"
 
-#include "resources/resource_manager.h"
+#include "gilgamesh/resources/resource_manager.h"
 
 namespace gilg {
 

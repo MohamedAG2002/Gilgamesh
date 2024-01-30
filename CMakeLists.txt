@@ -5,7 +5,8 @@ project(gilgamesh)
 ######################################
 set(GILG_LIBRARY_TYPE STATIC)
 set(GILG_BUILD_TYPE Debug)
-set(GILG_SOURCE_PATH ${CMAKE_SOURCE_DIR}/src/gilgamesh/)
+set(GILG_SOURCE_PATH ${CMAKE_SOURCE_DIR}/src/gilgamesh)
+set(GILG_HEADER_PATH ${CMAKE_SOURCE_DIR}/src/)
 set(GILG_LIBS_PATH ${CMAKE_SOURCE_DIR}/libs)
 ######################################
 
@@ -77,8 +78,8 @@ set(LIBS_SOURCES
 ######################################
 add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${LIBS_SOURCES} ${GILG_SOURCES})
 
-target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_LIBS_PATH}/include)
-target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_SOURCE_PATH})
+target_include_directories(${PROJECT_NAME} BEFORE PRIVATE ${GILG_LIBS_PATH}/include)
+target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_HEADER_PATH})
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
   ${glfw}  

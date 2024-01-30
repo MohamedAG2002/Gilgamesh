@@ -1,7 +1,7 @@
 #pragma once
 
-#include "core/defines.h"
-#include "graphics/renderer.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/graphics/renderer.h"
 
 namespace gilg {
 

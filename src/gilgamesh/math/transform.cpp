@@ -1,5 +1,5 @@
 #include "transform.h"
-#include "core/defines.h"
+#include "gilgamesh/core/defines.h"
 
 #include <glm/glm.hpp>
 #include <glm/ext/matrix_transform.hpp>

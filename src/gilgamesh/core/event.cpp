@@ -1,5 +1,5 @@
-#include "core/event.h"
-#include "core/logger.h"
+#include "event.h"
+#include "gilgamesh/core/logger.h"
 
 #include <unordered_map>
 #include <vector>

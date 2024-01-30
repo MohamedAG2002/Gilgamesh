@@ -1,8 +1,8 @@
 #pragma once
 
-#include "graphics/backend/vertex_array.h"
-#include "resources/shader.h"
-#include "math/transform.h"
+#include "gilgamesh/graphics/backend/vertex_array.h"
+#include "gilgamesh/resources/shader.h"
+#include "gilgamesh/math/transform.h"
 
 namespace gilg {
 

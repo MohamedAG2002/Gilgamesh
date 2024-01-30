@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include
+C_INCLUDES = -I/home/mohamed/Dev/C++/GilgameshEngine/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include
 
 C_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include
+CXX_INCLUDES = -I/home/mohamed/Dev/C++/GilgameshEngine/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include
 
 CXX_FLAGS = -g
 

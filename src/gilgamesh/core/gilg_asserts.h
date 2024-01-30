@@ -1,6 +1,6 @@
 #pragma once
 
-#include "logger.h"
+#include "gilgamesh/core/logger.h"
 
 namespace gilg {
 

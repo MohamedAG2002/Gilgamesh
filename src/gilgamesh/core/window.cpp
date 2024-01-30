@@ -1,9 +1,9 @@
 #include "window.h"
-#include "defines.h"
-#include "gilg_asserts.h"
-#include "logger.h"
-#include "core/event.h"
-#include "core/input.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/gilg_asserts.h"
+#include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/event.h"
+#include "gilgamesh/core/input.h"
 
 #include <GLFW/glfw3.h>
 #include <glad/gl.h>

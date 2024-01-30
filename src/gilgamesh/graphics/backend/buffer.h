@@ -1,6 +1,6 @@
 #pragma once
 
-#include "core/defines.h"
+#include "gilgamesh/core/defines.h"
 
 namespace gilg {
 

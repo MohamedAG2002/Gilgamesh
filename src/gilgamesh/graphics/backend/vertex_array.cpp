@@ -1,7 +1,7 @@
-#include "graphics/backend/vertex_array.h"
-#include "graphics/backend/buffer.h"
-#include "core/defines.h"
-#include "core/gilg_asserts.h"
+#include "vertex_array.h"
+#include "gilgamesh/graphics/backend/buffer.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/gilg_asserts.h"
 
 #include <glad/gl.h>
 

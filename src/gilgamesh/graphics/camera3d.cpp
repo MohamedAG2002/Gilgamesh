@@ -1,7 +1,7 @@
 #include "camera3d.h"
-#include "core/window.h"
-#include "core/input.h"
-#include "core/clock.h"
+#include "gilgamesh/core/window.h"
+#include "gilgamesh/core/input.h"
+#include "gilgamesh/core/clock.h"
 
 #include <glm/glm.hpp>
 #include <glm/ext/matrix_transform.hpp>

@@ -1,10 +1,10 @@
 #include "editor.h"
-#include "core/defines.h"
-#include "core/logger.h"
-#include "core/window.h"
-#include "core/clock.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/window.h"
+#include "gilgamesh/core/clock.h"
 
-#include "graphics/backend/graphics_context.h"
+#include "gilgamesh/graphics/backend/graphics_context.h"
 
 #include <glm/glm.hpp>
 #include <imgui/imgui.h>
@@ -90,6 +90,7 @@ void editor_renderer_info(render_data& data)
   ImGui::Text("Vendor: %s", debug_info.vendor.c_str());
   ImGui::Text("Renderer: %s", debug_info.renderer.c_str());
   ImGui::Text("Version: %s", debug_info.version.c_str());
+  ImGui::NewLine();
 
   ImGui::ColorEdit3("Background Color", &data.clear_color.r);
 

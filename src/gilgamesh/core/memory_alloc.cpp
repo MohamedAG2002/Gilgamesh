@@ -1,7 +1,7 @@
 #include "memory_alloc.h"
-#include "defines.h"
-#include "logger.h"
-#include "gilg_asserts.h"
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/gilg_asserts.h"
 
 #include <cstdlib>
 #include <cstring>
