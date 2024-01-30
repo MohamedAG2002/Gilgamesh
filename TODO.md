@@ -1,5 +1,4 @@
 # Short-Term TODO:
-- u_view, u_projection -> u_view_projection 
 - Uniform buffers
 - Renderer
 

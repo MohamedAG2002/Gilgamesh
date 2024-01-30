@@ -5,6 +5,7 @@
 
 #include "gilgamesh/graphics/backend/graphics_context.h"
 #include "gilgamesh/graphics/backend/vertex_array.h"
+#include "gilgamesh/graphics/backend/uniform_buffer.h"
 
 #include "gilgamesh/resources/resource_manager.h"
 
@@ -27,6 +28,8 @@ namespace gilg {
 struct renderer 
 {
   vertex_array quad_va;
+  uniform_buffer ubo;
+
   std::unordered_map<std::string, u64> shaders, textures;
   resource_id current_shader, current_texture;
  
@@ -151,14 +154,16 @@ b8 create_renderer()
 
   renderer.quad_va = create_vertex_array();
   setup_buffers();
+  renderer.ubo = create_uniform_buffer(0);
 
   renderer.shaders["basic"] = resource_add_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
   renderer.shaders["texture"] = resource_add_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
   renderer.shaders["camera"] = resource_add_shader("assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
+  renderer.shaders["test"] = resource_add_shader("assets/shaders/test.vert.glsl", "assets/shaders/test.frag.glsl");
 
   renderer.textures["container"] = resource_add_texture("assets/textures/container.jpg");
   
-  renderer.current_shader = renderer.shaders["camera"];
+  renderer.current_shader = renderer.shaders["test"];
   renderer.current_texture = renderer.textures["container"];
 
   renderer.curr_shdr = resource_get_shader(renderer.current_shader);
@@ -176,6 +181,7 @@ b8 create_renderer()
 
 void destroy_renderer()
 {
+  destroy_uniform_buffer(renderer.ubo);
   destroy_vertex_array(renderer.quad_va);
   destroy_gcontext();
 
@@ -189,8 +195,10 @@ void clear_renderer(const color& color)
 
 void begin_renderer(const render_data& data)
 {
+  bind_uniform_buffer(renderer.ubo);
+  uniform_buffer_upload_mat4(renderer.ubo, data.cam->view_projection);
+
   bind_shader(renderer.curr_shdr);
-  set_shader_mat4(renderer.curr_shdr, "u_view_projection", data.cam->view_projection); 
 }
 
 void end_renderer()

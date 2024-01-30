@@ -35,6 +35,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o.d"
+  "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/uniform_buffer.cpp.o"
+  "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/uniform_buffer.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/camera3d.cpp.o"

@@ -121,6 +121,12 @@
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/uniform_buffer.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/uniform_buffer.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/uniform_buffer.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/uniform_buffer.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp",
   "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o"

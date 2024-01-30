@@ -561,6 +561,30 @@ src/gilgamesh/graphics/backend/graphics_context.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.s
 .PHONY : src/gilgamesh/graphics/backend/graphics_context.cpp.s
 
+src/gilgamesh/graphics/backend/uniform_buffer.o: src/gilgamesh/graphics/backend/uniform_buffer.cpp.o
+.PHONY : src/gilgamesh/graphics/backend/uniform_buffer.o
+
+# target to build an object file
+src/gilgamesh/graphics/backend/uniform_buffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/uniform_buffer.cpp.o
+.PHONY : src/gilgamesh/graphics/backend/uniform_buffer.cpp.o
+
+src/gilgamesh/graphics/backend/uniform_buffer.i: src/gilgamesh/graphics/backend/uniform_buffer.cpp.i
+.PHONY : src/gilgamesh/graphics/backend/uniform_buffer.i
+
+# target to preprocess a source file
+src/gilgamesh/graphics/backend/uniform_buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/uniform_buffer.cpp.i
+.PHONY : src/gilgamesh/graphics/backend/uniform_buffer.cpp.i
+
+src/gilgamesh/graphics/backend/uniform_buffer.s: src/gilgamesh/graphics/backend/uniform_buffer.cpp.s
+.PHONY : src/gilgamesh/graphics/backend/uniform_buffer.s
+
+# target to generate assembly for a file
+src/gilgamesh/graphics/backend/uniform_buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/uniform_buffer.cpp.s
+.PHONY : src/gilgamesh/graphics/backend/uniform_buffer.cpp.s
+
 src/gilgamesh/graphics/backend/vertex_array.o: src/gilgamesh/graphics/backend/vertex_array.cpp.o
 .PHONY : src/gilgamesh/graphics/backend/vertex_array.o
 
@@ -840,6 +864,9 @@ help:
 	@echo "... src/gilgamesh/graphics/backend/graphics_context.o"
 	@echo "... src/gilgamesh/graphics/backend/graphics_context.i"
 	@echo "... src/gilgamesh/graphics/backend/graphics_context.s"
+	@echo "... src/gilgamesh/graphics/backend/uniform_buffer.o"
+	@echo "... src/gilgamesh/graphics/backend/uniform_buffer.i"
+	@echo "... src/gilgamesh/graphics/backend/uniform_buffer.s"
 	@echo "... src/gilgamesh/graphics/backend/vertex_array.o"
 	@echo "... src/gilgamesh/graphics/backend/vertex_array.i"
 	@echo "... src/gilgamesh/graphics/backend/vertex_array.s"

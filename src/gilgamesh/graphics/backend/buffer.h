@@ -8,8 +8,9 @@ namespace gilg {
 ///////////////////////////////////////////////////////
 enum buffer_type 
 {
-  GILG_BUFF_TYPE_VERTEX = 0x8892,
-  GILG_BUFF_TYPE_INDEX  = 0x8893,
+  GILG_BUFF_TYPE_VERTEX  = 0x8892,
+  GILG_BUFF_TYPE_INDEX   = 0x8893,
+  GILG_BUFF_TYPE_UNIFORM = 0x8A11,
 };
 ///////////////////////////////////////////////////////
 

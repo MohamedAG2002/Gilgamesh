@@ -41,6 +41,7 @@ set(GILG_SOURCES
   # Graphics backend
   ${GILG_SOURCE_PATH}/graphics/backend/graphics_context.cpp
   ${GILG_SOURCE_PATH}/graphics/backend/vertex_array.cpp
+  ${GILG_SOURCE_PATH}/graphics/backend/uniform_buffer.cpp
 
   # Graphics
   ${GILG_SOURCE_PATH}/graphics/renderer.cpp
