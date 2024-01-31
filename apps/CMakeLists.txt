@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 project(testbed)
 
 set(CMAKE_PREFIX_PATH "/home/mohamed/Dev/C++/GilgameshEngine/")
+set(CMAKE_BUILD_TYPE Debug)
 set(TESTBED_SRC_DIR ${CMAKE_SOURCE_DIR})
 
 set(GILG_HEADER_DIR ${CMAKE_PREFIX_PATH}/src)

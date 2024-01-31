@@ -16,6 +16,8 @@
 #include "gilgamesh/math/transform.h"
 
 #include <glm/ext/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glad/gl.h>
 
 #include <string>
 #include <unordered_map>
@@ -121,6 +123,13 @@ void setup_buffers()
     .count = 36
   };
   vertex_array_push_buffer(renderer.quad_va, vbo_desc);
+  
+  // Pushing layouts
+  std::vector<layout_data_type> layout = {
+    GILG_FLOAT3, 
+    GILG_FLOAT2,
+  };
+  vertex_array_push_layout(renderer.quad_va, layout, false);
 
   // Pushing ebo buffer
   buffer_desc ebo_desc = {
@@ -131,12 +140,22 @@ void setup_buffers()
   };
   vertex_array_push_buffer(renderer.quad_va, ebo_desc);
 
-  // Pushing layout 
-  std::vector<layout_data_type> layout = {
-    GILG_FLOAT3, 
-    GILG_FLOAT2,
+  // Pushing instance buffer
+  buffer_desc inst_desc = {
+    .type  = GILG_BUFF_TYPE_INSTANCE,
+    .data  = GILG_BUFFER_ALLOC(glm::mat4, 100),
+    .usage = GILG_BUFF_USAGE_STATIC_DRAW, 
+    .count = 100
   };
-  vertex_array_push_layout(renderer.quad_va, layout);
+  vertex_array_push_buffer(renderer.quad_va, inst_desc);
+
+  std::vector<layout_data_type> inst_layout = {
+    GILG_FLOAT4, // Matrix 1st colomn
+    GILG_FLOAT4, // Matrix 2nd colomn
+    GILG_FLOAT4, // Matrix 3rd colomn
+    GILG_FLOAT4, // Matrix 4th colomn
+  };
+  vertex_array_push_layout(renderer.quad_va, inst_layout, true);
 
   unbind_vertex_array(renderer.quad_va);
 }
@@ -151,6 +170,13 @@ b8 create_renderer()
     GILG_LOG_ERROR("Failed to create graphics context");
     return false;
   }
+  
+  renderer.models.push_back(create_transform(glm::vec3(10.0f, 0.0f, 10.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(20.0f, 0.0f, 10.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(20.0f, 0.0f, 15.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(30.0f, 0.0f, 30.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(35.0f, 0.0f, 20.0f)));
+  renderer.models.push_back(create_transform(glm::vec3(40.0f, 0.0f, 30.0f)));
 
   renderer.quad_va = create_vertex_array();
   setup_buffers();
@@ -160,21 +186,16 @@ b8 create_renderer()
   renderer.shaders["texture"] = resource_add_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
   renderer.shaders["camera"] = resource_add_shader("assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
   renderer.shaders["test"] = resource_add_shader("assets/shaders/test.vert.glsl", "assets/shaders/test.frag.glsl");
+  renderer.shaders["inst"] = resource_add_shader("assets/shaders/inst.vert.glsl", "assets/shaders/inst.frag.glsl");
 
   renderer.textures["container"] = resource_add_texture("assets/textures/container.jpg");
   
-  renderer.current_shader = renderer.shaders["test"];
+  renderer.current_shader = renderer.shaders["inst"];
   renderer.current_texture = renderer.textures["container"];
-
+  
   renderer.curr_shdr = resource_get_shader(renderer.current_shader);
   renderer.curr_tex = resource_get_texture(renderer.current_texture);
-
-  renderer.models.push_back(create_transform(glm::vec3(10.0f, 0.0f, 10.0f)));
-  renderer.models.push_back(create_transform(glm::vec3(20.0f, 0.0f, 15.0f)));
-  renderer.models.push_back(create_transform(glm::vec3(30.0f, 0.0f, 30.0f)));
-  renderer.models.push_back(create_transform(glm::vec3(35.0f, 0.0f, 20.0f)));
-  renderer.models.push_back(create_transform(glm::vec3(40.0f, 0.0f, 50.0f)));
-
+ 
   GILG_LOG_INFO("Renderer was successfully created");
   return true;
 }
@@ -195,16 +216,18 @@ void clear_renderer(const color& color)
 
 void begin_renderer(const render_data& data)
 {
-  bind_uniform_buffer(renderer.ubo);
   uniform_buffer_upload_mat4(renderer.ubo, data.cam->view_projection);
 
-  bind_shader(renderer.curr_shdr);
+  for(int i = 0; i < renderer.models.size(); i++)
+    vertex_array_update_buffer(renderer.quad_va, GILG_BUFF_TYPE_VERTEX, i * sizeof(glm::mat4), sizeof(glm::mat4), glm::value_ptr(renderer.models[i].model));
 }
 
 void end_renderer()
 {
-  for(auto& transform : renderer.models)
-    renderer_queue_sumbit(renderer.curr_shdr, renderer.quad_va, transform);
+  //for(auto& transform : renderer.models)
+    //renderer_queue_sumbit(renderer.curr_shdr, renderer.quad_va, transform);
+    
+  renderer_queue_sumbit_inst(renderer.curr_shdr, renderer.quad_va, renderer.models.size());
 
   gcontext_swap();
 }

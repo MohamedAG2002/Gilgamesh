@@ -6,6 +6,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glad/gl.h>
 
+#include <vector>
 #include <string>
 #include <sstream>
 #include <fstream>
@@ -138,6 +139,44 @@ void set_shader_mat4(shader& shader, const std::string& name, const glm::mat4& v
 void set_shader_vec3(shader& shader, const std::string& name, const glm::vec3& value)
 {
   glUniform3f(get_uniform_location(shader, name.c_str()), value.x, value.y, value.z);
+}
+
+void set_shader_vec4(shader& shader, const std::string& name, const glm::vec4& value)
+{
+  glUniform4f(get_uniform_location(shader, name.c_str()), value.x, value.y, value.z, value.w);
+}
+
+void set_shader_mat4_arr(shader& shader, const std::string& name, const std::vector<glm::mat4>& arr)
+{
+  for(int i = 0; i < arr.size(); i++)
+  {
+    std::string index_str = name + "[" + std::to_string(i) + "]";
+    glm::mat4 value = arr[i];
+
+    glUniformMatrix4fv(get_uniform_location(shader, index_str.c_str()), 1, GL_FALSE, glm::value_ptr(value));
+  }
+}
+
+void set_shader_vec3_arr(shader& shader, const std::string& name, const std::vector<glm::vec3>& arr)
+{
+  for(int i = 0; i < arr.size(); i++)
+  {
+    std::string index_str = name + "[" + std::to_string(i) + "]";
+    glm::vec3 value = arr[i];
+
+    glUniform3f(get_uniform_location(shader, index_str.c_str()), value.x, value.y, value.z);
+  }
+}
+
+void set_shader_vec4_arr(shader& shader, const std::string& name, const std::vector<glm::vec4>& arr)
+{
+  for(int i = 0; i < arr.size(); i++)
+  {
+    std::string index_str = name + "[" + std::to_string(i) + "]";
+    glm::vec4 value = arr[i];
+
+    glUniform4f(get_uniform_location(shader, index_str.c_str()), value.x, value.y, value.z, value.w);
+  }
 }
 ////////////////////////////////////////////////////////////////////////
 

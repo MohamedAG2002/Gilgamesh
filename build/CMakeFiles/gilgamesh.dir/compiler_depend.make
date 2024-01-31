@@ -1822,14 +1822,18 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/bits/specfun.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/bits/stl_function.h \
   /usr/include/c++/11/bits/stl_iterator.h \
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cassert \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
@@ -1871,6 +1875,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -4536,7 +4541,6 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o: /hom
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/KHR/khrplatform.h \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glad/gl.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/defines.h \
-  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/gilg_asserts.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/buffer.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.h \
@@ -5045,6 +5049,8 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/camera3d.cpp.o: /home/mohamed/De
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h
 
 CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o: /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/KHR/khrplatform.h \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glad/gl.h \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_mat2x3.hpp \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_mat2x3.inl \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_mat2x4.hpp \
@@ -5185,6 +5191,50 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o: /home/mohamed/De
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/matrix_transform.inl \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/fwd.hpp \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/glm.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/setup.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_relational.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_relational.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/setup.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_float.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_quat.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/detail/type_quat.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_geometric.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_geometric.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_common.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_common.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_double.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_double_precision.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_float.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_float_precision.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_transform.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_transform.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_trigonometric.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_trigonometric.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_bool1.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_bool1_precision.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_double1.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_double1_precision.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_float1.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_float1_precision.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_int1.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_int1_sized.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_relational.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_relational.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_uint1.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/vector_uint1_sized.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/matrix_clip_space.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/matrix_clip_space.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/matrix_projection.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/matrix_projection.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/matrix_transform.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/matrix_transform.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/epsilon.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/epsilon.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/quaternion.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/quaternion.inl \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/vec1.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/type_ptr.hpp \
+  /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/type_ptr.inl \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/integer.hpp \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/mat2x2.hpp \
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/packing.hpp \
@@ -5271,6 +5321,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o: /home/mohamed/De
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdio \
   /usr/include/c++/11/cstdlib \
+  /usr/include/c++/11/cstring \
   /usr/include/c++/11/cwchar \
   /usr/include/c++/11/debug/assertions.h \
   /usr/include/c++/11/debug/debug.h \
@@ -5322,6 +5373,8 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o: /home/mohamed/De
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
@@ -6410,6 +6463,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o: /home/m
   /usr/include/c++/11/bits/specfun.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/bits/stl_function.h \
   /usr/include/c++/11/bits/stl_iterator.h \
@@ -6417,10 +6471,13 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o: /home/m
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
   /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cassert \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
@@ -6466,6 +6523,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o: /home/m
   /usr/include/c++/11/type_traits \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/utility \
+  /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -6821,16 +6879,20 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o: /home/mohamed/Dev
   /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/bits/stl_function.h \
   /usr/include/c++/11/bits/stl_iterator.h \
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/streambuf.tcc \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cassert \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
@@ -6883,6 +6945,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o: /home/mohamed/Dev
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
   /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -8236,6 +8299,10 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h:
 
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/c++/11/bits/stl_vector.h:
+
 /usr/include/c++/11/bits/enable_special_members.h:
 
 /usr/include/c++/11/bits/functexcept.h:
@@ -8247,10 +8314,6 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
 /usr/include/c++/11/bits/invoke.h:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/include/c++/11/bits/stl_vector.h:
 
 /usr/include/c++/11/cfloat:
 

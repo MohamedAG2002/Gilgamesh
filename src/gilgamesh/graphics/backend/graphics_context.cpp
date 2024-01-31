@@ -77,15 +77,25 @@ void gcontext_swap()
 void gcontext_draw_vertex(const draw_mode mode, vertex_array& va)
 {
   bind_vertex_array(va); 
-
-  glDrawArrays((u32)mode, 0, va.vbo.count);
+  glDrawArrays((u32)mode, 0, va.vertex_buffer.count);
 }
 
 void gcontext_draw_index(const draw_mode mode, vertex_array& va)
 {
   bind_vertex_array(va); 
-  
-  glDrawElements((u32)mode, va.ebo.count, GL_UNSIGNED_INT, 0);
+  glDrawElements((u32)mode, va.index_buffer.count, GL_UNSIGNED_INT, 0);
+}
+
+void gcontext_draw_vertex_inst(const draw_mode mode, vertex_array& va, usizei inst_count)
+{
+  bind_vertex_array(va); 
+  glDrawArraysInstanced((u32)mode, 0, va.vertex_buffer.count, inst_count);
+}
+
+void gcontext_draw_index_inst(const draw_mode mode, vertex_array& va, usizei inst_count)
+{
+  bind_vertex_array(va); 
+  glDrawElementsInstanced((u32)mode, va.index_buffer.count, GL_UNSIGNED_INT, 0, inst_count);
 }
 ////////////////////////////////////////////////////////////
 

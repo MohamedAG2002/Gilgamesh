@@ -8,9 +8,10 @@ namespace gilg {
 ///////////////////////////////////////////////////////
 enum buffer_type 
 {
-  GILG_BUFF_TYPE_VERTEX  = 0x8892,
-  GILG_BUFF_TYPE_INDEX   = 0x8893,
-  GILG_BUFF_TYPE_UNIFORM = 0x8A11,
+  GILG_BUFF_TYPE_VERTEX   = 0x8892,
+  GILG_BUFF_TYPE_INDEX    = 0x8893,
+  GILG_BUFF_TYPE_UNIFORM  = 0x8A11,
+  GILG_BUFF_TYPE_INSTANCE = 0x1,
 };
 ///////////////////////////////////////////////////////
 
@@ -30,8 +31,8 @@ enum buffer_usage
 
   // Stream
   GILG_BUFF_USAGE_STREAM_COPY = 0x88E2, 
-  GIGL_BUFF_USAGE_STREAM_DRAW = 0x88E0, 
-  GIGL_BUFF_USAGE_STREAM_READ = 0x88E1, 
+  GILG_BUFF_USAGE_STREAM_DRAW = 0x88E0, 
+  GILG_BUFF_USAGE_STREAM_READ = 0x88E1, 
 };
 ///////////////////////////////////////////////////////
 

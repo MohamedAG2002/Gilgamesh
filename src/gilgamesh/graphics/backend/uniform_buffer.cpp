@@ -44,6 +44,7 @@ void unbind_uniform_buffer(uniform_buffer& ub)
 
 void uniform_buffer_upload_mat4(uniform_buffer& ub, const glm::mat4& value)
 {
+  glBindBuffer(ub.buffer.type, ub.buffer.id);
   glBufferSubData(ub.buffer.type, 0, sizeof(glm::mat4), glm::value_ptr(value));
 }
 /////////////////////////////////////////////////////

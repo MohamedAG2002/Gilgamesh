@@ -48,7 +48,7 @@ game init_game()
     printf("ERROR: failed to create the editor\n");
 
   game.target = glm::vec3(0.0f, 0.0f, -3.0f);
-  game.cam = gilg::create_camera3d(gilg::GILG_CAM_FREE, glm::vec3(-10.0f, 0.0f, -4.0f), &game.target, 45.0f); 
+  game.cam = gilg::create_camera3d(gilg::GILG_CAM_FREE, glm::vec3(-10.0f, 0.0f, 10.0f), &game.target, 45.0f); 
  
   game.render_data.cam = &game.cam;
   game.render_data.clear_color = gilg::color(0.1f, 0.1f, 0.1f, 1.0f);

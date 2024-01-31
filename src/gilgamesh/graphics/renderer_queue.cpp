@@ -23,9 +23,15 @@ static renderer_queue ren_que;
 void renderer_queue_sumbit(shader& shader, vertex_array& va, const transform& transform)
 {
   bind_shader(shader);
-  set_shader_mat4(shader, "u_model", transform.model);
+  set_shader_mat4(shader, "u_model", transform.model); 
 
   gcontext_draw_vertex(GILG_DRAW_TRIANGLES, va); 
+}
+
+void renderer_queue_sumbit_inst(shader& shader, vertex_array& va, usizei inst_count)
+{
+  bind_shader(shader);
+  gcontext_draw_vertex_inst(GILG_DRAW_TRIANGLES, va, inst_count);
 }
 
 void renderer_queue_flush()

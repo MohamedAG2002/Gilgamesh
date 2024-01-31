@@ -1,8 +1,13 @@
 # Short-Term TODO:
-- Uniform buffers
-- Renderer
+- Shaders 
+
+# Things to fix or make better 
+- Texture numbers. Needs to be set automatically not by the client
+- Uniform buffers starting size and automatic configurations of the layout just like the pointer attributes
+- Vertex arrays. Just everything. Refactor everything in it
 
 # Mid-Term TODO:
+- Documentation
 - Scenes
 - Entities
 - Serialization
