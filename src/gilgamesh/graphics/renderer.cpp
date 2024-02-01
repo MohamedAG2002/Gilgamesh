@@ -20,7 +20,6 @@
 #include <glad/gl.h>
 
 #include <string>
-#include <unordered_map>
 #include <vector>
 
 namespace gilg {
@@ -31,12 +30,8 @@ struct renderer
 {
   vertex_array quad_va;
   uniform_buffer ubo;
-
-  std::unordered_map<std::string, u64> shaders, textures;
-  resource_id current_shader, current_texture;
- 
-  shader curr_shdr;
-  texture2d curr_tex;
+  shader current_shader;
+  texture2d current_texture;
 
   std::vector<transform> models;
 };
@@ -171,6 +166,23 @@ b8 create_renderer()
     return false;
   }
   
+  renderer.quad_va = create_vertex_array();
+  setup_buffers();
+  renderer.ubo = create_uniform_buffer(0);
+
+  // Shaders init 
+  resource_add_shader("basic", "assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
+  resource_add_shader("texture", "assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
+  resource_add_shader("camera", "assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
+  resource_add_shader("test", "assets/shaders/test.vert.glsl", "assets/shaders/test.frag.glsl");
+  resource_add_shader("inst", "assets/shaders/inst.vert.glsl", "assets/shaders/inst.frag.glsl");
+  renderer.current_shader = resource_get_shader("inst");
+
+  // Textures init 
+  resource_add_texture("container", "assets/textures/container.jpg");
+  renderer.current_texture = resource_get_texture("container");
+
+  // Models init
   renderer.models.push_back(create_transform(glm::vec3(10.0f, 0.0f, 10.0f)));
   renderer.models.push_back(create_transform(glm::vec3(20.0f, 0.0f, 10.0f)));
   renderer.models.push_back(create_transform(glm::vec3(20.0f, 0.0f, 15.0f)));
@@ -178,24 +190,6 @@ b8 create_renderer()
   renderer.models.push_back(create_transform(glm::vec3(35.0f, 0.0f, 20.0f)));
   renderer.models.push_back(create_transform(glm::vec3(40.0f, 0.0f, 30.0f)));
 
-  renderer.quad_va = create_vertex_array();
-  setup_buffers();
-  renderer.ubo = create_uniform_buffer(0);
-
-  renderer.shaders["basic"] = resource_add_shader("assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
-  renderer.shaders["texture"] = resource_add_shader("assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
-  renderer.shaders["camera"] = resource_add_shader("assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
-  renderer.shaders["test"] = resource_add_shader("assets/shaders/test.vert.glsl", "assets/shaders/test.frag.glsl");
-  renderer.shaders["inst"] = resource_add_shader("assets/shaders/inst.vert.glsl", "assets/shaders/inst.frag.glsl");
-
-  renderer.textures["container"] = resource_add_texture("assets/textures/container.jpg");
-  
-  renderer.current_shader = renderer.shaders["inst"];
-  renderer.current_texture = renderer.textures["container"];
-  
-  renderer.curr_shdr = resource_get_shader(renderer.current_shader);
-  renderer.curr_tex = resource_get_texture(renderer.current_texture);
- 
   GILG_LOG_INFO("Renderer was successfully created");
   return true;
 }
@@ -227,7 +221,7 @@ void end_renderer()
   //for(auto& transform : renderer.models)
     //renderer_queue_sumbit(renderer.curr_shdr, renderer.quad_va, transform);
     
-  renderer_queue_sumbit_inst(renderer.curr_shdr, renderer.quad_va, renderer.models.size());
+  renderer_queue_sumbit_inst(renderer.current_shader, renderer.quad_va, renderer.models.size());
 
   gcontext_swap();
 }

@@ -4,19 +4,7 @@
 #include "gilgamesh/resources/shader.h"
 #include "gilgamesh/math/transform.h"
 
-#include <vector>
-
 namespace gilg {
-
-// Renderer Queue type
-//////////////////////////////////////////////////
-struct renderer_queue 
-{
-  std::vector<vertex_array> queue;
-};
-
-static renderer_queue ren_que;
-//////////////////////////////////////////////////
 
 // Renderer Queue functions
 //////////////////////////////////////////////////
@@ -36,8 +24,7 @@ void renderer_queue_sumbit_inst(shader& shader, vertex_array& va, usizei inst_co
 
 void renderer_queue_flush()
 {
-  for(auto& va : ren_que.queue)
-    gcontext_draw_vertex(GILG_DRAW_TRIANGLES, va);
+  // Does nothing for now...
 }
 //////////////////////////////////////////////////
 

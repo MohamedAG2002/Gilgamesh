@@ -34,7 +34,7 @@ struct texture2d
 //////////////////////////////////////////////////////////////
 texture2d load_texture2d(const std::string& path);
 void unload_texture2d(texture2d& texture);
-void render_texture2d(texture2d& texture, i32 num);
+void render_texture2d(const texture2d& texture, i32 num);
 //////////////////////////////////////////////////////////////
 
 }

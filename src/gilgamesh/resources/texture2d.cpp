@@ -60,7 +60,7 @@ void unload_texture2d(texture2d& texture)
   glDeleteTextures(1, &texture.id);
 }
 
-void render_texture2d(texture2d& texture, i32 num)
+void render_texture2d(const texture2d& texture, i32 num)
 {
   glActiveTexture(GL_TEXTURE0 + num);
   glBindTexture(GL_TEXTURE_2D, texture.id);

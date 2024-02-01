@@ -15,8 +15,8 @@ namespace gilg {
 ///////////////////////////////////////////////////////////////
 struct resource_manager 
 {
-  std::unordered_map<resource_id, texture2d> textures2d;
-  std::unordered_map<resource_id, shader> shaders;
+  std::unordered_map<std::string, texture2d> textures2d;
+  std::unordered_map<std::string, shader> shaders;
 };
 
 static resource_manager rsrc_man;
@@ -46,57 +46,41 @@ void shutdown_resource_manager()
   GILG_LOG_INFO("Resource manager was successfully shutdown");
 }
 
-const resource_id resource_add_texture(const std::string& path)
+void resource_add_texture(const std::string& name, const std::string& path)
 {
-  resource_id id = random_ulong();
-  rsrc_man.textures2d[id] = load_texture2d(path);
-
-  return id;
+  GILG_ASSERT_MSG(rsrc_man.textures2d.find(name) == rsrc_man.textures2d.end(), "Texture2D already exists");
+  rsrc_man.textures2d[name] = load_texture2d(path);
 }
 
-const resource_id resource_add_shader(const std::string& vert_path, const std::string& frag_path)
+void resource_add_shader(const std::string& name, const std::string& vert_path, const std::string& frag_path)
 {
-  resource_id id = random_ulong();
-  rsrc_man.shaders[id] = load_shader(vert_path, frag_path);
-
-  return id;
+  GILG_ASSERT_MSG(rsrc_man.shaders.find(name) == rsrc_man.shaders.end(), "Shader already exists");
+  rsrc_man.shaders[name] = load_shader(vert_path, frag_path);
 }
 
-const texture2d resource_get_texture(const resource_id& id)
+const texture2d resource_get_texture(const std::string& id)
 {
-  if (rsrc_man.textures2d.find(id) == nullptr)
-    GILG_ASSERT_MSG(false, "Could not retrieve texture2d since it doesn't exist");
-
+  GILG_ASSERT_MSG(rsrc_man.textures2d.find(id) != rsrc_man.textures2d.end(), "Could not retrieve texture2d since it doesn't exist");
   return rsrc_man.textures2d[id];
 }
 
-const shader resource_get_shader(const resource_id& id)
+const shader resource_get_shader(const std::string& id)
 {
-  if (rsrc_man.shaders.find(id) == nullptr)
-    GILG_ASSERT_MSG(false, "Could not retrieve shader since it doesn't exist");
-  
+  GILG_ASSERT_MSG(rsrc_man.shaders.find(id) != rsrc_man.shaders.end(), "Could not retrieve shader since it doesn't exist");
   return rsrc_man.shaders[id];
 }
 
-b8 resource_remove_texture(const resource_id& id)
+b8 resource_remove_texture(const std::string& id)
 {
-  if (rsrc_man.textures2d.find(id) == nullptr)
-  {
-    GILG_ASSERT_MSG(false, "Could not remove texture2d since it doesn't exist");
-    return false;
-  }
+  GILG_ASSERT_MSG(rsrc_man.textures2d.find(id) != rsrc_man.textures2d.end(), "Could not remove texture2d since it doesn't exist");
 
   rsrc_man.textures2d.erase(id);
   return true;
 }
 
-b8 resource_remove_shader(const resource_id& id)
+b8 resource_remove_shader(const std::string& id)
 {
-  if (rsrc_man.shaders.find(id) == nullptr)
-  {
-    GILG_ASSERT_MSG(false, "Could not remove shader since it doesn't exist");
-    return false;
-  }
+  GILG_ASSERT_MSG(rsrc_man.shaders.find(id) != rsrc_man.shaders.end(), "Could not remove shader since it doesn't exist");
 
   rsrc_man.shaders.erase(id);
   return true;

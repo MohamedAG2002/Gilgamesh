@@ -1,8 +1,7 @@
 # Short-Term TODO:
-- Better main entry
-- Design an instanced renderer?!!!
-- Shaders
+- Rework the resource manager
 - Materials
+- Design an instanced renderer?!!!
 
 # Things to fix or make better 
 - Texture numbers. Needs to be set automatically not by the client
