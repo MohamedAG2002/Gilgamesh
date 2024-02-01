@@ -6,11 +6,37 @@
 
 namespace gilg {
 
+// App function pointers
+//////////////////////////////////////////
+typedef void(*app_init)(void);
+typedef void(*app_update)(void);
+typedef void(*app_render)(void);
+typedef void(*app_shutdown)(void);
+typedef void(*app_render_gui)(void);
+//////////////////////////////////////////
+
+// App Description struct
+//////////////////////////////////////////
+struct app_desc 
+{
+  i32 width, height; 
+  std::string title; 
+
+  app_init init_func;
+  app_update update_func;
+  app_render render_func;
+  app_shutdown shutdown_func;
+
+  // Optional func 
+  app_render_gui render_gui_func;
+};
+//////////////////////////////////////////
+
 // Engine functions
 //////////////////////////////////////////
-b8 init_engine(const i32 width, const i32 height, const std::string& title);
+b8 init_engine(const app_desc& app);
 void shutdown_engine();
-void update_engine();
+void run_engine();
 //////////////////////////////////////////
 
 }

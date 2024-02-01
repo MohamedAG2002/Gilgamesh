@@ -1,5 +1,8 @@
 # Short-Term TODO:
-- Shaders 
+- Better main entry
+- Design an instanced renderer?!!!
+- Shaders
+- Materials
 
 # Things to fix or make better 
 - Texture numbers. Needs to be set automatically not by the client

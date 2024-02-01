@@ -13,6 +13,11 @@
 
 namespace gilg {
 
+// Globals
+///////////////////////////////////////////////
+static app_desc s_app;
+///////////////////////////////////////////////
+
 // Callbacks
 ///////////////////////////////////////////////
 bool app_exit_callback(event_type type, event_desc desc)
@@ -32,7 +37,7 @@ bool app_exit_callback(event_type type, event_desc desc)
 
 // Engine functions
 //////////////////////////////////////////
-b8 init_engine(const i32 width, const i32 height, const std::string& title)
+b8 init_engine(const app_desc& app)
 {
   // Logger init 
   GILG_ASSERT_MSG(init_logger() == true, "Failed to initialize logger"); 
@@ -52,7 +57,7 @@ b8 init_engine(const i32 width, const i32 height, const std::string& title)
   }
 
   // Window init 
-  if(!create_window(width, height, title))
+  if(!create_window(app.width, app.height, app.title))
   {
     GILG_LOG_FATAL("Failed to create window");
     return false;
@@ -85,6 +90,16 @@ b8 init_engine(const i32 width, const i32 height, const std::string& title)
   
   // Listen to events
   listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);
+ 
+  // Making sure all of the required functions are given
+  GILG_ASSERT_MSG(app.init_func, "Application init function was not supplied");
+  GILG_ASSERT_MSG(app.update_func, "Application update function was not supplied");
+  GILG_ASSERT_MSG(app.render_func, "Application render function was not supplied");
+  GILG_ASSERT_MSG(app.shutdown_func, "Application shutdown function was not supplied");
+  
+  // App init 
+  s_app = app; 
+  s_app.init_func();
   
   GILG_LOG_INFO("Engine was successfully intialized");
   return true;
@@ -92,6 +107,13 @@ b8 init_engine(const i32 width, const i32 height, const std::string& title)
 
 void shutdown_engine()
 {
+  // App shutdown 
+  /////////////////////////////
+  s_app.shutdown_func(); 
+  /////////////////////////////
+
+  // Engine systems shutdown 
+  /////////////////////////////
   shutdown_resource_manager();
 
   destroy_renderer();
@@ -103,12 +125,22 @@ void shutdown_engine()
   shutdown_memory_allocater();
   shutdown_events(); 
   shutdown_logger();
+  /////////////////////////////
 }
 
-void update_engine()
+void run_engine()
 {
-  update_clock();
-  update_window();  
+  while(!window_closed()) 
+  {
+    s_app.render_func();
+
+    if(s_app.render_gui_func)
+      s_app.render_gui_func();
+
+    update_clock();
+    s_app.update_func();
+    update_window();
+  }
 }
 //////////////////////////////////////////
 

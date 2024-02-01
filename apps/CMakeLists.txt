@@ -13,6 +13,7 @@ find_library(glfw glfw REQUIRED)
 
 set(TEST_SRC
   # Core test
+  ${TESTBED_SRC_DIR}/basic_app/game.cpp
   ${TESTBED_SRC_DIR}/basic_app/main.cpp
 )
 
