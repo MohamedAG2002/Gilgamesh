@@ -12,7 +12,6 @@ typedef void(*app_init)(void);
 typedef void(*app_update)(void);
 typedef void(*app_render)(void);
 typedef void(*app_shutdown)(void);
-typedef void(*app_render_gui)(void);
 //////////////////////////////////////////
 
 // App Description struct
@@ -26,9 +25,6 @@ struct app_desc
   app_update update_func;
   app_render render_func;
   app_shutdown shutdown_func;
-
-  // Optional func 
-  app_render_gui render_gui_func;
 };
 //////////////////////////////////////////
 

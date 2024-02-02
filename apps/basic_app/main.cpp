@@ -11,7 +11,6 @@ int main()
     .update_func     = update_game, 
     .render_func     = render_game, 
     .shutdown_func   = shutdown_game,
-    .render_gui_func = render_game_gui 
   };
   
   if(!gilg::init_engine(app))

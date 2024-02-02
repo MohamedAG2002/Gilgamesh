@@ -37,6 +37,7 @@ set(GILG_SOURCES
   # Math 
   ${GILG_SOURCE_PATH}/math/gilg_random.cpp
   ${GILG_SOURCE_PATH}/math/transform.cpp
+  ${GILG_SOURCE_PATH}/math/math_utils.cpp
 
   # Graphics backend
   ${GILG_SOURCE_PATH}/graphics/backend/graphics_context.cpp
@@ -45,6 +46,7 @@ set(GILG_SOURCES
 
   # Graphics
   ${GILG_SOURCE_PATH}/graphics/renderer.cpp
+  ${GILG_SOURCE_PATH}/graphics/renderer2d.cpp
   ${GILG_SOURCE_PATH}/graphics/renderer_queue.cpp
   ${GILG_SOURCE_PATH}/graphics/camera3d.cpp
   

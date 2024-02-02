@@ -2,6 +2,7 @@
 #include "gilgamesh/graphics/backend/buffer.h"
 #include "gilgamesh/core/defines.h"
 #include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/gilg_asserts.h"
 
 #include <glad/gl.h>
 
@@ -11,7 +12,7 @@ namespace gilg {
 
 // Private functions
 ///////////////////////////////////////////////////////
-u32 calculate_stride(const std::vector<layout_data_type>& layout)
+static u32 calculate_stride(const std::vector<layout_data_type>& layout)
 {
   u32 stride = 0;
 
@@ -21,7 +22,7 @@ u32 calculate_stride(const std::vector<layout_data_type>& layout)
   return stride;
 }
 
-buffer_element get_buffer_element_by_type(layout_data_type type)
+static buffer_element get_buffer_element_by_type(layout_data_type type)
 {
   buffer_element element; 
 
@@ -53,6 +54,25 @@ buffer_element get_buffer_element_by_type(layout_data_type type)
   }
 
   return element;
+}
+
+static u32 get_buff_type_id(const vertex_array& va, const u32& buff_type)
+{
+  switch(buff_type)
+  {
+    case GILG_BUFF_TYPE_VERTEX:
+      return va.vertex_buffer.id;
+      break;
+    case GILG_BUFF_TYPE_INDEX:
+      return va.index_buffer.id;
+      break;
+    case GILG_BUFF_TYPE_INSTANCE:
+      return va.inst_buffer.id;
+      break;
+    default:
+      GILG_ASSERT_MSG(false, "Unknown buffer type");      
+      break;
+  }
 }
 ///////////////////////////////////////////////////////
 
@@ -128,13 +148,17 @@ void vertex_array_push_buffer(vertex_array& va, buffer_desc& desc)
 void vertex_array_push_layout(const vertex_array& va, const std::vector<layout_data_type>& layout, bool is_inst)
 {
   u32 index_mul = 0; 
+  u32 buffer_id = va.vertex_buffer.id;
+  if(is_inst)
+  {
+    index_mul = 2; 
+    buffer_id = va.inst_buffer.id;
+  }
+
   usizei offset = 0;
   u32 stride = calculate_stride(layout); 
-  
-  if(is_inst)
-    index_mul = 2;
 
-  glBindVertexArray(va.id); 
+  glBindBuffer(GL_ARRAY_BUFFER, buffer_id);
 
   for(int i = 0; i < layout.size(); i++)
   {
@@ -154,9 +178,12 @@ void vertex_array_push_layout(const vertex_array& va, const std::vector<layout_d
 
 void vertex_array_update_buffer(const vertex_array& va, const u32 buff_type, usizei offset, const usizei size, const void* data)
 {
+  u32 buffer_id = get_buff_type_id(va, buff_type);
+  u32 true_buffer = buff_type == GILG_BUFF_TYPE_INSTANCE ? GILG_BUFF_TYPE_VERTEX : buff_type;
+
   glBindVertexArray(va.id);
-  glBindBuffer(va.inst_buffer.type, va.inst_buffer.id);
-  glBufferSubData(va.inst_buffer.type, offset, size, data);
+  glBindBuffer(true_buffer, buffer_id);
+  glBufferSubData(true_buffer, offset, size, data);
 }
 ///////////////////////////////////////////////////////
 

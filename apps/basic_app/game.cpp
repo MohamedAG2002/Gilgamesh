@@ -20,6 +20,11 @@ void init_game()
  
   game.render_data.cam = &game.cam;
   game.render_data.clear_color = gilg::color(0.1f, 0.1f, 0.1f, 1.0f);
+
+  game.cube_pos = gilg::create_transform(glm::vec3(10.0f, 0.0f, 10.0f));
+  game.quad_pos = glm::vec2(-0.5f, 0.5f);
+  game.quad_size = glm::vec2(1.0f, 1.0f);
+  game.quad_color = gilg::GILG_COLOR_WHITE;
 }
 
 void update_game()
@@ -37,23 +42,28 @@ void render_game()
   gilg::begin_renderer(game.render_data);
   gilg::clear_renderer(game.render_data.clear_color);
 
-  if(game.show_editor)
-  {
-    render_game_gui();
-    gilg::enable_cursor();
-  }
-  else 
-    gilg::disable_cursor();
+  gilg::begin_renderer2d();
+  gilg::render_quad(game.quad_pos, game.quad_size, game.quad_color);
+  gilg::end_renderer2d();
 
+  render_game_gui();
   gilg::end_renderer();
 }
 
 void render_game_gui()
 {
+  if(!game.show_editor)
+  {
+    gilg::disable_cursor();
+    return;
+  }
+
+  gilg::enable_cursor();
   gilg::editor_begin();
 
   gilg::editor_info_window(game.render_data);
   gilg::editor_camera_panel(game.cam); 
+  gilg::editor_entities_panel(game.quad_pos, game.quad_size, game.quad_color);
 
   gilg::editor_end();
 }

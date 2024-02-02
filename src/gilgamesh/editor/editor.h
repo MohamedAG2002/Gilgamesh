@@ -3,6 +3,8 @@
 #include "gilgamesh/core/defines.h"
 #include "gilgamesh/graphics/renderer.h"
 
+#include <glm/glm.hpp>
+
 namespace gilg {
 
 // Editor functions
@@ -16,7 +18,7 @@ void editor_engine_info();
 void editor_renderer_info(render_data& data);
 void editor_info_window(render_data& data);
 void editor_camera_panel(camera3d& cam);
-void editor_hierarchy_panel();
+void editor_entities_panel(glm::vec2& pos, glm::vec2& size, color& color);
 /////////////////////////////////////////////////////
 
 }

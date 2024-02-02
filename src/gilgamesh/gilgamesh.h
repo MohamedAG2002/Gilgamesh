@@ -9,10 +9,12 @@
 
 #include "gilgamesh/graphics/color.h"
 #include "gilgamesh/graphics/renderer.h"
+#include "gilgamesh/graphics/renderer2d.h"
 #include "gilgamesh/graphics/camera3d.h"
 #include "gilgamesh/graphics/renderer_queue.h"
 #include "gilgamesh/graphics/backend/buffer.h"
 #include "gilgamesh/graphics/backend/vertex_array.h"
+#include "gilgamesh/graphics/backend/graphics_context.h"
 
 #include "gilgamesh/resources/resource_manager.h"
 #include "gilgamesh/resources/shader.h"
