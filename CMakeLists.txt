@@ -20,6 +20,7 @@ set(CMAKE_BUILD_TYPE ${GILG_BUILD_TYPE})
 # Finding libraries
 ######################################
 find_library(glfw glfw REQUIRED)
+find_package(spdlog REQUIRED)
 ######################################
 
 # Sources
@@ -81,11 +82,12 @@ set(LIBS_SOURCES
 ######################################
 add_library(${PROJECT_NAME} ${GILG_LIBRARY_TYPE} ${LIBS_SOURCES} ${GILG_SOURCES})
 
-target_include_directories(${PROJECT_NAME} BEFORE PRIVATE ${GILG_LIBS_PATH}/include)
+target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_LIBS_PATH}/include)
 target_include_directories(${PROJECT_NAME} BEFORE PUBLIC ${GILG_HEADER_PATH})
 
-target_link_libraries(${PROJECT_NAME} PUBLIC
+target_link_libraries(${PROJECT_NAME} PRIVATE
   ${glfw}  
+  spdlog::spdlog_header_only
 )
 ######################################
 

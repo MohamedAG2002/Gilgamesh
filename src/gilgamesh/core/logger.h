@@ -2,6 +2,7 @@
 
 #include "gilgamesh/core/defines.h"
 
+#include <utility>
 #include <string>
 
 namespace gilg {
@@ -34,7 +35,7 @@ enum log_level
 b8 init_logger(void);
 void shutdown_logger(void);
 void log_assertion(const std::string& expr, const std::string& msg, const std::string& file_name, const u16 line_num);
-void log_info(log_level level, const std::string& msg, ...);
+void log_info(log_level level, const char* msg, ...);
 //////////////////////////////////////////////////////
 
 // Trace log when available

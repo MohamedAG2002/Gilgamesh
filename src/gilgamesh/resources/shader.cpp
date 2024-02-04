@@ -67,7 +67,7 @@ unsigned int get_uniform_location(const shader& shader, const char* name)
 
   uni_loc = glGetUniformLocation(shader.program, name);
   if(uni_loc == -1)
-    printf("[SHADER-ERROR]: Could not find variable \'%s\' in the shader\n", name);
+    GILG_LOG_ERROR("[SHADER-ERROR]: Could not find variable \'%s\' in the shader\n", name);
 
   return uni_loc;
 }

@@ -15,10 +15,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake"
+  "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CheckIncludeFile.cmake"
+  "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CheckLibraryExists.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Compiler/GNU-C.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Compiler/GNU.cmake"
+  "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake"
+  "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/FindPackageMessage.cmake"
+  "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake"
+  "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake"
   "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake"
@@ -29,6 +36,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.7/CMakeCCompiler.cmake"
   "CMakeFiles/3.27.7/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.7/CMakeSystem.cmake"
+  "/usr/local/lib/cmake/spdlog/spdlogConfig.cmake"
+  "/usr/local/lib/cmake/spdlog/spdlogConfigTargets-release.cmake"
+  "/usr/local/lib/cmake/spdlog/spdlogConfigTargets.cmake"
+  "/usr/local/lib/cmake/spdlog/spdlogConfigVersion.cmake"
   )
 
 # The corresponding makefile is:

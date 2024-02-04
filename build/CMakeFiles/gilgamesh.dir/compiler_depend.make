@@ -1479,6 +1479,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o: /home/mohamed/Dev/C++/G
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/cassert \
@@ -1521,6 +1522,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/clock.cpp.o: /home/mohamed/Dev/C++/G
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -1831,6 +1833,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/string_view.tcc \
@@ -1877,6 +1880,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -2528,6 +2532,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/input.cpp.o: /home/mohamed/Dev/C++/G
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/cassert \
@@ -2570,6 +2575,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/input.cpp.o: /home/mohamed/Dev/C++/G
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -2863,6 +2869,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/cassert \
@@ -2872,6 +2879,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/climits \
   /usr/include/c++/11/clocale \
   /usr/include/c++/11/cmath \
+  /usr/include/c++/11/cstdarg \
   /usr/include/c++/11/cstddef \
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdio \
@@ -2905,6 +2913,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/logger.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -3056,6 +3065,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/memory_alloc.cpp.o: /home/mohamed/De
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/cctype \
@@ -3082,6 +3092,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/memory_alloc.cpp.o: /home/mohamed/De
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -3363,6 +3374,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/window.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/cassert \
@@ -3405,6 +3417,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/window.cpp.o: /home/mohamed/Dev/C++/
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -3716,6 +3729,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.o: /home/mohamed/Dev/C+
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/string_view.tcc \
@@ -3761,6 +3775,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.o: /home/mohamed/Dev/C+
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -4066,6 +4081,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o: 
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/string_view.tcc \
@@ -4111,6 +4127,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/graphics_context.cpp.o: 
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -4583,6 +4600,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o: /hom
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/string_view.tcc \
@@ -4611,6 +4629,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/backend/vertex_array.cpp.o: /hom
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -5300,6 +5319,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o: /home/mohamed/De
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/string_view.tcc \
@@ -5347,6 +5367,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer.cpp.o: /home/mohamed/De
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -5660,6 +5681,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer2d.cpp.o: /home/mohamed/
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/string_view.tcc \
@@ -5706,6 +5728,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer2d.cpp.o: /home/mohamed/
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -7253,6 +7276,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o: /home/mohamed/Dev
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/streambuf.tcc \
@@ -7312,6 +7336,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o: /home/mohamed/Dev
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/type_traits \
   /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/utility \
   /usr/include/c++/11/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -7476,6 +7501,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/cctype \
@@ -7502,6 +7528,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/utility \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -7665,6 +7692,8 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/vertex.h:
 
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp:
+
+/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.cpp:
 
 /usr/include/c++/11/ext/numeric_traits.h:
 
@@ -8074,9 +8103,9 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/fxsrintrin.h:
 
-/usr/include/c++/11/bits/node_handle.h:
-
 /usr/include/c++/11/utility:
+
+/usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/dlfcn.h:
 
@@ -8269,6 +8298,8 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 /usr/include/c++/11/tr1/ell_integral.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
+
+/usr/include/c++/11/cstdarg:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/fmaintrin.h:
 
@@ -8589,8 +8620,6 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.cpp:
 
 /usr/include/c++/11/iosfwd:
-
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.cpp:
 
 /usr/include/c++/11/new:
 

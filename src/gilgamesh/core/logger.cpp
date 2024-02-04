@@ -3,6 +3,7 @@
 #include "gilgamesh/core/event.h"
 
 #include <string>
+#include <cstdarg>
 #include <cstdio>
 
 namespace gilg {
@@ -29,12 +30,18 @@ void log_assertion(const std::string& expr, const std::string& msg, const std::s
   printf("      [LINE]: %i\n", line_num);
 }
 
-void log_info(log_level level, const std::string& msg, ...)
-{ 
-  u8 log_index = (u8)level;
-  const char* levels[] = { "NONE", "TRACE", "DEBUG", "INFO", "WARN", "ERROR", "FATAL"};
+void log_info(log_level level, const char* msg, ...)
+{
+  u8 lvl_index = (u8)level;
+  const char* levels[] = {"NONE", "TRACE", "DEBUG", "INFO", "WARN", "ERROR", "FATAL"};
+ 
+  char out_msg[32000];
+  va_list list; 
+  va_start(list, msg);
+  vsnprintf(out_msg, 32000, msg, list); 
+  va_end(list);
 
-  printf("[GILG-%s]: %s\n", levels[log_index], msg.c_str());
+  printf("[GILG-%s]: %s\n", levels[lvl_index], out_msg);
 
   if(level == FATAL)
     dispatch_event(GILG_EVENT_APP_QUIT, event_desc{});

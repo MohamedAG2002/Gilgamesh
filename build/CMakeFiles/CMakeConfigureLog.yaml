@@ -541,3 +541,42 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/mohamed/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/local/lib/cmake/spdlog/spdlogConfig.cmake:30 (find_package)"
+      - "CMakeLists.txt:23 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/CMakeScratch/TryCompile-caYTEI"
+      binary: "/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/CMakeScratch/TryCompile-caYTEI"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/CMakeScratch/TryCompile-caYTEI'
+        
+        Run Build Command(s): /home/mohamed/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_be06b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_be06b.dir/build.make CMakeFiles/cmTC_be06b.dir/build
+        gmake[1]: Entering directory '/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/CMakeScratch/TryCompile-caYTEI'
+        Building C object CMakeFiles/cmTC_be06b.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_be06b.dir/src.c.o -c /home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/CMakeScratch/TryCompile-caYTEI/src.c
+        Linking C executable cmTC_be06b
+        /home/mohamed/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be06b.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_be06b.dir/src.c.o -o cmTC_be06b 
+        gmake[1]: Leaving directory '/home/mohamed/Dev/C++/GilgameshEngine/build/CMakeFiles/CMakeScratch/TryCompile-caYTEI'
+        
+      exitCode: 0
+...

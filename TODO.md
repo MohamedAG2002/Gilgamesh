@@ -1,7 +1,7 @@
 # Short-Term TODO:
-- Memory profiler 
 - Fix the input stuff 
-- Make logging actually take in values and not just print them
+- Make the resources as pointers not just copies
+- Better shader info like having it's path embeded and reading from a single file instead of 2 or more
 
 - Batch renderer
 - Design an instanced renderer?!!!
@@ -16,6 +16,7 @@
 
 # Mid-Term TODO:
 - Slowly remove STL from the engine. Completely!
+- More sophisticated memory profiler
 - Documentation
 - Scenes
 - Entities
