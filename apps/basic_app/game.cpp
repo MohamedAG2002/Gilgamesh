@@ -61,7 +61,8 @@ void render_game_gui()
   gilg::enable_cursor();
   gilg::editor_begin();
 
-  gilg::editor_info_window(game.render_data);
+  gilg::editor_debug_info();
+  gilg::editor_renderer_info(game.render_data);
   gilg::editor_camera_panel(game.cam); 
   gilg::editor_entities_panel(game.quad_pos, game.quad_size, game.quad_color);
 

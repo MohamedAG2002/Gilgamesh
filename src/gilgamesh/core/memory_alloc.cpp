@@ -1,7 +1,6 @@
 #include "memory_alloc.h"
 #include "gilgamesh/core/defines.h"
 #include "gilgamesh/core/logger.h"
-#include "gilgamesh/core/gilg_asserts.h"
 
 #include <cstdlib>
 #include <cstring>
@@ -12,7 +11,7 @@ namespace gilg {
 /////////////////////////////////////////////
 typedef struct mem_status 
 {
-  usizei total_allocs, total_freed, total_usage;
+  gilg::usizei total_allocs, total_freed, total_usage;
 } mem_status;
 
 static mem_status mstatus;
@@ -33,7 +32,9 @@ b8 init_memory_allocater(void)
 
 void shutdown_memory_allocater(void)
 {
-  GILG_ASSERT_MSG(mstatus.total_freed == 0, "Some allocations were not freed");
+  if(mstatus.total_usage > 0)
+    GILG_LOG_WARNING("Allocations of size \'%zu\' were not freed", mstatus.total_usage);
+
   GILG_LOG_INFO("Memory allocater successfully shutdown");
 }
 
@@ -81,7 +82,6 @@ void free_memory(void* mem, usizei size)
   free(mem);
 
   mstatus.total_freed += size;
-  mstatus.total_usage = mstatus.total_allocs - mstatus.total_freed;
 
   GILG_LOG_INFO("Freed memory block of size %zu", size);
 }
@@ -112,6 +112,12 @@ void* zero_out_memory(void* mem, usizei size)
 {
   GILG_LOG_INFO("Set memory block of size %zu to 0", size);
   return set_memory(mem, 0, size);
+}
+
+const u32 get_current_memory_usage()
+{
+  mstatus.total_usage = mstatus.total_allocs - mstatus.total_freed;
+  return mstatus.total_usage;
 }
 /////////////////////////////////////////////
 

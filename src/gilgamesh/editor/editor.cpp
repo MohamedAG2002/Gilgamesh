@@ -3,6 +3,7 @@
 #include "gilgamesh/core/logger.h"
 #include "gilgamesh/core/window.h"
 #include "gilgamesh/core/clock.h"
+#include "gilgamesh/core/memory_alloc.h"
 
 #include "gilgamesh/graphics/backend/graphics_context.h"
 
@@ -68,9 +69,9 @@ void editor_end()
   ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
 
-void editor_engine_info()
+void editor_debug_info()
 {
-  ImGui::Begin("Engine Info");
+  ImGui::Begin("Debug Info");
   ImGui::Text("Version: 0.1");
 
   glm::vec2 mouse_pos = get_mouse_pos();
@@ -78,6 +79,9 @@ void editor_engine_info()
   
   f64 fps = clock_fps(); 
   ImGui::Text("FPS = %f", fps);
+
+  usizei usage = get_current_memory_usage();
+  ImGui::Text("Memory Usage = %zu", usage);
 
   ImGui::End();
 }
@@ -95,12 +99,6 @@ void editor_renderer_info(render_data& data)
   ImGui::ColorEdit3("Background Color", &data.clear_color.r);
 
   ImGui::End();
-}
-
-void editor_info_window(render_data& data)
-{
-  editor_engine_info();
-  editor_renderer_info(data);
 }
 
 static u8 current_cam_type = 0;

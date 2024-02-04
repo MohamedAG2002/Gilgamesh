@@ -1,4 +1,8 @@
 # Short-Term TODO:
+- Memory profiler 
+- Fix the input stuff 
+- Make logging actually take in values and not just print them
+
 - Batch renderer
 - Design an instanced renderer?!!!
 - Materials
@@ -11,6 +15,7 @@
 - Probably have begin_renderer a scene object or something like that instead of render_data
 
 # Mid-Term TODO:
+- Slowly remove STL from the engine. Completely!
 - Documentation
 - Scenes
 - Entities

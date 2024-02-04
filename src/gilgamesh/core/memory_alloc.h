@@ -28,6 +28,8 @@ void free_memory(void* mem, usizei size);
 void* set_memory(void* mem, i32 value, usizei size);
 void* copy_memory(void* src, void* dest, usizei src_size);
 void* zero_out_memory(void* mem, usizei size);
+
+const u32 get_current_memory_usage();
 /////////////////////////////////////////////
 
 }
