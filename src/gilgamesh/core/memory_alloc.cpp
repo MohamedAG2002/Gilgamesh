@@ -47,7 +47,7 @@ void* alloc_memory(usizei size)
 
   mstatus.total_allocs += size;
   
-  GILG_LOG_INFO("Allocated %zu", size);
+  GILG_LOG_TRACE("Allocated %zu", size);
   return m;  
 }
 
@@ -60,7 +60,7 @@ void* calloc_memory(usizei count, usizei size)
 
   mstatus.total_allocs += size * count;
   
-  GILG_LOG_INFO("Allocated %zu", size * count);
+  GILG_LOG_TRACE("Allocated %zu", size * count);
   return m;  
 }
 
@@ -73,7 +73,7 @@ void* realloc_memory(void* mem, usizei new_size)
 
   mstatus.total_allocs += new_size;
   
-  GILG_LOG_INFO("Re-allocated memory block to size %zu", new_size);
+  GILG_LOG_TRACE("Re-allocated memory block to size %zu", new_size);
   return m;  
 }
 
@@ -83,7 +83,7 @@ void free_memory(void* mem, usizei size)
 
   mstatus.total_freed += size;
 
-  GILG_LOG_INFO("Freed memory block of size %zu", size);
+  GILG_LOG_TRACE("Freed memory block of size %zu", size);
 }
 
 void* set_memory(void* mem, i32 value, usizei size)
@@ -93,7 +93,7 @@ void* set_memory(void* mem, i32 value, usizei size)
   if(m == NULL)
     GILG_LOG_FATAL("Failed to set memory");
 
-  GILG_LOG_INFO("Set memory block of size %zu to vlaue %i", size, value);
+  GILG_LOG_TRACE("Set memory block of size %zu to vlaue %i", size, value);
   return m;  
 }
 
@@ -104,13 +104,13 @@ void* copy_memory(void* src, void* dest, usizei src_size)
   if(m == NULL)
     GILG_LOG_FATAL("Failed to copy memory");
 
-  GILG_LOG_INFO("Copied memory block of size %zu", src_size);
+  GILG_LOG_TRACE("Copied memory block of size %zu", src_size);
   return m;  
 }
 
 void* zero_out_memory(void* mem, usizei size)
 {
-  GILG_LOG_INFO("Set memory block of size %zu to 0", size);
+  GILG_LOG_TRACE("Set memory block of size %zu to 0", size);
   return set_memory(mem, 0, size);
 }
 

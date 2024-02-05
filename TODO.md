@@ -17,6 +17,8 @@
 # Mid-Term TODO:
 - Slowly remove STL from the engine. Completely!
 - More sophisticated memory profiler
+- File logging
+- Cross platform console logging
 - Documentation
 - Scenes
 - Entities

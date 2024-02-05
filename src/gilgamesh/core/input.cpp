@@ -2,19 +2,27 @@
 #include "gilgamesh/core/defines.h"
 #include "gilgamesh/core/event.h"
 #include "gilgamesh/core/logger.h"
-#include "gilgamesh/core/window.h"
+#include "gilgamesh/core/memory_alloc.h"
 
 namespace gilg {
 
 // Input states
 ////////////////////////////////////////////////
-struct input_state
+struct key_state
 {
-  b8 keyboard_state[GILG_MAX_KEYS];
-  b8 mouse_state[GILG_MAX_BUTTONS];
+  b8 previous_state[GILG_MAX_KEYS];
+  b8 current_state[GILG_MAX_KEYS];
 };
 
-static input_state input_state;
+struct mouse_state
+{
+  b8 previous_state[GILG_MAX_BUTTONS];
+  b8 current_state[GILG_MAX_BUTTONS];
+};
+
+
+static mouse_state s_mouse;
+static key_state s_key;
 ////////////////////////////////////////////////
 
 // Callbacks
@@ -23,12 +31,12 @@ bool key_input_callback(event_type type, event_desc desc)
 {
   if(type == GILG_EVENT_KEY_PRESSED)
   {
-    input_state.keyboard_state[desc.key_pressed] = true;
+    s_key.current_state[desc.key_pressed] = true;
     return true;
   }
   else if(type == GILG_EVENT_KEY_RELEASED)
   {
-    input_state.keyboard_state[desc.key_released] = false;
+    s_key.current_state[desc.key_released] = false;
     return true;
   }
 
@@ -39,12 +47,12 @@ bool mouse_input_callback(event_type type, event_desc desc)
 {
   if(type == GILG_EVENT_MOUSE_BUTTON_PRESSED)
   {
-    input_state.mouse_state[desc.mouse_button_pressed] = true;
+    s_mouse.current_state[desc.mouse_button_pressed] = true;
     return true;
   }
   else if(type == GILG_EVENT_MOUSE_BUTTON_RELEASED)
   {
-    input_state.mouse_state[desc.mouse_button_released] = false;
+    s_mouse.current_state[desc.mouse_button_released] = false;
     return true;
   }
 
@@ -71,28 +79,37 @@ void shutdown_input()
 {
   GILG_LOG_INFO("Input system successfully shutdown");
 }
+
+void update_input()
+{
+  // Updating the keyboard state 
+  copy_memory(s_key.current_state, s_key.previous_state, sizeof(s_key.current_state));
+
+  // Updating the mouse state 
+  copy_memory(s_mouse.current_state, s_mouse.previous_state, sizeof(s_mouse.current_state));
+}
 ////////////////////////////////////////////////
 
 // Keyboard input
 ////////////////////////////////////////////////
 b8 is_key_down(key_code code)
 {
-  return glfwGetKey(window_handle(), code) == GLFW_PRESS;
+  return s_key.current_state[code];
 }
 
 b8 is_key_up(key_code code)
 {
-  return glfwGetKey(window_handle(), code) == GLFW_RELEASE;
+  return !s_key.current_state[code];
 }
 
 b8 is_key_pressed(key_code code)
 {
-  return input_state.keyboard_state[code];
+  return !s_key.previous_state[code] && s_key.current_state[code];
 }
 
 b8 is_key_released(key_code code)
 {
-  return !input_state.keyboard_state[code];
+  return s_key.previous_state[code] && !s_key.current_state[code];
 }
 ////////////////////////////////////////////////
 
@@ -100,22 +117,22 @@ b8 is_key_released(key_code code)
 ////////////////////////////////////////////////
 b8 is_mouse_down(mouse_button_code code)
 {
-  return glfwGetMouseButton(window_handle(), code) == GLFW_PRESS;
+  return s_mouse.current_state[code];
 }
 
 b8 is_mouse_up(mouse_button_code code)
 {
-  return glfwGetMouseButton(window_handle(), code) == GLFW_RELEASE;
+  return !s_mouse.current_state[code];
 }
 
 b8 is_mouse_pressed(mouse_button_code code)
 {
-  return input_state.mouse_state[code];
+  return !s_mouse.previous_state[code] && s_mouse.current_state[code];
 }
 
 b8 is_mouse_released(mouse_button_code code)
 {
-  return !input_state.mouse_state[code];
+  return s_mouse.previous_state[code] && !s_mouse.current_state[code];
 }
 ////////////////////////////////////////////////
 

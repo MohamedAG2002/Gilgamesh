@@ -144,7 +144,10 @@ void run_engine()
     s_app.render_func();
 
     update_clock();
+
     s_app.update_func();
+    
+    update_input(); 
     update_window();
   }
 }
