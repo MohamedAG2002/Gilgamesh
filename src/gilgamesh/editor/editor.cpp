@@ -54,6 +54,8 @@ void editor_shutdown()
   ImGui_ImplGlfw_Shutdown();
   ImGui_ImplOpenGL3_Shutdown();
   ImGui::DestroyContext();
+  
+  GILG_LOG_INFO("Editor was successfully shutdown");
 }
 
 void editor_begin()

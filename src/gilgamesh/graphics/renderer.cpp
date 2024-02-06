@@ -32,7 +32,6 @@ struct renderer
   vertex_array quad_va;
   uniform_buffer ubo;
   shader* current_shader;
-  texture2d* current_texture;
 
   std::vector<transform> transforms;
   usizei inst_count;
@@ -162,10 +161,6 @@ b8 create_renderer()
   resource_add_shader("inst", "assets/shaders/inst.vert.glsl", "assets/shaders/inst.frag.glsl");
   renderer.current_shader = resource_get_shader("inst");
 
-  // Textures init 
-  resource_add_texture("container", "assets/textures/container.jpg");
-  renderer.current_texture = resource_get_texture("container");
-
   GILG_LOG_INFO("Renderer was successfully created");
   return true;
 }
@@ -194,6 +189,7 @@ void begin_renderer(const render_data& data)
 
 void end_renderer()
 {
+  /*
   // Setting up the transform 
   for(int i = 0; i < renderer.transforms.size(); i++)
   {
@@ -209,6 +205,7 @@ void end_renderer()
   // Bringing everything back to normal 
   renderer.inst_count = 0;
   renderer.transforms.clear();
+  */
 
   gcontext_swap();
 }

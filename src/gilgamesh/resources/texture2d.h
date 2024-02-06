@@ -33,7 +33,7 @@ struct texture2d
 // Texture2D functions
 //////////////////////////////////////////////////////////////
 texture2d* load_texture2d(const std::string& path);
-texture2d* load_texture2d(u32 width, u32 height, texture_format format, void* pixels);
+texture2d* load_texture2d(i32 width, i32 height, texture_format format, void* pixels);
 void unload_texture2d(texture2d* texture);
 void render_texture2d(const texture2d* texture);
 //////////////////////////////////////////////////////////////

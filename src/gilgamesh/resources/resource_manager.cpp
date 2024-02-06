@@ -26,7 +26,6 @@ static resource_manager rsrc_man;
 b8 init_resource_manager()
 {
   GILG_LOG_INFO("Resource manager was successfully initialized");
-
   return true;
 }
 
@@ -79,6 +78,7 @@ b8 resource_remove_texture(const std::string& id)
 {
   GILG_ASSERT_MSG(rsrc_man.textures2d.find(id) != rsrc_man.textures2d.end(), "Could not remove texture2d since it doesn't exist");
 
+  unload_texture2d(rsrc_man.textures2d[id]);
   rsrc_man.textures2d.erase(id);
   return true;
 }
@@ -87,6 +87,7 @@ b8 resource_remove_shader(const std::string& id)
 {
   GILG_ASSERT_MSG(rsrc_man.shaders.find(id) != rsrc_man.shaders.end(), "Could not remove shader since it doesn't exist");
 
+  unload_shader(rsrc_man.shaders[id]);
   rsrc_man.shaders.erase(id);
   return true;
 }

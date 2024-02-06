@@ -110,7 +110,6 @@ void* copy_memory(void* src, void* dest, usizei src_size)
 
 void* zero_out_memory(void* mem, usizei size)
 {
-  GILG_LOG_TRACE("Set memory block of size %zu to 0", size);
   return set_memory(mem, 0, size);
 }
 

@@ -1,6 +1,7 @@
 #include "renderer2d.h"
 #include "gilgamesh/core/defines.h"
 #include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/memory_alloc.h"
 #include "gilgamesh/graphics/color.h"
 #include "gilgamesh/graphics/backend/graphics_context.h"
 #include "gilgamesh/graphics/backend/vertex_array.h"
@@ -106,8 +107,8 @@ b8 create_renderer2d()
   ren.batch_shader = resource_get_shader("batch");
 
   // Texutre init 
-  u32 pixels = 0xFFFFFFFF;
-  resource_add_texture("white_texture", 32, 32, GILG_RGBA, &pixels);
+  u32 pixels = 0xffffffff;
+  resource_add_texture("white_texture", 1, 1, GILG_RGBA, &pixels);
   ren.white_texture = resource_get_texture("white_texture");
 
   GILG_LOG_INFO("Renderer2D was successfully created");
@@ -125,11 +126,13 @@ void destroy_renderer2d()
 void begin_renderer2d()
 {
   bind_shader(ren.batch_shader);
+  set_shader_int(ren.batch_shader, "u_texture", ren.white_texture->slot);
 }
 
 void end_renderer2d()
 {
   vertex_array_update_buffer(ren.vao, GILG_BUFF_TYPE_VERTEX, 0, sizeof(vertex2d) * ren.vertices.size(), ren.vertices.data());
+  
   gcontext_draw_index(GILG_DRAW_TRIANGLES, ren.vao);
   
   ren.vertices.clear();
@@ -165,7 +168,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
   v4.color          = color;
   v4.texture_coords = glm::vec2(0.0f, 0.0f); 
   ren.vertices.push_back(v4);
-
+  
   bind_shader(ren.batch_shader);
   set_shader_int(ren.batch_shader, "u_texture", ren.white_texture->slot);
   render_texture2d(ren.white_texture);
@@ -205,7 +208,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const texture2d* t
 
   bind_shader(ren.batch_shader);
   set_shader_int(ren.batch_shader, "u_texture", texture->slot);
-  render_texture2d(ren.white_texture);
+  render_texture2d(texture);
 
   ren.vao.index_buffer.count += 6;
 }

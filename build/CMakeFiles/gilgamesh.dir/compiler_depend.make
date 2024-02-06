@@ -1787,6 +1787,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o: /home/mohamed/Dev/C++/
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/memory_alloc.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/window.h \
+  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/editor/editor.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/color.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.h \
@@ -5633,6 +5634,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer2d.cpp.o: /home/mohamed/
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/stb_image/stb_image.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/defines.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.h \
+  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/memory_alloc.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/buffer.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/graphics_context.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/vertex_array.h \
@@ -8686,6 +8688,8 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/engine.h:
 
+/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/editor/editor.h:
+
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/gtc/quaternion.hpp:
 
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.h:
@@ -8743,8 +8747,6 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/ext/quaternion_geometric.hpp:
 
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/input.cpp:
-
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/editor/editor.h:
 
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/backend/graphics_context.cpp:
 

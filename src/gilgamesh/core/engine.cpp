@@ -8,6 +8,7 @@
 #include "gilgamesh/core/input.h"
 #include "gilgamesh/core/clock.h"
 #include "gilgamesh/graphics/renderer.h"
+#include "gilgamesh/editor/editor.h"
 
 #include "gilgamesh/resources/resource_manager.h"
 
@@ -87,6 +88,13 @@ b8 init_engine(const app_desc& app)
     GILG_LOG_ERROR("Could not create a renderer");
     return false; 
   }
+
+  // Editor init 
+  if(!editor_init())
+  {
+    GILG_LOG_ERROR("Could not create the editor");
+    return false;
+  }
   
   // Listen to events
   listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);
@@ -114,14 +122,11 @@ void shutdown_engine()
 
   // Engine systems shutdown 
   /////////////////////////////
-  shutdown_resource_manager();
-
+  editor_shutdown();
   destroy_renderer();
-
+  shutdown_resource_manager();
   shutdown_input();
-
   destroy_window();
-
   shutdown_memory_allocater();
   shutdown_events(); 
   shutdown_logger();
