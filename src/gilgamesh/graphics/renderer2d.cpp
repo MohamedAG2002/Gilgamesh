@@ -24,7 +24,8 @@ struct renderer2d
   std::vector<vertex2d> vertices; 
 
   vertex_array vao;
-  shader batch_shader;
+  shader* batch_shader;
+  texture2d* white_texture;
 
   u32 inst_count;
 };
@@ -104,6 +105,11 @@ b8 create_renderer2d()
   resource_add_shader("batch", "assets/shaders/batch.vert.glsl", "assets/shaders/batch.frag.glsl");
   ren.batch_shader = resource_get_shader("batch");
 
+  // Texutre init 
+  u32 pixels = 0xFFFFFFFF;
+  resource_add_texture("white_texture", 32, 32, GILG_RGBA, &pixels);
+  ren.white_texture = resource_get_texture("white_texture");
+
   GILG_LOG_INFO("Renderer2D was successfully created");
   return true;
 }
@@ -160,11 +166,48 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
   v4.texture_coords = glm::vec2(0.0f, 0.0f); 
   ren.vertices.push_back(v4);
 
+  bind_shader(ren.batch_shader);
+  set_shader_int(ren.batch_shader, "u_texture", ren.white_texture->slot);
+  render_texture2d(ren.white_texture);
+
   ren.vao.index_buffer.count += 6;
 }
 
-void render_quad(const glm::vec2& pos, const glm::vec2& size, const texture2d&texture)
+void render_quad(const glm::vec2& pos, const glm::vec2& size, const texture2d* texture)
 { 
+  // Top-left 
+  vertex2d v1; 
+  v1.position       = glm::vec3(pos.x, pos.y, 0.0f); 
+  v1.color          = glm::vec4(1.0f);
+  v1.texture_coords = glm::vec2(0.0f, 1.0f); 
+  ren.vertices.push_back(v1);
+ 
+  // Top-right
+  vertex2d v2; 
+  v2.position       = glm::vec3(pos.x + size.x, pos.y, 0.0f); 
+  v2.color          = glm::vec4(1.0f);
+  v2.texture_coords = glm::vec2(1.0f, 1.0f); 
+  ren.vertices.push_back(v2);
+ 
+  // Bottom-right
+  vertex2d v3; 
+  v3.position       = glm::vec3(pos.x + size.x, pos.y + size.y, 0.0f); 
+  v3.color          = glm::vec4(1.0f);
+  v3.texture_coords = glm::vec2(1.0f, 0.0f); 
+  ren.vertices.push_back(v3);
+ 
+  // Bottom-left
+  vertex2d v4; 
+  v4.position       = glm::vec3(pos.x, pos.y + size.y, 0.0f); 
+  v4.color          = glm::vec4(1.0f);
+  v4.texture_coords = glm::vec2(0.0f, 0.0f); 
+  ren.vertices.push_back(v4);
+
+  bind_shader(ren.batch_shader);
+  set_shader_int(ren.batch_shader, "u_texture", texture->slot);
+  render_texture2d(ren.white_texture);
+
+  ren.vao.index_buffer.count += 6;
 }
 /////////////////////////////////////////////////
 

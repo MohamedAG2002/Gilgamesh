@@ -1,6 +1,7 @@
 #include "shader.h"
 #include "gilgamesh/core/defines.h"
 #include "gilgamesh/core/logger.h"
+#include "gilgamesh/core/memory_alloc.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -33,7 +34,7 @@ const std::string read_shader(const char* path)
   return ss.str().c_str();
 }
 
-void check_compile_error(const shader& shader, const u32 shader_id)
+void check_compile_error(const u32 shader_id)
 {
   int success;
   char log_info[512];
@@ -47,25 +48,25 @@ void check_compile_error(const shader& shader, const u32 shader_id)
   }
 }
 
-void check_linker_error(const shader& shader)
+void check_linker_error(const shader* shader)
 {
   int success;
   char log_info[512];
 
-  glGetProgramiv(shader.program, GL_COMPILE_STATUS, &success); 
+  glGetProgramiv(shader->program, GL_COMPILE_STATUS, &success); 
 
   if(!success) 
   {
-    glGetProgramInfoLog(shader.program, 512, nullptr, log_info);
+    glGetProgramInfoLog(shader->program, 512, nullptr, log_info);
     printf("[SHADER-ERROR]: %s\n", log_info);
   }
 }
 
-unsigned int get_uniform_location(const shader& shader, const char* name)
+unsigned int get_uniform_location(const shader* shader, const char* name)
 {
   u32 uni_loc = 0;
 
-  uni_loc = glGetUniformLocation(shader.program, name);
+  uni_loc = glGetUniformLocation(shader->program, name);
   if(uni_loc == -1)
     GILG_LOG_ERROR("[SHADER-ERROR]: Could not find variable \'%s\' in the shader\n", name);
 
@@ -75,78 +76,78 @@ unsigned int get_uniform_location(const shader& shader, const char* name)
 
 // Shader functions
 ////////////////////////////////////////////////////////////////////////
-shader load_shader(const std::string& vert_path, const std::string& frag_path)
+shader* load_shader(const std::string& vert_path, const std::string& frag_path)
 {
-  shader shdr;
+  shader* shdr = (shader*)alloc_memory(sizeof(shader));
 
   // Vertex shader
   std::string vert_str = read_shader(vert_path.c_str());
   const char* vert_src = vert_str.c_str(); 
-  shdr.vert = glCreateShader(GL_VERTEX_SHADER);
-  glShaderSource(shdr.vert, 1, &vert_src, 0);
-  glCompileShader(shdr.vert);
-  check_compile_error(shdr, shdr.vert);
+  shdr->vert = glCreateShader(GL_VERTEX_SHADER);
+  glShaderSource(shdr->vert, 1, &vert_src, 0);
+  glCompileShader(shdr->vert);
+  check_compile_error(shdr->vert);
 
   // Fragment shader
   std::string frag_str = read_shader(frag_path.c_str());
   const char* frag_src = frag_str.c_str(); 
-  shdr.frag = glCreateShader(GL_FRAGMENT_SHADER);
-  glShaderSource(shdr.frag, 1, &frag_src, 0);
-  glCompileShader(shdr.frag);
-  check_compile_error(shdr, shdr.frag);
+  shdr->frag = glCreateShader(GL_FRAGMENT_SHADER);
+  glShaderSource(shdr->frag, 1, &frag_src, 0);
+  glCompileShader(shdr->frag);
+  check_compile_error(shdr->frag);
 
   // Program linking
-  shdr.program = glCreateProgram();
-  glAttachShader(shdr.program, shdr.vert);
-  glAttachShader(shdr.program, shdr.frag);
-  glLinkProgram(shdr.program);
+  shdr->program = glCreateProgram();
+  glAttachShader(shdr->program, shdr->vert);
+  glAttachShader(shdr->program, shdr->frag);
+  glLinkProgram(shdr->program);
   check_linker_error(shdr);
 
   // Detach and delete shaders since they are useless now
-  glDetachShader(shdr.program, shdr.vert);
-  glDetachShader(shdr.program, shdr.frag);
-  glDeleteShader(shdr.vert);
-  glDeleteShader(shdr.frag);
+  glDetachShader(shdr->program, shdr->vert);
+  glDetachShader(shdr->program, shdr->frag);
+  glDeleteShader(shdr->vert);
+  glDeleteShader(shdr->frag);
 
   return shdr;
 }
 
-void unload_shader(shader& shader)
+void unload_shader(shader* shdr)
 {
-
+  free_memory(shdr, sizeof(shader));
 }
 
-void bind_shader(const shader& shader)
+void bind_shader(const shader* shader)
 {
-  glUseProgram(shader.program);
+  glUseProgram(shader->program);
 }
 
-void set_shader_int(shader& shader, const std::string& name, i32 value)
+void set_shader_int(const shader* shader, const std::string& name, i32 value)
 {
   glUniform1i(get_uniform_location(shader, name.c_str()), value);
 }
 
-void set_shader_float(shader& shader, const std::string& name, f32 value)
+void set_shader_float(const shader* shader, const std::string& name, f32 value)
 {
   glUniform1f(get_uniform_location(shader, name.c_str()), value);
 }
 
-void set_shader_mat4(shader& shader, const std::string& name, const glm::mat4& value)
+void set_shader_mat4(const shader* shader, const std::string& name, const glm::mat4& value)
 {
   glUniformMatrix4fv(get_uniform_location(shader, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
 }
 
-void set_shader_vec3(shader& shader, const std::string& name, const glm::vec3& value)
+void set_shader_vec3(const shader* shader, const std::string& name, const glm::vec3& value)
 {
   glUniform3f(get_uniform_location(shader, name.c_str()), value.x, value.y, value.z);
 }
 
-void set_shader_vec4(shader& shader, const std::string& name, const glm::vec4& value)
+void set_shader_vec4(const shader* shader, const std::string& name, const glm::vec4& value)
 {
   glUniform4f(get_uniform_location(shader, name.c_str()), value.x, value.y, value.z, value.w);
 }
 
-void set_shader_mat4_arr(shader& shader, const std::string& name, const std::vector<glm::mat4>& arr)
+void set_shader_mat4_arr(const shader* shader, const std::string& name, const std::vector<glm::mat4>& arr)
 {
   for(int i = 0; i < arr.size(); i++)
   {
@@ -157,7 +158,7 @@ void set_shader_mat4_arr(shader& shader, const std::string& name, const std::vec
   }
 }
 
-void set_shader_vec3_arr(shader& shader, const std::string& name, const std::vector<glm::vec3>& arr)
+void set_shader_vec3_arr(const shader* shader, const std::string& name, const std::vector<glm::vec3>& arr)
 {
   for(int i = 0; i < arr.size(); i++)
   {
@@ -168,7 +169,7 @@ void set_shader_vec3_arr(shader& shader, const std::string& name, const std::vec
   }
 }
 
-void set_shader_vec4_arr(shader& shader, const std::string& name, const std::vector<glm::vec4>& arr)
+void set_shader_vec4_arr(const shader* shader, const std::string& name, const std::vector<glm::vec4>& arr)
 {
   for(int i = 0; i < arr.size(); i++)
   {

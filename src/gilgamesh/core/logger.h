@@ -42,7 +42,7 @@ void log_info(log_level level, const char* msg, ...);
 #if GILG_LOG_TRACE_ENABLED == 1
 #define GILG_LOG_TRACE(msg, ...) log_info(TRACE, msg, ##__VA_ARGS__)
 #else 
-#define GILG_LOG_TRACE()
+#define GILG_LOG_TRACE(msg, ...)
 #endif
 
 // Debug log when available

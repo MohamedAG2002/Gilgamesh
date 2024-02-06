@@ -8,7 +8,6 @@
 #include "gilgamesh/core/input.h"
 #include "gilgamesh/core/clock.h"
 #include "gilgamesh/graphics/renderer.h"
-#include "gilgamesh/graphics/renderer2d.h"
 
 #include "gilgamesh/resources/resource_manager.h"
 
@@ -88,13 +87,6 @@ b8 init_engine(const app_desc& app)
     GILG_LOG_ERROR("Could not create a renderer");
     return false; 
   }
-
-  // Renderer2D init 
-  if(!create_renderer2d())
-  {
-    GILG_LOG_FATAL("Failed to create Renderer2D");
-    return false;
-  }
   
   // Listen to events
   listen_to_event(GILG_EVENT_WINDOW_CLOSED, app_exit_callback);
@@ -124,7 +116,6 @@ void shutdown_engine()
   /////////////////////////////
   shutdown_resource_manager();
 
-  destroy_renderer2d();
   destroy_renderer();
 
   shutdown_input();

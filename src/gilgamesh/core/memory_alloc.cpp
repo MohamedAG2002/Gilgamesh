@@ -104,7 +104,7 @@ void* copy_memory(void* src, void* dest, usizei src_size)
   if(m == NULL)
     GILG_LOG_FATAL("Failed to copy memory");
 
-  GILG_LOG_TRACE("Copied memory block of size %zu", src_size);
+  //GILG_LOG_TRACE("Copied memory block of size %zu", src_size);
   return m;  
 }
 

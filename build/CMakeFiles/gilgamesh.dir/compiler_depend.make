@@ -1790,7 +1790,6 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/core/engine.cpp.o: /home/mohamed/Dev/C++/
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/color.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.h \
-  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer2d.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/transform.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h \
@@ -6811,7 +6810,6 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o: /home/m
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/defines.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/gilg_asserts.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.h \
-  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/gilg_random.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h \
@@ -7222,6 +7220,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o: /home/mohamed/Dev
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/glm/vec4.hpp \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/defines.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.h \
+  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/memory_alloc.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -7465,6 +7464,7 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
   /home/mohamed/Dev/C++/GilgameshEngine/libs/include/stb_image/stb_image.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/defines.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.h \
+  /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/memory_alloc.h \
   /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -7690,9 +7690,9 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/vertex.h:
 
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp:
+/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer2d.h:
 
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.cpp:
+/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer.cpp:
 
 /usr/include/c++/11/ext/numeric_traits.h:
 
@@ -8322,8 +8322,6 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/sgxintrin.h:
 
-/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/renderer2d.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
 /usr/include/c++/11/cstdlib:
@@ -8619,6 +8617,8 @@ CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o: /home/mohamed/
 /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/core/logger.cpp:
 
 /usr/include/c++/11/iosfwd:
+
+/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/graphics/camera3d.cpp:
 
 /usr/include/c++/11/new:
 

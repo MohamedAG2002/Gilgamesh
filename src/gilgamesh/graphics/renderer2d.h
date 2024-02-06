@@ -23,7 +23,7 @@ void begin_renderer2d();
 void end_renderer2d();
 
 void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color);
-void render_quad(const glm::vec2& pos, const glm::vec2& size, const texture2d&texture);
+void render_quad(const glm::vec2& pos, const glm::vec2& size, const texture2d* texture);
 
 // @TODO: Future API 
 // void render_circle(pos, radius, color);

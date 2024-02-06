@@ -10,7 +10,10 @@ in VS_OUT
   vec2 tex_coords;
 } fs_in;
 
+// Uniforms
+uniform sampler2D u_texture;
+
 void main() 
 {
-  frag_color = fs_in.out_color;
+  frag_color = texture(u_texture, fs_in.tex_coords) * fs_in.out_color;
 }

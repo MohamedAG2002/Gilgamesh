@@ -4,7 +4,6 @@
 #include "gilgamesh/core/gilg_asserts.h"
 #include "gilgamesh/resources/texture2d.h"
 #include "gilgamesh/resources/shader.h"
-#include "gilgamesh/math/gilg_random.h"
 
 #include <string>
 #include <unordered_map>
@@ -15,8 +14,8 @@ namespace gilg {
 ///////////////////////////////////////////////////////////////
 struct resource_manager 
 {
-  std::unordered_map<std::string, texture2d> textures2d;
-  std::unordered_map<std::string, shader> shaders;
+  std::unordered_map<std::string, texture2d*> textures2d;
+  std::unordered_map<std::string, shader*> shaders;
 };
 
 static resource_manager rsrc_man;
@@ -52,19 +51,25 @@ void resource_add_texture(const std::string& name, const std::string& path)
   rsrc_man.textures2d[name] = load_texture2d(path);
 }
 
+void resource_add_texture(const std::string& name, u32 width, u32 height, texture_format format, void* pixels)
+{
+  GILG_ASSERT_MSG(rsrc_man.textures2d.find(name) == rsrc_man.textures2d.end(), "Texture2D already exists");
+  rsrc_man.textures2d[name] = load_texture2d(width, height, format, pixels);
+}
+
 void resource_add_shader(const std::string& name, const std::string& vert_path, const std::string& frag_path)
 {
   GILG_ASSERT_MSG(rsrc_man.shaders.find(name) == rsrc_man.shaders.end(), "Shader already exists");
   rsrc_man.shaders[name] = load_shader(vert_path, frag_path);
 }
 
-const texture2d resource_get_texture(const std::string& id)
+texture2d* resource_get_texture(const std::string& id)
 {
   GILG_ASSERT_MSG(rsrc_man.textures2d.find(id) != rsrc_man.textures2d.end(), "Could not retrieve texture2d since it doesn't exist");
   return rsrc_man.textures2d[id];
 }
 
-const shader resource_get_shader(const std::string& id)
+shader* resource_get_shader(const std::string& id)
 {
   GILG_ASSERT_MSG(rsrc_man.shaders.find(id) != rsrc_man.shaders.end(), "Could not retrieve shader since it doesn't exist");
   return rsrc_man.shaders[id];

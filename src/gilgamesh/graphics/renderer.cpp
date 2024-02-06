@@ -31,8 +31,8 @@ struct renderer
 {
   vertex_array quad_va;
   uniform_buffer ubo;
-  shader current_shader;
-  texture2d current_texture;
+  shader* current_shader;
+  texture2d* current_texture;
 
   std::vector<transform> transforms;
   usizei inst_count;
@@ -144,6 +144,12 @@ b8 create_renderer()
     return false;
   }
 
+  if(!create_renderer2d())
+  {
+    GILG_LOG_FATAL("Failed to create renderer2d");
+    return false;
+  }
+
   renderer.quad_va = create_vertex_array();
   setup_buffers();
   renderer.ubo = create_uniform_buffer(0);
@@ -170,6 +176,7 @@ void destroy_renderer()
 
   destroy_uniform_buffer(renderer.ubo);
   destroy_vertex_array(renderer.quad_va);
+  destroy_renderer2d();
   destroy_gcontext();
 
   GILG_LOG_INFO("Renderer was successfully destroyed");

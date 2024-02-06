@@ -1,6 +1,5 @@
 # Short-Term TODO:
-- Fix the input stuff 
-- Make the resources as pointers not just copies
+- Make the resources as pointers not just copies. But that would have to mean the functions have to take the resources in as pointers not as refs
 - Better shader info like having it's path embeded and reading from a single file instead of 2 or more
 
 - Batch renderer
@@ -8,7 +7,6 @@
 - Materials
 
 # Things to fix or make better 
-- is_key_pressed needs to be fixed as it is identical to is_key_down
 - Texture numbers. Needs to be set automatically not by the client
 - Uniform buffers starting size and automatic configurations of the layout just like the pointer attributes
 - Vertex arrays. Just everything. Refactor everything in it
