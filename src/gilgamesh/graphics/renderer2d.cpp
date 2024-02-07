@@ -18,7 +18,7 @@
 
 namespace gilg {
 
-// Renderer2D type 
+// Renderer2D struct 
 /////////////////////////////////////////////////
 struct renderer2d 
 {
@@ -33,6 +33,7 @@ struct renderer2d
 };
 
 static renderer2d ren;
+static render_stats stats;
 /////////////////////////////////////////////////
 
 // Private functions
@@ -141,10 +142,8 @@ void destroy_renderer2d()
 void begin_renderer2d()
 {
   bind_shader(ren.batch_shader);
+
   ren.vertices.clear();
-  
-  ren.texture_index = 1;
-  ren.vao.index_buffer.count = 0;
 }
 
 void flush_renderer2d()
@@ -155,12 +154,15 @@ void flush_renderer2d()
 
   // Initiate draw call!
   gcontext_draw_index(GILG_DRAW_TRIANGLES, ren.vao);
+  stats.draw_calls++;
+
+  ren.texture_index = 1;
+  ren.vao.index_buffer.count = 0;
 }
 
 void end_renderer2d()
 {
   vertex_array_update_buffer(ren.vao, GILG_BUFF_TYPE_VERTEX, 0, sizeof(vertex2d) * ren.vertices.size(), ren.vertices.data());
-  
   flush_renderer2d();
 }
 
@@ -210,6 +212,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
   ren.vertices.push_back(v4);
   
   ren.vao.index_buffer.count += 6;
+  stats.total_quads++;
 }
 
 void render_quad(const glm::vec2& pos, const glm::vec2& size, texture2d* texture, const color tint)
@@ -258,6 +261,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, texture2d* texture
   ren.vertices.push_back(v4);
   
   ren.vao.index_buffer.count += 6;
+  stats.total_quads++;
 
   // Check to find if the texture already exists in the array
   b8 found = false;
@@ -272,6 +276,17 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, texture2d* texture
   // increament the amount of textures to render next flush
   ren.textures[ren.texture_index] = texture;
   ren.texture_index++;
+}
+
+const render_stats& get_renderer2d_stats()
+{
+  return stats;
+}
+
+void reset_renderer2d_stats()
+{
+  stats.draw_calls = 0;
+  stats.total_quads = 0;
 }
 /////////////////////////////////////////////////
 

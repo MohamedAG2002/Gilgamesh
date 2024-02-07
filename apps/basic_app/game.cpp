@@ -11,6 +11,8 @@ game game;
 ///////////////////////
 void init_game()
 {
+  gilg::set_vsync(false);
+
   game.target = glm::vec3(0.0f, 0.0f, -3.0f);
   game.cam = gilg::create_camera3d(gilg::GILG_CAM_FREE, glm::vec3(-10.0f, 0.0f, 10.0f), &game.target, 45.0f); 
  
@@ -45,13 +47,19 @@ void render_game()
   gilg::clear_renderer(game.render_data.clear_color);
 
   gilg::begin_renderer2d();
-  gilg::render_quad(glm::vec2(-0.2f, 0.2f), game.quad_size, game.quad_color);
-  gilg::render_quad(glm::vec2(0.1f, 0.1f), game.quad_size, game.grass_texture, game.quad_color);
-  gilg::render_quad(game.quad_pos, game.quad_size, game.texture);
+  
+  for(int i = 0; i < 1024; i++)
+  {
+    gilg::render_quad(game.quad_pos, game.quad_size, game.quad_color);
+  }
+
   gilg::end_renderer2d();
 
   render_game_gui();
   gilg::end_renderer();
+
+  // Just for diagnostics
+  gilg::reset_renderer2d_stats();
 }
 
 void render_game_gui()

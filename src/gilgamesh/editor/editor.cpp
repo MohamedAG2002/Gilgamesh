@@ -6,6 +6,7 @@
 #include "gilgamesh/core/memory_alloc.h"
 
 #include "gilgamesh/graphics/backend/graphics_context.h"
+#include "gilgamesh/graphics/renderer2d.h"
 
 #include <glm/glm.hpp>
 #include <imgui/imgui.h>
@@ -96,6 +97,11 @@ void editor_renderer_info(render_data& data)
   ImGui::Text("Vendor: %s", debug_info.vendor.c_str());
   ImGui::Text("Renderer: %s", debug_info.renderer.c_str());
   ImGui::Text("Version: %s", debug_info.version.c_str());
+
+  usizei draw_calls = get_renderer2d_stats().draw_calls;
+  usizei quads = get_renderer2d_stats().total_quads;
+  ImGui::Text("2D Draw calls: %zu", draw_calls); 
+  ImGui::Text("2D Total quads: %zu", quads); 
   ImGui::NewLine();
 
   ImGui::ColorEdit3("Background Color", &data.clear_color.r);
