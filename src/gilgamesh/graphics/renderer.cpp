@@ -116,7 +116,7 @@ static void setup_buffers()
   buffer_desc inst_desc = {
     .type  = GILG_BUFF_TYPE_INSTANCE,
     .data  = GILG_BUFFER_ALLOC(glm::mat4, 1024),
-    .usage = GILG_BUFF_USAGE_STREAM_DRAW, 
+    .usage = GILG_BUFF_USAGE_DYNAMIC_DRAW, 
     .count = 1024
   };
   vertex_array_push_buffer(renderer.quad_va, inst_desc);

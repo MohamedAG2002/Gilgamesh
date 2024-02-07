@@ -42,8 +42,8 @@ void render_game()
   gilg::clear_renderer(game.render_data.clear_color);
 
   gilg::begin_renderer2d();
-  //gilg::render_quad(game.quad_pos, game.quad_size, game.texture);
-  gilg::render_quad(game.quad_pos, game.quad_size, game.quad_color);
+  gilg::render_quad(game.quad_pos, game.quad_size, game.texture);
+  gilg::render_quad(glm::vec2(-0.2f, 0.2f), game.quad_size, game.quad_color);
   gilg::end_renderer2d();
 
   render_game_gui();

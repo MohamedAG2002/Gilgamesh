@@ -28,6 +28,7 @@ void set_shader_mat4(const shader* shader, const std::string& name, const glm::m
 void set_shader_vec3(const shader* shader, const std::string& name, const glm::vec3& value);
 void set_shader_vec4(const shader* shader, const std::string& name, const glm::vec4& value);
 
+void set_shader_int_arr(const shader* shader, const std::string& name, const std::vector<i32>& arr);
 void set_shader_mat4_arr(const shader* shader, const std::string& name, const std::vector<glm::mat4>& arr);
 void set_shader_vec3_arr(const shader* shader, const std::string& name, const std::vector<glm::vec3>& arr);
 void set_shader_vec4_arr(const shader* shader, const std::string& name, const std::vector<glm::vec4>& arr);

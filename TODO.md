@@ -1,5 +1,5 @@
 # Short-Term TODO:
-- The plain white texture for the batch renderer doesn't work for some reason fix it!
+- Render more than one texture at a time
 - Better shader info like having it's path embeded and reading from a single file instead of 2 or more
 
 - Batch renderer
@@ -9,11 +9,11 @@
 # Things to fix or make better 
 - Uniform buffers starting size and automatic configurations of the layout just like the pointer attributes
 - Vertex arrays. Just everything. Refactor everything in it
+- Shader optimizations. Alot of them! Taking vectors instead of just simple arrays (yuck!), Need to cache the locations, etc...
 - Probably have begin_renderer a scene object or something like that instead of render_data
 
 # Mid-Term TODO:
 - Slowly remove STL from the engine. Completely!
-- More sophisticated memory profiler
 - File logging
 - Cross platform console logging
 - Documentation

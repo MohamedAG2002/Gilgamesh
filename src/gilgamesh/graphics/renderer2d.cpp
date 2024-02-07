@@ -23,12 +23,10 @@ namespace gilg {
 struct renderer2d 
 {
   std::vector<vertex2d> vertices; 
+  std::vector<texture2d*> textures;
 
   vertex_array vao;
   shader* batch_shader;
-  texture2d* white_texture;
-
-  u32 inst_count;
 };
 
 static renderer2d ren;
@@ -74,7 +72,7 @@ static void setup_buffers()
     .type  = GILG_BUFF_TYPE_INDEX, 
     .data  = GILG_BUFFER_DATA(indices), 
     .usage = GILG_BUFF_USAGE_STATIC_DRAW, 
-    .count = 6
+    .count = 0
   };
   vertex_array_push_buffer(ren.vao, ebo_desc);
   /////////////////////////////////////////////////
@@ -82,9 +80,10 @@ static void setup_buffers()
   // Setup layout 
   /////////////////////////////////////////////////
   std::vector<layout_data_type> layout = {
-    GILG_FLOAT3, 
-    GILG_FLOAT4, 
-    GILG_FLOAT2,
+    GILG_FLOAT3, // Position 
+    GILG_FLOAT4, // Color
+    GILG_FLOAT2, // Texture coords
+    GILG_FLOAT1, // Texture index
   };
   vertex_array_push_layout(ren.vao, layout, false);
   /////////////////////////////////////////////////
@@ -109,7 +108,13 @@ b8 create_renderer2d()
   // Texutre init 
   u32 pixels = 0xffffffff;
   resource_add_texture("white_texture", 1, 1, GILG_RGBA, &pixels);
-  ren.white_texture = resource_get_texture("white_texture");
+  ren.textures.push_back(resource_get_texture("white_texture"));
+
+  bind_shader(ren.batch_shader);
+  std::vector<i32> tex_slots(32);
+  for(int i = 0; i < 32; i++)
+    tex_slots[i] = i;
+  set_shader_int_arr(ren.batch_shader, "u_textures", tex_slots);
 
   GILG_LOG_INFO("Renderer2D was successfully created");
   return true;
@@ -125,27 +130,42 @@ void destroy_renderer2d()
 
 void begin_renderer2d()
 {
+  ren.vertices.clear();
+  ren.vao.index_buffer.count = 0;
+}
+
+void flush_renderer2d()
+{
   bind_shader(ren.batch_shader);
-  set_shader_int(ren.batch_shader, "u_texture", ren.white_texture->slot);
+
+  for(const auto& texture : ren.textures)
+    render_texture2d(texture);
+
+  gcontext_draw_index(GILG_DRAW_TRIANGLES, ren.vao);
 }
 
 void end_renderer2d()
 {
   vertex_array_update_buffer(ren.vao, GILG_BUFF_TYPE_VERTEX, 0, sizeof(vertex2d) * ren.vertices.size(), ren.vertices.data());
   
-  gcontext_draw_index(GILG_DRAW_TRIANGLES, ren.vao);
-  
-  ren.vertices.clear();
-  ren.vao.index_buffer.count = 0;
+  flush_renderer2d();
 }
 
 void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color)
 {
+  // Restart the renderer once the max quads is reached 
+  if(ren.vao.index_buffer.count >= MAX_INDICES)
+  {
+    begin_renderer2d();
+    end_renderer2d();
+  }
+
   // Top-left 
   vertex2d v1; 
   v1.position       = glm::vec3(pos.x, pos.y, 0.0f); 
   v1.color          = color;
   v1.texture_coords = glm::vec2(0.0f, 1.0f); 
+  v1.texture_index  = 0.0f;
   ren.vertices.push_back(v1);
  
   // Top-right
@@ -153,6 +173,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
   v2.position       = glm::vec3(pos.x + size.x, pos.y, 0.0f); 
   v2.color          = color;
   v2.texture_coords = glm::vec2(1.0f, 1.0f); 
+  v2.texture_index  = 0.0f;
   ren.vertices.push_back(v2);
  
   // Bottom-right
@@ -160,6 +181,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
   v3.position       = glm::vec3(pos.x + size.x, pos.y + size.y, 0.0f); 
   v3.color          = color;
   v3.texture_coords = glm::vec2(1.0f, 0.0f); 
+  v3.texture_index  = 0.0f;
   ren.vertices.push_back(v3);
  
   // Bottom-left
@@ -167,49 +189,54 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
   v4.position       = glm::vec3(pos.x, pos.y + size.y, 0.0f); 
   v4.color          = color;
   v4.texture_coords = glm::vec2(0.0f, 0.0f); 
+  v4.texture_index  = 0.0f;
   ren.vertices.push_back(v4);
   
-  bind_shader(ren.batch_shader);
-  set_shader_int(ren.batch_shader, "u_texture", ren.white_texture->slot);
-  render_texture2d(ren.white_texture);
-
   ren.vao.index_buffer.count += 6;
 }
 
-void render_quad(const glm::vec2& pos, const glm::vec2& size, const texture2d* texture)
+void render_quad(const glm::vec2& pos, const glm::vec2& size, texture2d* texture, const color tint)
 { 
+  // Restart the renderer once the max quads or the max textures (which should not happen) is reached 
+  if(ren.vao.index_buffer.count >= MAX_INDICES || ren.textures.size() > MAX_TEXTURES)
+  {
+    begin_renderer2d();
+    end_renderer2d();
+  }
+
   // Top-left 
   vertex2d v1; 
   v1.position       = glm::vec3(pos.x, pos.y, 0.0f); 
-  v1.color          = glm::vec4(1.0f);
+  v1.color          = tint;
   v1.texture_coords = glm::vec2(0.0f, 1.0f); 
+  v1.texture_index  = texture->slot;
   ren.vertices.push_back(v1);
  
   // Top-right
   vertex2d v2; 
   v2.position       = glm::vec3(pos.x + size.x, pos.y, 0.0f); 
-  v2.color          = glm::vec4(1.0f);
+  v2.color          = tint;
   v2.texture_coords = glm::vec2(1.0f, 1.0f); 
+  v2.texture_index  = texture->slot;
   ren.vertices.push_back(v2);
  
   // Bottom-right
   vertex2d v3; 
   v3.position       = glm::vec3(pos.x + size.x, pos.y + size.y, 0.0f); 
-  v3.color          = glm::vec4(1.0f);
+  v3.color          = tint;
   v3.texture_coords = glm::vec2(1.0f, 0.0f); 
+  v3.texture_index  = texture->slot;
   ren.vertices.push_back(v3);
  
   // Bottom-left
   vertex2d v4; 
   v4.position       = glm::vec3(pos.x, pos.y + size.y, 0.0f); 
-  v4.color          = glm::vec4(1.0f);
+  v4.color          = tint;
   v4.texture_coords = glm::vec2(0.0f, 0.0f); 
+  v4.texture_index  = texture->slot;
   ren.vertices.push_back(v4);
 
-  bind_shader(ren.batch_shader);
-  set_shader_int(ren.batch_shader, "u_texture", texture->slot);
-  render_texture2d(texture);
-
+  ren.textures.push_back(texture);
   ren.vao.index_buffer.count += 6;
 }
 /////////////////////////////////////////////////

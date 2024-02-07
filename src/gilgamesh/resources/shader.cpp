@@ -147,6 +147,11 @@ void set_shader_vec4(const shader* shader, const std::string& name, const glm::v
   glUniform4f(get_uniform_location(shader, name.c_str()), value.x, value.y, value.z, value.w);
 }
 
+void set_shader_int_arr(const shader* shader, const std::string& name, const std::vector<i32>& arr)
+{
+  glUniform1iv(get_uniform_location(shader, name.c_str()), arr.size(), arr.data());
+}
+
 void set_shader_mat4_arr(const shader* shader, const std::string& name, const std::vector<glm::mat4>& arr)
 {
   for(int i = 0; i < arr.size(); i++)
