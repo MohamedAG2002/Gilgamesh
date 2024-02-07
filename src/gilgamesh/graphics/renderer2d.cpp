@@ -1,7 +1,6 @@
 #include "renderer2d.h"
 #include "gilgamesh/core/defines.h"
 #include "gilgamesh/core/logger.h"
-#include "gilgamesh/core/memory_alloc.h"
 #include "gilgamesh/graphics/color.h"
 #include "gilgamesh/graphics/backend/graphics_context.h"
 #include "gilgamesh/graphics/backend/vertex_array.h"
@@ -15,6 +14,7 @@
 #include <glm/ext/matrix_transform.hpp>
 
 #include <vector>
+#include <array>
 
 namespace gilg {
 
@@ -23,10 +23,13 @@ namespace gilg {
 struct renderer2d 
 {
   std::vector<vertex2d> vertices; 
-  std::vector<texture2d*> textures;
+  std::array<texture2d*, MAX_TEXTURES> textures;
+  glm::vec4 quad_vertices[4];
 
   vertex_array vao;
   shader* batch_shader;
+
+  usizei texture_index = 1;
 };
 
 static renderer2d ren;
@@ -108,13 +111,20 @@ b8 create_renderer2d()
   // Texutre init 
   u32 pixels = 0xffffffff;
   resource_add_texture("white_texture", 1, 1, GILG_RGBA, &pixels);
-  ren.textures.push_back(resource_get_texture("white_texture"));
+  ren.textures[0] = resource_get_texture("white_texture");
 
+  // Setting up the texture uniforms in the shader
   bind_shader(ren.batch_shader);
   std::vector<i32> tex_slots(32);
   for(int i = 0; i < 32; i++)
     tex_slots[i] = i;
   set_shader_int_arr(ren.batch_shader, "u_textures", tex_slots);
+
+  // Setting up the quad buffer vertices to be used against matrices 
+  ren.quad_vertices[0] = glm::vec4(-0.5f, -0.5f, 0.0f, 1.0f);
+  ren.quad_vertices[1] = glm::vec4( 0.5f, -0.5f, 0.0f, 1.0f);
+  ren.quad_vertices[2] = glm::vec4( 0.5f,  0.5f, 0.0f, 1.0f);
+  ren.quad_vertices[3] = glm::vec4(-0.5f,  0.5f, 0.0f, 1.0f);
 
   GILG_LOG_INFO("Renderer2D was successfully created");
   return true;
@@ -130,17 +140,20 @@ void destroy_renderer2d()
 
 void begin_renderer2d()
 {
+  bind_shader(ren.batch_shader);
   ren.vertices.clear();
+  
+  ren.texture_index = 1;
   ren.vao.index_buffer.count = 0;
 }
 
 void flush_renderer2d()
 {
-  bind_shader(ren.batch_shader);
+  // Render all of the unique textures
+  for(i32 i = 0; i < ren.texture_index; i++)
+    render_texture2d(ren.textures[i]);
 
-  for(const auto& texture : ren.textures)
-    render_texture2d(texture);
-
+  // Initiate draw call!
   gcontext_draw_index(GILG_DRAW_TRIANGLES, ren.vao);
 }
 
@@ -156,13 +169,17 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
   // Restart the renderer once the max quads is reached 
   if(ren.vao.index_buffer.count >= MAX_INDICES)
   {
-    begin_renderer2d();
     end_renderer2d();
+    begin_renderer2d();
   }
+
+  glm::mat4 model(1.0f);
+  model = glm::translate(model, glm::vec3(pos.x, pos.y, 0.0f));
+  model = glm::scale(model, glm::vec3(size.x, size.y, 0.0f));
 
   // Top-left 
   vertex2d v1; 
-  v1.position       = glm::vec3(pos.x, pos.y, 0.0f); 
+  v1.position       = model * ren.quad_vertices[0]; 
   v1.color          = color;
   v1.texture_coords = glm::vec2(0.0f, 1.0f); 
   v1.texture_index  = 0.0f;
@@ -170,7 +187,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
  
   // Top-right
   vertex2d v2; 
-  v2.position       = glm::vec3(pos.x + size.x, pos.y, 0.0f); 
+  v2.position       = model * ren.quad_vertices[1]; 
   v2.color          = color;
   v2.texture_coords = glm::vec2(1.0f, 1.0f); 
   v2.texture_index  = 0.0f;
@@ -178,7 +195,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
  
   // Bottom-right
   vertex2d v3; 
-  v3.position       = glm::vec3(pos.x + size.x, pos.y + size.y, 0.0f); 
+  v3.position       = model * ren.quad_vertices[2]; 
   v3.color          = color;
   v3.texture_coords = glm::vec2(1.0f, 0.0f); 
   v3.texture_index  = 0.0f;
@@ -186,7 +203,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
  
   // Bottom-left
   vertex2d v4; 
-  v4.position       = glm::vec3(pos.x, pos.y + size.y, 0.0f); 
+  v4.position       = model * ren.quad_vertices[3]; 
   v4.color          = color;
   v4.texture_coords = glm::vec2(0.0f, 0.0f); 
   v4.texture_index  = 0.0f;
@@ -198,15 +215,19 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, const color& color
 void render_quad(const glm::vec2& pos, const glm::vec2& size, texture2d* texture, const color tint)
 { 
   // Restart the renderer once the max quads or the max textures (which should not happen) is reached 
-  if(ren.vao.index_buffer.count >= MAX_INDICES || ren.textures.size() > MAX_TEXTURES)
+  if(ren.vao.index_buffer.count >= MAX_INDICES || ren.texture_index > MAX_TEXTURES)
   {
-    begin_renderer2d();
     end_renderer2d();
+    begin_renderer2d();
   }
+  
+  glm::mat4 model(1.0f);
+  model = glm::translate(model, glm::vec3(pos.x, pos.y, 0.0f));
+  model = glm::scale(model, glm::vec3(size.x, size.y, 0.0f));
 
   // Top-left 
   vertex2d v1; 
-  v1.position       = glm::vec3(pos.x, pos.y, 0.0f); 
+  v1.position       = model * ren.quad_vertices[0]; 
   v1.color          = tint;
   v1.texture_coords = glm::vec2(0.0f, 1.0f); 
   v1.texture_index  = texture->slot;
@@ -214,7 +235,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, texture2d* texture
  
   // Top-right
   vertex2d v2; 
-  v2.position       = glm::vec3(pos.x + size.x, pos.y, 0.0f); 
+  v2.position       = model * ren.quad_vertices[1]; 
   v2.color          = tint;
   v2.texture_coords = glm::vec2(1.0f, 1.0f); 
   v2.texture_index  = texture->slot;
@@ -222,7 +243,7 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, texture2d* texture
  
   // Bottom-right
   vertex2d v3; 
-  v3.position       = glm::vec3(pos.x + size.x, pos.y + size.y, 0.0f); 
+  v3.position       = model * ren.quad_vertices[2]; 
   v3.color          = tint;
   v3.texture_coords = glm::vec2(1.0f, 0.0f); 
   v3.texture_index  = texture->slot;
@@ -230,14 +251,27 @@ void render_quad(const glm::vec2& pos, const glm::vec2& size, texture2d* texture
  
   // Bottom-left
   vertex2d v4; 
-  v4.position       = glm::vec3(pos.x, pos.y + size.y, 0.0f); 
+  v4.position       = model * ren.quad_vertices[3]; 
   v4.color          = tint;
   v4.texture_coords = glm::vec2(0.0f, 0.0f); 
   v4.texture_index  = texture->slot;
   ren.vertices.push_back(v4);
-
-  ren.textures.push_back(texture);
+  
   ren.vao.index_buffer.count += 6;
+
+  // Check to find if the texture already exists in the array
+  b8 found = false;
+  for(i32 i = 1; i < ren.texture_index; i++)
+    found = texture->id == ren.textures[i]->id;
+
+  // Only add unique textures into the array
+  if(found)
+    return; 
+
+  // If the texture is unique, add it to the array and 
+  // increament the amount of textures to render next flush
+  ren.textures[ren.texture_index] = texture;
+  ren.texture_index++;
 }
 /////////////////////////////////////////////////
 

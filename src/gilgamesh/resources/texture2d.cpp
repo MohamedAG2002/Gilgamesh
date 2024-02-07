@@ -12,7 +12,7 @@ namespace gilg {
 
 // Globals
 //////////////////////////////////////////////////////////////
-static i32 total_slot = -1;
+static i32 total_slot = 0;
 //////////////////////////////////////////////////////////////
 
 // Texture2D functions
@@ -22,7 +22,7 @@ texture2d* load_texture2d(const std::string& path)
   texture2d* tex = (texture2d*)alloc_memory(sizeof(texture2d));
   tex->id    = 0;
   tex->depth = 0;
-  tex->slot  = ++total_slot;
+  tex->slot  = total_slot++;
 
   // Generate and bind the texture 
   glGenTextures(1, &tex->id);
@@ -69,7 +69,7 @@ texture2d* load_texture2d(i32 width, i32 height, texture_format format, void* pi
   tex->width  = width;
   tex->height = height;
   tex->depth  = 0;
-  tex->slot   = ++total_slot;
+  tex->slot   = total_slot++;
   tex->format = format;
 
   // Generate and bind the texture 

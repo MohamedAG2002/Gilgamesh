@@ -1,10 +1,8 @@
 # Short-Term TODO:
-- Render more than one texture at a time
+- Move quads based on their transforms instead of 0 to 1 bullshit
 - Better shader info like having it's path embeded and reading from a single file instead of 2 or more
-
-- Batch renderer
-- Design an instanced renderer?!!!
 - Materials
+- Design an instanced renderer?!!!
 
 # Things to fix or make better 
 - Uniform buffers starting size and automatic configurations of the layout just like the pointer attributes

@@ -115,7 +115,7 @@ void editor_camera_panel(camera3d& cam)
 void editor_entities_panel(glm::vec2& pos, glm::vec2& size, color& color)
 {
   ImGui::Begin("Entitites");
-  ImGui::SliderFloat2("Position", &pos.r, 0.0f, 600.0f);
+  ImGui::SliderFloat2("Position", &pos.r, -1.0f, 1.0f);
   ImGui::SliderFloat2("Size", &size.r, 0.0f, 1.0f);
   ImGui::ColorPicker4("Color", &color.r);
   ImGui::End();

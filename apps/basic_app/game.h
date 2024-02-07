@@ -13,7 +13,7 @@ struct game
 
   glm::vec2 quad_pos, quad_size;
   gilg::color quad_color;
-  gilg::texture2d* texture;
+  gilg::texture2d* texture, *grass_texture;
 };
 
 void init_game();

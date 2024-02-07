@@ -24,6 +24,9 @@ void init_game()
   
   gilg::resource_add_texture("container", "assets/textures/container.jpg");
   game.texture = gilg::resource_get_texture("container");
+
+  gilg::resource_add_texture("grass", "assets/textures/grass.png");
+  game.grass_texture = gilg::resource_get_texture("grass");
 }
 
 void update_game()
@@ -42,8 +45,9 @@ void render_game()
   gilg::clear_renderer(game.render_data.clear_color);
 
   gilg::begin_renderer2d();
-  gilg::render_quad(game.quad_pos, game.quad_size, game.texture);
   gilg::render_quad(glm::vec2(-0.2f, 0.2f), game.quad_size, game.quad_color);
+  gilg::render_quad(glm::vec2(0.1f, 0.1f), game.quad_size, game.grass_texture, game.quad_color);
+  gilg::render_quad(game.quad_pos, game.quad_size, game.texture);
   gilg::end_renderer2d();
 
   render_game_gui();
