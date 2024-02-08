@@ -106,7 +106,7 @@ b8 create_renderer2d()
   setup_buffers();
 
   // Shaders init
-  resource_add_shader("batch", "assets/shaders/batch.vert.glsl", "assets/shaders/batch.frag.glsl");
+  resource_add_shader("batch", "assets/shaders/batch.glsl");
   ren.batch_shader = resource_get_shader("batch");
 
   // Texutre init 
@@ -116,10 +116,10 @@ b8 create_renderer2d()
 
   // Setting up the texture uniforms in the shader
   bind_shader(ren.batch_shader);
-  std::vector<i32> tex_slots(32);
+  i32 tex_slots[MAX_TEXTURES];
   for(int i = 0; i < 32; i++)
     tex_slots[i] = i;
-  set_shader_int_arr(ren.batch_shader, "u_textures", tex_slots);
+  set_shader_int_arr(ren.batch_shader, "u_textures", tex_slots, MAX_TEXTURES);
 
   // Setting up the quad buffer vertices to be used against matrices 
   ren.quad_vertices[0] = glm::vec4(-0.5f, -0.5f, 0.0f, 1.0f);

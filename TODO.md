@@ -1,14 +1,14 @@
 # Short-Term TODO:
-- Move quads based on their transforms instead of 0 to 1 bullshit
-- Better shader info like having it's path embeded and reading from a single file instead of 2 or more
+- Shader manager
 - Materials
+- Meshes: Creating them, managing the, rendering them, and etc...
 - Design an instanced renderer?!!!
 
 # Things to fix or make better 
 - Uniform buffers starting size and automatic configurations of the layout just like the pointer attributes
 - Vertex arrays. Just everything. Refactor everything in it
-- Shader optimizations. Alot of them! Taking vectors instead of just simple arrays (yuck!), Need to cache the locations, etc...
 - Probably have begin_renderer a scene object or something like that instead of render_data
+- The memory_alloc files probably need to be changed because the C-style way of allocating data doesn't take dynamically sized types. Either overload 'new' and 'delete' and deal with that or find a way to combat that issue.
 
 # Mid-Term TODO:
 - Slowly remove STL from the engine. Completely!

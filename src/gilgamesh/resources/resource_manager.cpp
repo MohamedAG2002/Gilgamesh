@@ -56,10 +56,10 @@ void resource_add_texture(const std::string& name, u32 width, u32 height, textur
   rsrc_man.textures2d[name] = load_texture2d(width, height, format, pixels);
 }
 
-void resource_add_shader(const std::string& name, const std::string& vert_path, const std::string& frag_path)
+void resource_add_shader(const std::string& name, const std::string& path)
 {
   GILG_ASSERT_MSG(rsrc_man.shaders.find(name) == rsrc_man.shaders.end(), "Shader already exists");
-  rsrc_man.shaders[name] = load_shader(vert_path, frag_path);
+  rsrc_man.shaders[name] = load_shader(path);
 }
 
 texture2d* resource_get_texture(const std::string& id)

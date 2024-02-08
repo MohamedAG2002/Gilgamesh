@@ -154,11 +154,11 @@ b8 create_renderer()
   renderer.ubo = create_uniform_buffer(0);
 
   // Shaders init 
-  resource_add_shader("basic", "assets/shaders/basic.vert.glsl", "assets/shaders/basic.frag.glsl");
-  resource_add_shader("texture", "assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
-  resource_add_shader("camera", "assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
-  resource_add_shader("test", "assets/shaders/test.vert.glsl", "assets/shaders/test.frag.glsl");
-  resource_add_shader("inst", "assets/shaders/inst.vert.glsl", "assets/shaders/inst.frag.glsl");
+  //resource_add_shader("basic", "assets/shaders/basic.glsl");
+  //resource_add_shader("texture", "assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
+  //resource_add_shader("camera", "assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
+  //resource_add_shader("test", "assets/shaders/test.vert.glsl", "assets/shaders/test.frag.glsl");
+  resource_add_shader("inst", "assets/shaders/inst.glsl");
   renderer.current_shader = resource_get_shader("inst");
 
   GILG_LOG_INFO("Renderer was successfully created");

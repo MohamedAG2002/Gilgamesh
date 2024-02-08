@@ -42,12 +42,12 @@ void* alloc_memory(usizei size)
 {
   void* m = malloc(size);
 
-  if(m == NULL)
+  if(!m)
     GILG_LOG_FATAL("Failed to allocate memory");
 
   mstatus.total_allocs += size;
   
-  GILG_LOG_TRACE("Allocated %zu", size);
+  GILG_LOG_TRACE("Allocated memory block of size \'%zu\'", size);
   return m;  
 }
 
@@ -60,7 +60,7 @@ void* calloc_memory(usizei count, usizei size)
 
   mstatus.total_allocs += size * count;
   
-  GILG_LOG_TRACE("Allocated %zu", size * count);
+  GILG_LOG_TRACE("Allocated %zu memory blocks each of size \'%zu\'", count, size);
   return m;  
 }
 

@@ -16,7 +16,7 @@ void shutdown_resource_manager();
 
 GILG_API void resource_add_texture(const std::string& name, const std::string& path);
 GILG_API void resource_add_texture(const std::string& name, u32 width, u32 height, texture_format format, void* pixels);
-GILG_API void resource_add_shader(const std::string& name, const std::string& vert_path, const std::string& frag_path);
+GILG_API void resource_add_shader(const std::string& name, const std::string& path);
 
 GILG_API texture2d* resource_get_texture(const std::string& id);
 GILG_API shader* resource_get_shader(const std::string& id);
