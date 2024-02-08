@@ -3,6 +3,7 @@
 #include "gilgamesh/graphics/color.h"
 #include "gilgamesh/graphics/renderer_queue.h"
 #include "gilgamesh/graphics/camera3d.h"
+#include "gilgamesh/graphics/shader_lib.h"
 
 #include "gilgamesh/graphics/backend/graphics_context.h"
 #include "gilgamesh/graphics/backend/vertex_array.h"
@@ -143,6 +144,12 @@ b8 create_renderer()
     return false;
   }
 
+  if(!shader_lib_init("assets/shaders/"))
+  {
+    GILG_LOG_FATAL("Failed to initialize shader library");
+    return false;
+  }
+
   if(!create_renderer2d())
   {
     GILG_LOG_FATAL("Failed to create renderer2d");
@@ -154,12 +161,12 @@ b8 create_renderer()
   renderer.ubo = create_uniform_buffer(0);
 
   // Shaders init 
-  //resource_add_shader("basic", "assets/shaders/basic.glsl");
-  //resource_add_shader("texture", "assets/shaders/texture.vert.glsl", "assets/shaders/texture.frag.glsl");
-  //resource_add_shader("camera", "assets/shaders/camera.vert.glsl", "assets/shaders/camera.frag.glsl");
-  //resource_add_shader("test", "assets/shaders/test.vert.glsl", "assets/shaders/test.frag.glsl");
-  resource_add_shader("inst", "assets/shaders/inst.glsl");
-  renderer.current_shader = resource_get_shader("inst");
+  shader_lib_add("basic", "basic.glsl");
+  shader_lib_add("texture", "texture.glsl");
+  shader_lib_add("camera", "camera.glsl");
+  shader_lib_add("test", "test.glsl");
+  shader_lib_add("inst", "inst.glsl");
+  renderer.current_shader = shader_lib_get("inst");
 
   GILG_LOG_INFO("Renderer was successfully created");
   return true;
@@ -172,6 +179,7 @@ void destroy_renderer()
   destroy_uniform_buffer(renderer.ubo);
   destroy_vertex_array(renderer.quad_va);
   destroy_renderer2d();
+  shader_lib_shutdown();
   destroy_gcontext();
 
   GILG_LOG_INFO("Renderer was successfully destroyed");

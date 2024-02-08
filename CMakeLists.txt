@@ -50,6 +50,7 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/graphics/renderer2d.cpp
   ${GILG_SOURCE_PATH}/graphics/renderer_queue.cpp
   ${GILG_SOURCE_PATH}/graphics/camera3d.cpp
+  ${GILG_SOURCE_PATH}/graphics/shader_lib.cpp
   
   # Resources
   ${GILG_SOURCE_PATH}/resources/resource_manager.cpp

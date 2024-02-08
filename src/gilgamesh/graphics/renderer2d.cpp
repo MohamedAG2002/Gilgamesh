@@ -9,6 +9,7 @@
 #include "gilgamesh/resources/texture2d.h"
 #include "gilgamesh/resources/shader.h"
 #include "gilgamesh/resources/resource_manager.h"
+#include "gilgamesh/graphics/shader_lib.h"
 
 #include <glm/glm.hpp>
 #include <glm/ext/matrix_transform.hpp>
@@ -106,8 +107,8 @@ b8 create_renderer2d()
   setup_buffers();
 
   // Shaders init
-  resource_add_shader("batch", "assets/shaders/batch.glsl");
-  ren.batch_shader = resource_get_shader("batch");
+  shader_lib_add("batch", "batch.glsl");
+  ren.batch_shader = shader_lib_get("batch");
 
   // Texutre init 
   u32 pixels = 0xffffffff;

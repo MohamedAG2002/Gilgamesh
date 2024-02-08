@@ -705,6 +705,30 @@ src/gilgamesh/graphics/renderer_queue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/renderer_queue.cpp.s
 .PHONY : src/gilgamesh/graphics/renderer_queue.cpp.s
 
+src/gilgamesh/graphics/shader_lib.o: src/gilgamesh/graphics/shader_lib.cpp.o
+.PHONY : src/gilgamesh/graphics/shader_lib.o
+
+# target to build an object file
+src/gilgamesh/graphics/shader_lib.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader_lib.cpp.o
+.PHONY : src/gilgamesh/graphics/shader_lib.cpp.o
+
+src/gilgamesh/graphics/shader_lib.i: src/gilgamesh/graphics/shader_lib.cpp.i
+.PHONY : src/gilgamesh/graphics/shader_lib.i
+
+# target to preprocess a source file
+src/gilgamesh/graphics/shader_lib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader_lib.cpp.i
+.PHONY : src/gilgamesh/graphics/shader_lib.cpp.i
+
+src/gilgamesh/graphics/shader_lib.s: src/gilgamesh/graphics/shader_lib.cpp.s
+.PHONY : src/gilgamesh/graphics/shader_lib.s
+
+# target to generate assembly for a file
+src/gilgamesh/graphics/shader_lib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/graphics/shader_lib.cpp.s
+.PHONY : src/gilgamesh/graphics/shader_lib.cpp.s
+
 src/gilgamesh/math/gilg_random.o: src/gilgamesh/math/gilg_random.cpp.o
 .PHONY : src/gilgamesh/math/gilg_random.o
 
@@ -930,6 +954,9 @@ help:
 	@echo "... src/gilgamesh/graphics/renderer_queue.o"
 	@echo "... src/gilgamesh/graphics/renderer_queue.i"
 	@echo "... src/gilgamesh/graphics/renderer_queue.s"
+	@echo "... src/gilgamesh/graphics/shader_lib.o"
+	@echo "... src/gilgamesh/graphics/shader_lib.i"
+	@echo "... src/gilgamesh/graphics/shader_lib.s"
 	@echo "... src/gilgamesh/math/gilg_random.o"
 	@echo "... src/gilgamesh/math/gilg_random.i"
 	@echo "... src/gilgamesh/math/gilg_random.s"
