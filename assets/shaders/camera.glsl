@@ -1,3 +1,4 @@
+@type vertex
 #version 460 core 
 
 // Layouts 
@@ -23,4 +24,24 @@ void main()
   vs_out.texture_coords = aTextureCoords;
 
   gl_Position = u_view_projection * u_model * vec4(aPos, 1.0f);
+}
+
+@type fragment
+#version 460 core 
+
+// Outputs 
+out vec4 frag_color;
+
+// Inputs 
+in VS_OUT
+{
+  vec2 texture_coords;
+} fs_in;
+
+// Uniforms 
+uniform sampler2D tex;
+
+void main() 
+{
+  frag_color = texture(tex, fs_in.texture_coords);
 }
