@@ -55,6 +55,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/math_utils.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.o.d"
+  "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.o"
+  "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o.d"
   "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o"

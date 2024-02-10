@@ -181,6 +181,12 @@
 },
 {
   "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
+  "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/mesh.cpp",
+  "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/mesh.cpp",
+  "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.o"
+},
+{
+  "directory": "/home/mohamed/Dev/C++/GilgameshEngine/build",
   "command": "/usr/bin/c++  -I/home/mohamed/Dev/C++/GilgameshEngine/src -I/home/mohamed/Dev/C++/GilgameshEngine/libs/include -g -o CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.o -c /home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/editor/editor.cpp",
   "file": "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/editor/editor.cpp",
   "output": "CMakeFiles/gilgamesh.dir/src/gilgamesh/editor/editor.cpp.o"

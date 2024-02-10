@@ -56,6 +56,7 @@ set(GILG_SOURCES
   ${GILG_SOURCE_PATH}/resources/resource_manager.cpp
   ${GILG_SOURCE_PATH}/resources/shader.cpp
   ${GILG_SOURCE_PATH}/resources/texture2d.cpp
+  ${GILG_SOURCE_PATH}/resources/mesh.cpp
  
   # Editor
   ${GILG_SOURCE_PATH}/editor/editor.cpp

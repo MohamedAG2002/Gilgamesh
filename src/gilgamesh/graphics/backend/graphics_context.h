@@ -43,8 +43,8 @@ void destroy_gcontext();
 const context_debug_info& gcontext_debug_info();
 void gcontext_clear(const color& color);
 void gcontext_swap();
-void gcontext_draw_vertex(const draw_mode mode, vertex_array& va);
-void gcontext_draw_index(const draw_mode mode, vertex_array& va);
+void gcontext_draw_vertex(const draw_mode mode, const vertex_array& va);
+void gcontext_draw_index(const draw_mode mode, const vertex_array& va);
 
 void gcontext_draw_vertex_inst(const draw_mode mode, vertex_array& va, usizei inst_count);
 void gcontext_draw_index_inst(const draw_mode mode, vertex_array& va, usizei inst_count);

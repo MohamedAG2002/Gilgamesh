@@ -36,6 +36,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/gilg_random.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/gilg_random.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/math_utils.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/math_utils.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/math_utils.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/math/transform.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.o.d"
+  "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/mesh.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/resource_manager.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/resource_manager.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/shader.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/shader.cpp.o.d"
   "/home/mohamed/Dev/C++/GilgameshEngine/src/gilgamesh/resources/texture2d.cpp" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o" "gcc" "CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/texture2d.cpp.o.d"

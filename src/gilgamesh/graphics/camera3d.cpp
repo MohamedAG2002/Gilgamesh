@@ -2,6 +2,7 @@
 #include "gilgamesh/core/window.h"
 #include "gilgamesh/core/input.h"
 #include "gilgamesh/core/clock.h"
+#include "gilgamesh/core/logger.h"
 
 #include <glm/glm.hpp>
 #include <glm/ext/matrix_transform.hpp>

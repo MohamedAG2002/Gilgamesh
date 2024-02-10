@@ -98,18 +98,14 @@ void destroy_vertex_array(vertex_array& va)
   glDeleteBuffers(1, &va.inst_buffer.id);
 }
 
-void bind_vertex_array(vertex_array& va)
+void bind_vertex_array(const vertex_array& va)
 {
   glBindVertexArray(va.id);
-
-  va.is_binded = true;
 }
 
-void unbind_vertex_array(vertex_array& va)
+void unbind_vertex_array(const vertex_array& va)
 {
   glBindVertexArray(0);
-  
-  va.is_binded = false;
 }
 
 void vertex_array_push_buffer(vertex_array& va, buffer_desc& desc)
@@ -151,7 +147,7 @@ void vertex_array_push_layout(const vertex_array& va, const std::vector<layout_d
   u32 buffer_id = va.vertex_buffer.id;
   if(is_inst)
   {
-    index_mul = 2; 
+    index_mul = 3; 
     buffer_id = va.inst_buffer.id;
   }
 

@@ -74,13 +74,13 @@ void gcontext_swap()
   glfwSwapBuffers(window_handle());
 }
 
-void gcontext_draw_vertex(const draw_mode mode, vertex_array& va)
+void gcontext_draw_vertex(const draw_mode mode, const vertex_array& va)
 {
   bind_vertex_array(va); 
   glDrawArrays((u32)mode, 0, va.vertex_buffer.count);
 }
 
-void gcontext_draw_index(const draw_mode mode, vertex_array& va)
+void gcontext_draw_index(const draw_mode mode, const vertex_array& va)
 {
   bind_vertex_array(va); 
   glDrawElements((u32)mode, va.index_buffer.count, GL_UNSIGNED_INT, 0);

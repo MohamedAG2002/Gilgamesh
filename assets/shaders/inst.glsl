@@ -3,8 +3,9 @@
 
 // Layouts
 layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec2 aTextureCoords;
-layout (location = 2) in mat4 aModel;
+layout (location = 1) in vec3 aNormal;
+layout (location = 2) in vec2 aTextureCoords;
+layout (location = 3) in mat4 aModel;
 
 // Outputs
 out VS_OUT 
@@ -32,7 +33,10 @@ void main()
 out vec4 frag_color;
 
 // Inputs 
-in vec2 texture_coords;
+in VS_OUT 
+{
+  vec2 texture_coords;
+} fs_in;
 
 // Uniforms 
 uniform sampler2D tex;

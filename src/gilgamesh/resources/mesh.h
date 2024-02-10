@@ -1,0 +1,41 @@
+#pragma once
+
+#include "gilgamesh/core/defines.h"
+#include "gilgamesh/resources/texture2d.h"
+#include "gilgamesh/math/vertex.h"
+#include "gilgamesh/graphics/backend/vertex_array.h"
+
+namespace gilg {
+
+// Mesh Desc struct
+//////////////////////////////////////////////////////////////////////
+struct mesh_desc 
+{
+  vertex* vertices = nullptr; 
+  usizei vertices_count; 
+
+  u32* indices = nullptr;
+  usizei indices_count;
+
+  texture2d** textures = nullptr; // Array of texture pointers
+  usizei textures_count;
+};
+//////////////////////////////////////////////////////////////////////
+
+// Mesh struct
+//////////////////////////////////////////////////////////////////////
+struct mesh 
+{
+  mesh_desc desc;
+  vertex_array mesh_va;
+};
+//////////////////////////////////////////////////////////////////////
+
+// Mesh functions
+//////////////////////////////////////////////////////////////////////
+mesh* load_mesh(const mesh_desc& desc);
+void unload_mesh(mesh* m);
+void render_mesh(const mesh* m);
+//////////////////////////////////////////////////////////////////////
+
+}

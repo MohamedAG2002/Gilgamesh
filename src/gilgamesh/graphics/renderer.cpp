@@ -10,6 +10,7 @@
 #include "gilgamesh/graphics/backend/uniform_buffer.h"
 
 #include "gilgamesh/resources/resource_manager.h"
+#include "gilgamesh/resources/mesh.h"
 
 #include "gilgamesh/core/logger.h"
 #include "gilgamesh/core/defines.h"
@@ -33,104 +34,103 @@ struct renderer
   vertex_array quad_va;
   uniform_buffer ubo;
   shader* current_shader;
+  mesh* cube_mesh;
 
-  std::vector<transform> transforms;
+  std::vector<glm::mat4> transforms;
   usizei inst_count;
 };
 
 static renderer renderer;
 ///////////////////////////////////////////////////////
 
-
 // Private functions
 ///////////////////////////////////////////////////////
 static void setup_buffers()
 {
   vertex vertices[] = {
-    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 0.0f),  
-    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 0.0f), 
-    glm::vec3( 0.5f,  0.5f, -0.5f), glm::vec2(1.0f, 1.0f), 
-    glm::vec3( 0.5f,  0.5f, -0.5f), glm::vec2(1.0f, 1.0f), 
-    glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec2(0.0f, 1.0f), 
-    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 0.0f), 
-   
-    // Back-face
-    glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec2(0.0f, 0.0f),
-    glm::vec3( 0.5f, -0.5f, 0.5f), glm::vec2(1.0f, 0.0f),
-    glm::vec3( 0.5f,  0.5f, 0.5f), glm::vec2(1.0f, 1.0f),
-    glm::vec3( 0.5f,  0.5f, 0.5f), glm::vec2(1.0f, 1.0f),
-    glm::vec3(-0.5f,  0.5f, 0.5f), glm::vec2(0.0f, 1.0f),
-    glm::vec3(-0.5f, -0.5f, 0.5f), glm::vec2(0.0f, 0.0f),
-   
-    // Left-face
-    glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
-    glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec2(1.0f, 1.0f),
-    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
-    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
-    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
-    glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
-   
-    // Right-face
-    glm::vec3(0.5f,  0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
-    glm::vec3(0.5f,  0.5f, -0.5f), glm::vec2(1.0f, 1.0f),
-    glm::vec3(0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
-    glm::vec3(0.5f, -0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
-    glm::vec3(0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
-    glm::vec3(0.5f,  0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
-   
-    // Bottom-face
-    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 1.0f),
-    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 1.0f),
-    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 0.0f),
-    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec2(1.0f, 0.0f),
-    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
-    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec2(0.0f, 1.0f),
-   
-    // Top-face
-    glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
-    glm::vec3( 0.5f, 0.5f, -0.5f), glm::vec2(1.0f, 1.0f),
-    glm::vec3( 0.5f, 0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
-    glm::vec3( 0.5f, 0.5f,  0.5f), glm::vec2(1.0f, 0.0f),
-    glm::vec3(-0.5f, 0.5f,  0.5f), glm::vec2(0.0f, 0.0f),
-    glm::vec3(-0.5f, 0.5f, -0.5f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec2(0.0f, 0.0f),  
+    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec2(1.0f, 0.0f), 
+    glm::vec3( 0.5f,  0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec2(1.0f, 1.0f), 
+    glm::vec3( 0.5f,  0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec2(1.0f, 1.0f), 
+    glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec2(0.0f, 1.0f), 
+    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec2(0.0f, 0.0f), 
+    glm::vec3(-0.5f, -0.5f, 0.5f),  glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(0.0f, 0.0f),
+    glm::vec3( 0.5f, -0.5f, 0.5f),  glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3( 0.5f,  0.5f, 0.5f),  glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(1.0f, 1.0f),
+    glm::vec3( 0.5f,  0.5f, 0.5f),  glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(1.0f, 1.0f),
+    glm::vec3(-0.5f,  0.5f, 0.5f),  glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f, 0.5f),  glm::vec3(0.0f, 0.0f, 1.0f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(0.5f,  0.5f,  0.5f),  glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(0.5f,  0.5f, -0.5f),  glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f),
+    glm::vec3(0.5f, -0.5f, -0.5f),  glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(0.5f, -0.5f, -0.5f),  glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(0.5f, -0.5f,  0.5f),  glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(0.5f,  0.5f,  0.5f),  glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec2(0.0f, 1.0f),
+    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec2(1.0f, 1.0f),
+    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3( 0.5f, -0.5f, -0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec3(0.0f, -1.0f, 0.0f), glm::vec2(0.0f, 1.0f),
+    glm::vec3(-0.5f, 0.5f, -0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(0.0f, 1.0f),
+    glm::vec3( 0.5f, 0.5f, -0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(1.0f, 1.0f),
+    glm::vec3( 0.5f, 0.5f,  0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3( 0.5f, 0.5f,  0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(1.0f, 0.0f),
+    glm::vec3(-0.5f, 0.5f,  0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(0.0f, 0.0f),
+    glm::vec3(-0.5f, 0.5f, -0.5f),  glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(0.0f, 1.0f),
   };
 
   bind_vertex_array(renderer.quad_va);
-
-  // Pushing vbo buffer
-  buffer_desc vbo_desc = {
-    .type  = GILG_BUFF_TYPE_VERTEX,
-    .data  = GILG_BUFFER_DATA(vertices),
-    .usage = GILG_BUFF_USAGE_STATIC_DRAW, 
-    .count = 36
-  };
-  vertex_array_push_buffer(renderer.quad_va, vbo_desc);
   
-  // Pushing layouts
+  buffer_desc vbo = {
+    .type = GILG_BUFF_TYPE_VERTEX, 
+    .data = GILG_BUFFER_DATA(vertices), 
+    .usage = GILG_BUFF_USAGE_STATIC_DRAW,
+    .count = 36,
+  };
+  vertex_array_push_buffer(renderer.quad_va, vbo);
+
   std::vector<layout_data_type> layout = {
+    GILG_FLOAT3, 
     GILG_FLOAT3, 
     GILG_FLOAT2,
   };
   vertex_array_push_layout(renderer.quad_va, layout, false);
-
-  // Pushing instance buffer
-  buffer_desc inst_desc = {
-    .type  = GILG_BUFF_TYPE_INSTANCE,
-    .data  = GILG_BUFFER_ALLOC(glm::mat4, 1024),
-    .usage = GILG_BUFF_USAGE_DYNAMIC_DRAW, 
-    .count = 1024
+  
+  buffer_desc inst_vbo = {
+    .type = GILG_BUFF_TYPE_INSTANCE, 
+    .data = GILG_BUFFER_ALLOC(glm::mat4, 100), 
+    .usage = GILG_BUFF_USAGE_DYNAMIC_DRAW,
+    .count = 0,
   };
-  vertex_array_push_buffer(renderer.quad_va, inst_desc);
-
+  vertex_array_push_buffer(renderer.quad_va, inst_vbo);
+  
   std::vector<layout_data_type> inst_layout = {
-    GILG_FLOAT4, // Matrix 1st colomn
-    GILG_FLOAT4, // Matrix 2nd colomn
-    GILG_FLOAT4, // Matrix 3rd colomn
-    GILG_FLOAT4, // Matrix 4th colomn
+    GILG_FLOAT4, 
+    GILG_FLOAT4, 
+    GILG_FLOAT4,
+    GILG_FLOAT4,
   };
   vertex_array_push_layout(renderer.quad_va, inst_layout, true);
 
   unbind_vertex_array(renderer.quad_va);
+
+  mesh_desc cube_desc = {
+    .vertices = vertices, 
+    .vertices_count = 36,
+    .indices = nullptr,
+    .indices_count = 0,
+    .textures = nullptr, 
+    .textures_count = 0
+  };
+  resource_add_mesh("cube_mesh", cube_desc);
+  renderer.cube_mesh = resource_get_mesh("cube_mesh");
 }
 ///////////////////////////////////////////////////////
 
@@ -162,11 +162,12 @@ b8 create_renderer()
 
   // Shaders init 
   shader_lib_add("basic", "basic.glsl");
+  shader_lib_add("basic3d", "basic3d.glsl");
   shader_lib_add("texture", "texture.glsl");
   shader_lib_add("camera", "camera.glsl");
   shader_lib_add("test", "test.glsl");
   shader_lib_add("inst", "inst.glsl");
-  renderer.current_shader = shader_lib_get("inst");
+  renderer.current_shader = shader_lib_get("basic3d");
 
   GILG_LOG_INFO("Renderer was successfully created");
   return true;
@@ -202,11 +203,11 @@ void end_renderer()
   for(int i = 0; i < renderer.transforms.size(); i++)
   {
     vertex_array_update_buffer(renderer.quad_va, 
-                               GILG_BUFF_TYPE_VERTEX, 
+                               GILG_BUFF_TYPE_INSTANCE, 
                                i * sizeof(glm::mat4), sizeof(glm::mat4), 
-                               glm::value_ptr(renderer.transforms[i].model));
+                               glm::value_ptr(renderer.transforms[i]));
   }
- 
+  
   // The actual render call
   renderer_queue_sumbit_inst(renderer.current_shader, renderer.quad_va, renderer.inst_count);
 
@@ -220,8 +221,13 @@ void end_renderer()
 
 void render_cube(const transform& transform, const color& color)
 {
-  renderer.transforms.push_back(transform);
-  renderer.inst_count++;
+  bind_shader(renderer.current_shader);
+  set_shader_mat4(renderer.current_shader, "u_model", transform.model);
+  set_shader_vec4(renderer.current_shader, "u_color", color);
+  render_mesh(renderer.cube_mesh);
+  
+  //renderer.transforms.push_back(transform.model);
+  //renderer.inst_count++;
 }
 ///////////////////////////////////////////////////////
 

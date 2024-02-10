@@ -801,6 +801,30 @@ src/gilgamesh/math/transform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/math/transform.cpp.s
 .PHONY : src/gilgamesh/math/transform.cpp.s
 
+src/gilgamesh/resources/mesh.o: src/gilgamesh/resources/mesh.cpp.o
+.PHONY : src/gilgamesh/resources/mesh.o
+
+# target to build an object file
+src/gilgamesh/resources/mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.o
+.PHONY : src/gilgamesh/resources/mesh.cpp.o
+
+src/gilgamesh/resources/mesh.i: src/gilgamesh/resources/mesh.cpp.i
+.PHONY : src/gilgamesh/resources/mesh.i
+
+# target to preprocess a source file
+src/gilgamesh/resources/mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.i
+.PHONY : src/gilgamesh/resources/mesh.cpp.i
+
+src/gilgamesh/resources/mesh.s: src/gilgamesh/resources/mesh.cpp.s
+.PHONY : src/gilgamesh/resources/mesh.s
+
+# target to generate assembly for a file
+src/gilgamesh/resources/mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gilgamesh.dir/build.make CMakeFiles/gilgamesh.dir/src/gilgamesh/resources/mesh.cpp.s
+.PHONY : src/gilgamesh/resources/mesh.cpp.s
+
 src/gilgamesh/resources/resource_manager.o: src/gilgamesh/resources/resource_manager.cpp.o
 .PHONY : src/gilgamesh/resources/resource_manager.o
 
@@ -966,6 +990,9 @@ help:
 	@echo "... src/gilgamesh/math/transform.o"
 	@echo "... src/gilgamesh/math/transform.i"
 	@echo "... src/gilgamesh/math/transform.s"
+	@echo "... src/gilgamesh/resources/mesh.o"
+	@echo "... src/gilgamesh/resources/mesh.i"
+	@echo "... src/gilgamesh/resources/mesh.s"
 	@echo "... src/gilgamesh/resources/resource_manager.o"
 	@echo "... src/gilgamesh/resources/resource_manager.i"
 	@echo "... src/gilgamesh/resources/resource_manager.s"
