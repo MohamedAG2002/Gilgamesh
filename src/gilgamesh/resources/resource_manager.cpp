@@ -56,10 +56,10 @@ void resource_add_texture(const std::string& name, u32 width, u32 height, textur
   rsrc_man.textures2d[name] = load_texture2d(width, height, format, pixels);
 }
 
-void resource_add_mesh(const std::string& name, const mesh_desc& desc)
+void resource_add_mesh(const std::string& name, const std::vector<vertex>& vertices, const std::vector<u32>& indices)
 {
   GILG_ASSERT_MSG(rsrc_man.meshes.find(name) == rsrc_man.meshes.end(), "Mesh already exists");
-  rsrc_man.meshes[name] = load_mesh(desc);
+  rsrc_man.meshes[name] = load_mesh(vertices, indices);
 }
 
 GILG_API void resource_add_mesh(const std::string& name, const mesh_type type)

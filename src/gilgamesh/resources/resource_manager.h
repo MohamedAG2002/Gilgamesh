@@ -15,7 +15,7 @@ void shutdown_resource_manager();
 
 GILG_API void resource_add_texture(const std::string& name, const std::string& path);
 GILG_API void resource_add_texture(const std::string& name, u32 width, u32 height, texture_format format, void* pixels);
-GILG_API void resource_add_mesh(const std::string& name, const mesh_desc& desc);
+GILG_API void resource_add_mesh(const std::string& name, const std::vector<vertex>& vertices, const std::vector<u32>& indices);
 GILG_API void resource_add_mesh(const std::string& name, const mesh_type type);
 
 GILG_API texture2d* resource_get_texture(const std::string& id);

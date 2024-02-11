@@ -136,12 +136,11 @@ static void construct_mesh_by_type(mesh* m, const mesh_type type)
 
 // Mesh functions
 //////////////////////////////////////////////////////////////////////
-mesh* load_mesh(const mesh_desc& desc)
+mesh* load_mesh(const std::vector<vertex>& vertices, const std::vector<u32>& indices)
 {
-  mesh* m = (mesh*)alloc_memory(sizeof(mesh));
-  m->vertices = desc.vertices;
-  m->indices  = desc.indices;
-  //m->texture  = desc.texture; // @TODO: This should be a material or just completely removed and used as a parametar in the render_mesh instead
+  mesh* m = new mesh;
+  m->vertices = vertices;
+  m->indices  = indices;
 
   // Setup the VAO
   m->mesh_va = create_vertex_array();
@@ -173,9 +172,13 @@ void unload_mesh(mesh* m)
 
 void render_mesh(const mesh* m)
 {
+  gcontext_draw_index(GILG_DRAW_TRIANGLES, m->mesh_va);
+}
+
+void render_mesh(const mesh* m, const texture2d* texture)
+{
   // Render the texture
-  if(m->texture)
-    render_texture2d(m->texture);
+  render_texture2d(texture);
 
   // Rendering the indices 
   gcontext_draw_index(GILG_DRAW_TRIANGLES, m->mesh_va);

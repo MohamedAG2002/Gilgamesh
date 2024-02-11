@@ -1,6 +1,7 @@
 #pragma once
 
 #include "gilgamesh/resources/shader.h"
+#include "gilgamesh/resources/texture2d.h"
 #include "gilgamesh/graphics/camera3d.h"
 #include "gilgamesh/graphics/color.h"
 #include "gilgamesh/math/transform.h"
@@ -28,6 +29,7 @@ void begin_renderer(const render_data& data);
 void end_renderer();
 
 void render_cube(const transform& transform, const color& color);
+void render_cube(const transform& transform, const texture2d* texture);
 ///////////////////////////////////////////////////////
 
 }

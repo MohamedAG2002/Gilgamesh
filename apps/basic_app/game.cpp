@@ -53,7 +53,7 @@ void render_game()
     for(int x = 0; x < 10; x++)
     {
       gilg::transform model = gilg::create_transform(glm::vec3(y * 2.0f, 0.0f, x * 2.0f));
-      gilg::render_cube(model, game.quad_color);
+      gilg::render_cube(model, game.texture);
     }
   }
 

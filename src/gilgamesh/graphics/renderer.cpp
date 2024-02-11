@@ -111,13 +111,8 @@ static void setup_buffers()
     22, 23, 20, 
   };
 
-  mesh_desc cube_desc = {
-    .vertices = vertices, 
-    .indices  = indices,
-    .texture  = nullptr, 
-  };
-  //resource_add_mesh("cube_mesh", cube_desc);
-  resource_add_mesh("cube_mesh", GILG_MESH_TYPE_CUBE);
+  resource_add_mesh("cube_mesh", vertices, indices);
+  //resource_add_mesh("cube_mesh", GILG_MESH_TYPE_CUBE);
   renderer.cube_mesh = resource_get_mesh("cube_mesh");
 }
 ///////////////////////////////////////////////////////
@@ -216,6 +211,14 @@ void render_cube(const transform& transform, const color& color)
   
   //renderer.transforms.push_back(transform.model);
   //renderer.inst_count++;
+}
+
+void render_cube(const transform& transform, const texture2d* texture)
+{
+  bind_shader(renderer.current_shader);
+  set_shader_mat4(renderer.current_shader, "u_model", transform.model);
+  set_shader_int(renderer.current_shader, "u_texture", texture->slot);
+  render_mesh(renderer.cube_mesh, texture);
 }
 ///////////////////////////////////////////////////////
 
