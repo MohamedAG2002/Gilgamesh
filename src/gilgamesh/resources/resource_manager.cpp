@@ -62,6 +62,12 @@ void resource_add_mesh(const std::string& name, const mesh_desc& desc)
   rsrc_man.meshes[name] = load_mesh(desc);
 }
 
+GILG_API void resource_add_mesh(const std::string& name, const mesh_type type)
+{
+  GILG_ASSERT_MSG(rsrc_man.meshes.find(name) == rsrc_man.meshes.end(), "Mesh already exists");
+  rsrc_man.meshes[name] = load_mesh(type);
+}
+
 texture2d* resource_get_texture(const std::string& id)
 {
   GILG_ASSERT_MSG(rsrc_man.textures2d.find(id) != rsrc_man.textures2d.end(), "Could not retrieve texture2d since it doesn't exist");
